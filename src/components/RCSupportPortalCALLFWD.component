@@ -1,0 +1,58 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+              	<!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+              	--><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+              	<span class="breadcrumblink">Call Recording</span>
+      	</div>
+        <article>
+          <h4>Call Recording</h4>
+          <div class="video-desc">
+            <p>There are two call recording features in the system.</p>
+            <br/>
+            <p><strong>On Demand Call Recording</strong>
+On demand call recording will give all users the ability to record a specific call by pressing *9 to start recording and *9 when they are done.  (This can be turned on or off at the company level by the administrator.)</p>
+ <br/>
+ <p><strong>Auto Call Recording</strong>
+Administrators can set the system to automatically record an employee’s incoming and outgoing calls. They can download and play back recordings for customer service evaluation, training purposes or for keeping compliance records.
+</p>
+            <br/><br/>
+            <p class="note">Please note that Automatic call recording is available only on select RingCentral plans. Please note that state and federal laws require that callers hear a call-recording notification before and after their call is recorded. Your company’s call recording procedures must comply with federal and state laws; RingCentral is not responsible for compliance. 
+</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video">
+            	<img title="How to setup the automatic call record" alt="How to setup the automatic call record" 
+            	src="http://i1.ytimg.com/vi/xh2KF2gVhmw/mqdefault.jpg" />
+            	<a class="article-video" href="http://www.youtube.com/watch?v=xh2KF2gVhmw?rel=0" rel="prettyPhoto" title="How to setup the automatic call record">
+              		<p class="play-video"></p>
+              	</a> 
+               	<a href="http://www.youtube.com/watch?v=xh2KF2gVhmw?rel=0" style="padding-top: 25px;" rel="prettyPhoto" title="How to setup the automatic call record" 
+              		class="overview-call">How to setup the automatic call record&raquo;
+              	</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_7" class="more">RingOut</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Automatic-Call-Recording-Frequently-Asked-Questions?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3635%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Automatic%20Call%20Recording%2
+            ">Automatic Call Recording Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Change-the-Automatic-Call-Recording-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3636%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Change%20the%20Automatic%20Call%20Recording%20Settings
+            ">How to change the Automatic Call Recording Settings</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-set-up-user-extensions-with-automatic-call-recording?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3637%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20up%20
+            ">How to set up user extensions with automatic call recording</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-customize-call-recording-announcement?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DHow%2Bto%2Bcustomize%2Bcall%2Brecording%2Bannouncement%26action%3DSearchAnswer%26sortBy%3D&popup
+            ">How to customize call recording announcement</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+     <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,205 @@
+<apex:page controller="SupportPortalControllerNew" showHeader="false"   cache="true" expires="{!cacheMaxAge}">
+    
+ 
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' 
+
+type='text/css' />
+
+<link href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/uniform.form.min.css')}" 
+
+type="text/css" rel="stylesheet"  media="screen" />
+
+<!-- Below style sheet updated by anil only for Case --> 
+<link href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/styleForCase.css')}" type="text/css" rel="stylesheet"  media="screen" />
+<!-- end  --> 
+<style>
+        .contact-support-container article.app {
+            padding: 2px !important;
+        }
+        
+        .contact-support-container .img-container.chat_support {
+            background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+                icon_2.png ')}') 34px 10px no-repeat;
+            display: block;
+            width: 200px;
+        }
+        
+        .contact-support-container .img-container.case2 {
+            background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+                icon_1.png ')}') 26px 0px no-repeat;
+            display: block;
+            width: 50px;
+        }
+        
+        .contact-support-container .img-container.call_support2 {
+            background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+                icon_3.png ')}') 29px 5px no-repeat;
+            display: block;
+            width: 200px;
+        }
+        
+        .contact-support-container .img-container.community2 {
+            background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+                icon_4.png ')}') 48px 0px no-repeat;
+            display: block;
+            width: 200px;
+        }
+        
+        .newapp {
+            height: 100px !important;
+            width: 200px !important;
+        }
+        
+        .opencase {
+            height: 100px !important;
+            width: 200px !important;
+        }
+        
+        .contact-support-container .container-desc h3 {
+            font-size: 20px !important;
+            margin-bottom: 10px !important;
+        }
+        
+        .chat-content {
+            width: 240px;
+            float: left;
+        }
+        </style>
+            <Style>
+        .Chat_OfflineMsg {
+            background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+                icon_2.png ')}') no-repeat scroll transparent;
+            display: block;
+            height: 200px;
+            float: right;
+            width: 200px;
+            position: absolute;
+            margin-left: 260px;
+        }
+        
+        .link_set {
+            color: #4541E3;
+            cursor: pointer;
+            margin-top: 125px;
+            position: absolute;
+            margin-left: 22px;
+        }
+        
+        .caseStatus-button {
+            margin-left: -21px;
+            width: 220px;
+        }
+        </Style>
+            <style>
+        ul li,ol li {
+            margin-left: 0;
+        }
+        
+        .menu .column {
+            width: 125px !important;
+        }
+        
+        .supportPhoneNo {
+            font-weight: bold;
+            color: #658DA6;
+        }
+        
+         .box_tab {
+            width: auto;
+        }
+        
+         .box_tab .info_line {
+            width: auto;
+        }
+         
+        /* .main_center {
+            width: auto;
+        }  */
+         
+        .main_right {
+            width: 170px !important;
+            min-height: 465px;
+            display: none;
+            /*text-align:right !important;*/
+        }
+        
+        .main_center h2 {
+            font-family: Helvetica;
+            color: #4B4B4B;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 3px -1px 0px;
+            text-shadow: none;
+        }
+        
+        .contactSupportP {
+            color: #095183 !important;
+            font-family: Helvetica !important;
+            font-size: 14px !important;
+            text-decoration: none !important;
+            padding-left: 20px !important;
+            font-weight: bold !important;
+            padding: 0px !important;
+        }
+</style>
+  <apex:variable var="newUI" value="newSkinOn"   rendered="{!isArticleDetailsPage}">
+        <link type="text/css" rel="stylesheet" 
+
+href="/sCSS/29.0/sprites/1362621144000/Theme3/default/gc/extended.css" class="user"/>
+        <style>ul li, ol li{margin-left:0;}</style>  
+        
+</apex:variable>
+<apex:variable var="change" value="update" rendered="{!($CurrentPage.parameters.popup)=='true'}">
+ 
+</apex:variable> 
+ <script src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery-1.8.2.js')}"></script> 
+  <script src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/js/libs/uniform.form.min.js')}"></script>
+  <script src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/js/libs/jquery.pajinate.js')}"></script>
+   <script src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/js/libs/jquery.validate.min.js')}"></script>
+   <script src="{!URLFOR($Resource.RCBlockUI, 'blockUI/js/jquery.blockUI.js')}"></script>
+ 
+
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="content">
+            <apex:outputPanel layout="block" >
+                <apex:outputPanel layout="block" id="contactSupport" >
+                <div class="tab_content" >
+                    <div class="box_tab visible">
+                        <div class="info_line">
+ 
+
+                            <h2 >Contact Support</h2>
+                            <table width="70%"
+                                style="font-size: 11pt; lfont-weight: normal; margin-left: 1%;">
+                                <TR>
+                                    <TD width="100%">
+                                        <TABLE width="100%">
+                                            <TR>
+                                                <TD colspan="3" width='360px' style="padding-bottom: 5px;">
+                                                    <p class="contactSupportP">Customer Care</p>
+                                                    <p
+                                                            style="padding-left: 0px; font-size: 12px; width: 505px; text-align: justify;">
+                                                            If you’re experiencing a fault with your BT Cloud Phone
+                                                            service, you can give us a call on <strong>0800
+                                                                389 0598</strong> . We’re open Monday to Friday 8am to 6pm
+                                                            (closed bank holidays) for Basic customers and all single
+                                                            user accounts; or 24 hours per day, 7 days a week for
+                                                            other Connect and Collaborate customers.
+                                                        </p>
+                                                </TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD> 
+                                </TR>
+                            </table>
+                            <div style="border: 0px dotted; border-top: 1px dotted; margin-bottom: 5px; margin-right: 30px;"></div>
+                        </div>
+                    </div>
+                    <c:supportportalcontactsuppus />
+                </div>
+                </apex:outputPanel>
+                <c:SupportPortalCaseView rendered="{!AND(NOT(isOpenCase),NOT(isGuestUser))}"/>
+            </apex:outputPanel> 
+        </apex:define>
+    </apex:composition>
+</apex:page>

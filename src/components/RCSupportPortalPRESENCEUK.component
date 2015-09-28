@@ -1,0 +1,60 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Presence</span>
+        </div>
+        <article>
+          <h4>Presence</h4>
+          <div class="video-desc">
+            <p>Whether you're available, busy or on hold, the Presence feature allows you to see the phone status of your colleagues.</p>
+            <br/>
+            <p>RingCentral Presence will tell you whose line is in use, even if they're using their mobile phone. You'll be able to handle the call accordingly and save time resulting in a better customer experience.</p>
+            <br/>
+            <p>With presence, designate users who can answer calls to your extension.</p>
+            <br/>
+            <p>Presence requires use of a Presence-capable phone.</p>
+            <br/>
+            <p>For a list of phones, click <a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5055?retURL" class="more">here.</a></p>
+            <br/>
+            <p>Please note that presence is currently only available on select plans.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <!--<div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=_zWGe6DU3iM" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            --><!-- </div> --> 
+            
+            <img title="Presence Overview" alt="Presence Overview" 
+                src="http://i1.ytimg.com/vi/wOCN1lc4bKk/mqdefault.jpg " />
+                <a class="article-video" href="javascript:void(0);" rel="prettyPhoto" title="Presence Overview" style="padding-top: 20px;">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="javascript:void(0);" rel="prettyPhoto" title="Presence Overview">Presence Overview&raquo;</a> </div>
+              </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_5" class="more">Call Flip</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5055?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3663%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Presence%20Overview
+            ">Presence Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4984?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D1%26k%3Dpresence%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20set%20up%20Presence%20permissions%20for%20user%20extensions%20as%20an%20administrator
+            ">How to set up Presence permissions for user extensions as an administrator</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5089?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D1%26k%3Dpresence%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20choose%20specific%20user%20extensions%20to%20monitor%20for%20Presence
+            ">How to choose specific user extensions to monitor for Presence</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

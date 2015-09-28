@@ -1,0 +1,182 @@
+<apex:component >
+<style>
+  .settinganchor{
+    //text-decoration: underline;
+    color:#f8981d;
+  }
+  /*.breadcrumblink {
+        color: #666666;
+        font-weight: 300;
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: normal;
+    }*/
+    .suggestion {
+        float:none !important;
+    }
+</style>
+
+<section class="lc-page">
+                                <div class="left-container">
+                                    <!--<div id="BreadCrumb" style="padding-bottom: 10px;">
+                                        <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                                        <span class="breadcrumblink">Company Settings</span>
+                                    </div>
+                                    --><article>
+                                      <h4>Company Settings</h4>
+                                      <div class="video-desc">
+                                        <p style="line-height:normal !important">As the administrator of your RingCentral system, 
+                                        you can harness the power of the cloud to control any and all of your company settings anytime, 
+                                        anywhere, from any device. 
+                                        </p><br/>
+                                        <p style="line-height:normal !important">
+                                        You can:  
+                                         <!-- 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_0">Add and set up users</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_1">add and set up departments</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_22">set up business hours</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_2">set up call handling rules</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_3">set up advanced call handling rules</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_4">order and configure phones</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_5">set call recording</a> and 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_6">add additional phone numbers</a>. 
+                                         -->
+                                         <!--<ul class="">
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_0">Add and set up users</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_1">add and set up departments</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_22">set up business hours</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_2">set up call handling rules</a></li>
+                                         </ul>
+                                         <ul>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_3">set up advanced call handling rules</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_4">order and configure phones</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_5">set call recording</a></li>
+                                            <li><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_6">add additional phone numbers</a></li>
+                                         </ul>
+                                        -->
+                                        <table style="width:375px">
+                                            <tr>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_0" class="settinganchor">Add and set up users</a></td>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_1">Add and set up departments</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_22">Set up business hours</a></td>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_2">Set up call handling rules</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_5">Set call recording</a></td>
+                                                <td nowrap="nowrap" style="vertical-align:top;"> <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_4">Order and configure phones</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap" style="vertical-align:top;"> <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_3">Set up advanced call handling</a></td>
+                                                <td nowrap="nowrap" style="vertical-align:top;"><a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_6">Add additional phone numbers</a></td>
+                                            </tr>
+                                        </table>
+                                        </p>
+                                        <br/>
+                                        <!--<br/>
+                                        -->  
+                                      </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                        <div class="share">
+                                          <apex:outputtext value='<a class="addthis_button_expanded" 
+                                          onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=cV7aRFRoZj8" 
+                                          href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                        </div>
+                                         <img title="RingCentral Office - Changing Company Settings" alt="RingCentral Office - Changing Company Settings" 
+                                            src="http://i1.ytimg.com/vi/_mCg4Q8Ojck/mqdefault.jpg"  />
+                                        <a class="article-video" href="http://www.youtube.com/watch?v=_mCg4Q8Ojck?rel=0" rel="prettyPhoto">
+                                       
+                                          <p class="play-video"></p>
+                                        </a>
+                                        <a class="overview-call" title="RingCentral Office - Changing Company Settings" 
+                                            href="http://www.youtube.com/watch?v=_mCg4Q8Ojck?rel=0" rel="prettyPhoto">RingCentral Office - Changing Company Settings &raquo;</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic: </span> 
+                                        <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_0" class="more">Add and Set Up Users</a>
+                                        <br/><p style="line-height:normal !important;margin-top:30px;">Other Settings Sections:  
+                                            <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="settinganchor">User Settings</a>, 
+                                            <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="settinganchor">Department Settings</a>
+                                        </p> 
+                                    </div>
+                                    <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+                                         <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_company_settings" 
+                                            target="_blank" class="more">
+                                           Learn more in the Community
+                                        </a>
+                                    </div>
+                                   </div>
+                                    
+                             
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5072?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3112%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20can%20I%20add%20extensions%20to%20my%20accoun
+                                            ">How to add multiple extensions to your RingCentral account as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5026?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3135%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20Extension%20Direct%20Numbers
+                                            ">How to add extension direct numbers as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5017?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3522%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20a%20department%27s%20info
+                                            ">How to edit a department's information</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4958?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dauto%2Breceptionist%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=What%20is%20an%20auto-receptionist?
+                                            ">What is an auto-receptionist?</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5105?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3280%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20Business%20Hours%20Settings
+                                            ">How to set up the company hours settings</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5008?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3634%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to
+                                            ">How to access the advanced call handling feature of the auto receptionist</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4965?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dbasic%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Basic%20troubleshooting%20tips%20for%20your%20phones
+                                            ">Basic troubleshooting tips for your phones</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4966?retURL=%2Frcsupport2013%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D000003829%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20Set%20up%20and%20Provision%20Existing%20or%20Third%20Party%20Devices
+                                            ">How to Set up and Provision Existing or Third Party Devices</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5033?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D2%26k%3DCall%2BRecording%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20Initiate%20On-Demand%20Call%20Recordings
+                                            ">How to Initiate On-Demand Call Recordings</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5014?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D2%26k%3Ddownload%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20Download%20On-Demand%20Call%20Recordings
+                                            ">How to Download On-Demand Call Recordings</a></li>
+                                            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5074?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3265%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20Phone%20Numbers
+                                            ">How to add phone numbers to my RingCentral account as an Administrator</a></li>
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                                <aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section">
+                                            <ul class="paginate gallery">
+                                                
+                                                <li>
+                                                  <img title="RingCentral Office - Company Numbers Overview" alt="RingCentral Office - Company Numbers Overview" 
+                                                    src="http://i1.ytimg.com/vi/heG6_SXa4bU/mqdefault.jpg"  />
+                                                <a href="http://www.youtube.com/watch?v=heG6_SXa4bU?rel=0" rel="prettyPhoto" title="RingCentral Office - Company Numbers Overview">
+                                              
+                                                <p class="play-video"></p></a><span>RingCentral Office - Company Numbers Overview</span></li>
+                                                
+                                                <li>
+                                                 <img title="RingCentral Office - Advanced Company Call Handling" alt="RingCentral Office - Advanced Company Call Handling" 
+                                                    src="http://i1.ytimg.com/vi/VyRVQI32gnc/mqdefault.jpg"  />
+                                                <a href="http://www.youtube.com/watch?v=VyRVQI32gnc?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Company Call Handling">
+                                               
+                                                <p class="play-video"></p></a><span>RingCentral Office - Advanced Company Call Handling
+                                                </span></li>
+                                                
+                                                <li>
+                                                 <img title="RingCentral Office - Company Business Hours
+                                                " alt="RingCentral Office - Company Business Hours" 
+                                                    src="http://i1.ytimg.com/vi/5VsYYetGj64/mqdefault.jpg"  />
+                                                <a href="http://www.youtube.com/watch?v=5VsYYetGj64?rel=0" rel="prettyPhoto" title="RingCentral Office - Company Business Hours">
+                                               
+                                                <p class="play-video"></p></a><span>RingCentral Office - Company Business Hours
+                                                </span></li>
+                                                
+                                                <!--
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>4 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            --></ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+                                <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,5 @@
+<apex:page ><!-- standardController="zqu__Quote__c">
+    <apex:outputPanel id="existingCharges">
+        <c:Z_ExistingChargesComp quoteID="{!zqu__Quote__c.Id}" from="QuoteDetailPage" />
+    </apex:outputPanel>-->
+</apex:page>

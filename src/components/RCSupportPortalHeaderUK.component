@@ -1,0 +1,614 @@
+<apex:component controller="RCSupportControllerHandler">
+<apex:attribute type="Boolean" required="true" name="isGuestUser" description="userType"/> 
+<apex:stylesheet value="{!URLFOR($Resource.RCHeaderFooter, 'header-footer-rc/includes/css/stylefooter.css')}" />
+<style>
+    .bg_wrapper {
+        /* background: url("../img/top_sprite.png") repeat-x scroll left -97px #fff; */
+        position: relative;
+        z-index: 20;
+        height: 130px;
+    }
+
+    .nov_head {
+        height: 26px;
+        border-bottom: 1px solid #f2f2f2; 
+        padding: 27px 0 16px 0;
+        margin-bottom: 15px;
+        z-index: 1000;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu {
+        width:330px;
+        padding-left:35px;
+        padding-top:30px;
+        padding-bottom:29px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_products .submenu {
+        width:560px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu ul {
+        float:left;
+        padding-left:20px; 
+        padding-top:10px;
+        margin-bottom:-8px;
+        width:128px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_products .submenu ul {
+        float:left;
+        padding-left:20px; 
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu ul:first-child {
+        padding-left:0;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu .video {
+        float:right;
+        width:219px;
+        margin-top:8px;
+    }
+    
+    .nov_head .login {
+        background: url(../images/topsprite.png) no-repeat 24px -88px;
+        padding-left: 48px;
+        line-height: 25px;
+        height: 26px;
+        border-left: 1px solid #dadada;
+        padding-right: 0;
+        margin-left: 0;
+        float: right;
+        margin-right: 0;
+    }
+    
+    .arrow {
+        padding-right: 12px;
+    }
+    
+    .header_wrapper .nov_head .menuNav .countriesNav {
+        width: 158px;
+    }
+    
+</style>
+<script>
+  function login(){
+   login();
+   return false;
+  }
+  
+   
+</script>
+
+<div class="bg_wrapper">
+        <div class="header_wrapper">
+            <header>
+            <div class="nov_head">
+                <a href="http://www.ringcentral.co.uk/" class="logo"
+                    title="RingCentral Virtual PBX, Phone and Internet Fax Service and Software"><span></span><b>RingCentral
+                        - Your Phone System Everywhere</b>
+                </a> 
+                <apex:outputLink value="http://service.ringcentral.co.uk/"
+                    styleClass="login" rendered="{!isGuestUser}">Login</apex:outputLink>
+                <apex:outputLink value="/secur/logout.jsp" styleClass="login"
+                    rendered="{!!isGuestUser}">Logout</apex:outputLink>
+                
+               <!--   <div class="livepersonblock white homepage" style="cursor: pointer;">
+                    <!--<div id='LP_DIV_1371060597644' class="label">
+                    </div>-->
+                    
+                   <!--  <apex:OutputPanel rendered="{!if($Site.Name == 'rcsupport2013',true,false)}">
+                       <div id='LP_DIV_1371060597644' class="label">
+                       </div>
+                   </apex:OutputPanel> 
+           
+                   <apex:OutputPanel rendered="{!if($Site.Name == 'rcsupportCA2012',true,false)}">
+                       <div id='LP_DIV_1373654177472' class="label">
+                       </div>
+                   </apex:OutputPanel> 
+                    
+                </div> -->
+                
+                <div class="info">
+                    <ul class="menuNav">
+                        <li class="countriesNav"><span>Country: </span> <span
+                            class="arrow" id="header_country">United Kingdom</span>
+                            <ul class="submenuNav">
+                                <li><a 
+                                    title="RingCentral US - Virtual Office Phone System" href="http://www.ringcentral.com/">
+                                        <span>United States</span> </a></li>
+                                <li><a
+                                    title="RingCentral Canada - Virtual Office Phone System"
+                                    href="http://www.ringcentral.ca"> <span>Canada</span> </a></li>
+                                <li><a class="selected"
+                                    title="RingCentral UK - Virtual Office Phone System"
+                                     href="http://www.ringcentral.co.uk"> <span>United Kingdom</span> </a></li>
+                            </ul></li>
+                        <li><a
+                            href="http://www.ringcentral.co.uk/whyringcentral/contactus.html">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                    <!-- <p class="sale_phones" style="margin-right: 30px">
+                        Sales<span class="office_phone" style="padding-left: 2px;"
+                            id="DinOfficePhone">800<code>-</code>820<code>-</code>3676</span>
+                    </p> -->
+                    <p class="sale_phones">
+                        Phone<span class="office_phone" style="padding-left: 2px;"
+                            id="DinOfficePhone"><a href="callto:0800-098-8136">0800-098-8136</a></span>
+                    </p>
+                    <p class="sale_phones" style="padding-right:30px">
+                        <span class="office_phone" style="padding-left: 2px;"
+                            id="DinOfficePhone"><a href="http://www.ringcentral.co.uk/cookies.html">Cookies</a></span>
+                    </p>
+                </div>
+                
+            </div>
+            <div class="searchbox id-rc-searchbox"
+                style="width: 21%; overflow: auto">
+                <form class="" action="{!$Site.CurrentSiteUrl}RCSupportPOrtalGlobalSearch" method="get">
+                    <input class="submit_search" type="submit" value="Search" name="Submit" /> 
+                    <input type="text" class="input" name="globalquery" value="" /> 
+                    <input type="hidden" value="1" name="start" class="input" title='start' id='globalSearch11123' />
+                </form>
+                <apex:form forceSSL="true" rendered="{!isTokenFound}">
+                    <apex:actionFunction action="{!login}" name="login" />
+                    <script>
+                if('{!isTokenFound}'=='true'){
+                       login();
+                 }
+             </script>
+                </apex:form>
+                
+            </div>
+            <nav class="topmenu">
+            <ul class="clearfix">
+                <li class="link_to_products sub"><a
+                    href="http://www.ringcentral.co.uk/office/product-overview.html"
+                    title="Products" class="navLink"> <span>Product</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="title"><a
+                                href="http://www.ringcentral.co.uk/office/product-overview.html"
+                                title="Office">Office<span></span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/product-overview.html"
+                                title="Office">Overview</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/how-it-works.html"
+                                title="How it Works">How it Works</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/plansandpricing.html"
+                                title="Plans &amp; Pricing">Plans &amp; Pricing</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/industry-solutions/overview.html"
+                                title="Features">Industries</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/voip-phone.html"
+                                title="Professional">Phones</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/phone-system-faq.html"
+                                title="Fax">FAQs</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="title"><a
+                                href="http://www.ringcentral.co.uk/office/phone-system-features.html">Features<span></span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/hosted-pbx/overview.html"
+                                title="Online Meetings">Hosted PBX</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/call-forwarding/overview.html"
+                                title="Call Forwarding">Call Forwarding</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/call-recording/overview.html"
+                                title="Online Meetings">Call Recording</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/auto-attendant/overview.html"
+                                title="Auto-Receptionist">Auto-Receptionist</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/softphone/overview.html"
+                                title="Online Meetings">Softphone</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/freephone-numbers/overview.html"
+                                title="Online Meetings">Freephone Numbers</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/messaging/overview.html"
+                                title="Online Meetings">RingCentral Messaging</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li style="margin-bottom: 30px;"></li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/voip/overview.html"
+                                title="Virtual PBX">VoIP</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/video-conference/overview.html"
+                                title="Video Conferencing">Video Conferencing</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/online-meetings/overview.html"
+                                title="Online Meetings">Online Meetings</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/fax-online/overview.html"
+                                title="Business SMS">Online Fax</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/rcmobile/overview.html"
+                                title="Toll Free Number">Mobile Apps</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/plansandpricing/international-call-bundles.html"
+                                title="Virtual PBX">International call bundles</a>
+                            </li>
+                        </ul>
+                    </div></li>
+                <li class="link_to_apps"><a
+                    href="http://www.ringcentral.co.uk/office/features/rcmobile/overview.html"
+                    title="Apps & Integrations" class="navLink"> <span>Apps &amp; Integrations</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="title"><a
+                                href="http://www.ringcentral.co.uk/office/features/rcmobile/overview.html"
+                                title="Apps">Apps<span></span>
+                            </a>
+                            </li>
+                            <li><a href="http://www.ringcentral.co.uk/office/features/rcmobile/overview.html"
+                                title="Mobile App">Mobile App</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/desktop-apps/overview.html"
+                                title="Desktop App">Desktop App</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="title"><a
+                                href="http://www.ringcentral.co.uk/office/integrations/overview.html">Integrations<span></span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/box-integration/overview.html"
+                                title="Box">Box</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/ringcentral-for-google/overview.html"
+                                title="Google">Google</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/outlook-integration/overview.html"
+                                title="Outlook">Outlook</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/salesforce-integration/overview.html"
+                                title="Salesforce">Salesforce</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/zendesk-integration/overview.html"
+                                title="Zendesk">Zendesk</a>
+                            </li>
+                            <li><a
+                                href="http://www.ringcentral.co.uk/office/features/desk-integration/overview.html"
+                                title="Desk">Desk</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="link_to_resources"><a
+                    href="http://www.ringcentral.co.uk/office/plansandpricing.html"
+                    title="Plans & Pricing" class="navLink"> <span>Plans &amp; Pricing</span> </a>
+                </li>
+                <li class="link_to_resources sub"><a
+                    href="http://www.ringcentral.co.uk/resources/learning-center.html"
+                    title="Resources" class="navLink"> <span>Resources</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="link_to_resources_learning"><a
+                                href="http://www.ringcentral.co.uk/events/index.html  "
+                                title="Events"><span>Events</span>
+                            </a></li>
+                            <li class="link_to_resources_documentation"><a target="_blank"
+                                href="http://www.ringcentral.co.uk/resources/learning-center.html#ringcentral_success_stories" 
+                                title="Success Stroies"><span>Success Stroies</span>
+                            </a></li>
+                            <li class="link_to_resources_documentation"><a
+                                href="http://www.ringcentral.co.uk/resources/learning-center.html#ringcentral_guides"
+                                title="Guides"><span>Guides</span>
+                            </a></li>
+                            <li class="link_to_resources_videos"><a
+                                href="http://www.ringcentral.co.uk/resources/learning-center.html#videos"
+                                title="Videos"><span>Videos</span>
+                            </a></li>
+                            <li class="link_to_resources_documentation"><a
+                                href="http://www.ringcentral.co.uk/resources/learning-center.html#whitepapers"
+                                title="Whitepapers"><span>Whitepapers</span>
+                            </a></li>
+                            <li class="link_to_resources_blog"><a
+                                href="https://blog.ringcentral.com/category/ringcentral-uk/"
+                                title="Blogs"><span>Blogs</span>
+                            </a></li>
+                        </ul>
+                    </div></li>
+                <li class="link_to_support sub"><a
+                    href="http://success.ringcentral.co.uk/" title="Support"
+                    class="navLink long"> <span>Support</span> </a>
+                    </li>
+                <li class="link_to_about sub"><a
+                    href="http://www.ringcentral.co.uk/whyringcentral/company.html"
+                    title="About Us" class="navLink"><span>About Us</span>
+                </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="link_to_about_company"><a
+                                href="http://www.ringcentral.co.uk/whyringcentral/company.html"
+                                title="Company"><span>Company</span>
+                            </a></li>
+                            <li class="link_to_about_leadership"><a
+                                href="http://www.ringcentral.co.uk/whyringcentral/leadership.html"
+                                title="Leadership"><span>Leadership</span>
+                            </a></li>
+                            <li class="link_to_about_customers"><a
+                                href="http://www.ringcentral.co.uk/whyringcentral/our_customers.html"
+                                title="Customers"><span>Customers</span>
+                            </a></li>
+                            <li class="link_to_about_news"><a
+                                href="http://www.ringcentral.co.uk/whyringcentral/company/pressreleases.html"
+                                title="In The News"><span>Press</span>
+                            </a></li>
+                            <li class="link_to_investors"><a
+                                href="https://community.ringcentral.com/ringcentral/products/ringcentral_uk_support"
+                                title="Investors"><span>Community</span>
+                            </a></li>
+                            <li class="link_to_about_contact"><a
+                                href="http://www.ringcentral.co.uk/whyringcentral/contactus.html"
+                                title="Contact Us"><span class="bot_line">Contact Us</span>
+                            </a></li>
+                            <li class="link_to_about_careers"><a
+                                href="http://www.ringcentral.com/whyringcentral/jobs.html"
+                                title="Careers"><span>Careers</span>
+                            </a></li>
+                            <li class="link_to_about_partner"><a
+                                href="http://www.ringcentral.co.uk/partner/overview.html"
+                                title="Partner With Us"><span>Partner With Us</span>
+                            </a></li>
+                            <li class="link_to_about_press"><a
+                                href="http://affiliates.ringcentral.co.uk/"
+                                title="Press"><span>Affiliates</span>
+                            </a></li>
+                            <li class="link_to_about_legal"><a
+                                href="http://www.ringcentral.co.uk/legal.html"
+                                title="RingCentral's Legal"><span class="bot_line">Legal</span>
+                            </a></li>
+                        </ul>
+                    </div></li> 
+                <li class="link_to_login last"><a href="#" title="Login"
+                    rel="nofollow" class="navLink"><span>Login</span>
+                </a>
+                </li>
+            </ul>
+            </nav> <c:RCVideoSupport /> </header>
+        </div>
+    </div>
+  
+ <script src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery-ui.js')}"></script>
+ <script src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/Support_Portal_Articles.js')}"></script>
+ <link href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/jquery-ui.css')}" rel='stylesheet' type='text/css' /> 
+ 
+<style>
+  .ui-autocomplete {
+    z-index:10000 !important;
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    width:70% !important;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 100px;
+  }
+</style>
+<script> 
+
+  $(function() {
+  
+    $( "#globalSearch1UK" ).autocomplete({
+            //source: staticResourceArr,
+             source: function(request, response) {
+                var searchText=$.trim(request.term);
+                searchText=searchText.replace(/ {2,}/g, ' ');
+               // var matcher = new RegExp( $.ui.autocomplete.escapeRegex(searchText), "");
+                 var matcher = new RegExp(searchText+"?", "i");
+                var data = $.grep( staticResourceArr, function(value) {
+                    return matcher.test( value.label || value.value || value );
+                });
+                 response(data);
+            },
+     /* minLength: 2,*/
+      select: function( event, ui ) {
+      //console.log(ui.item.value);
+      $(this).val(ui.item.value);
+      $(".submit-search").click();
+      }
+    }).keydown(function(e){
+      if (e.keyCode === 13){
+          $(".submit-search").click();
+      }
+      });
+  });
+  </script>
+<div class="bg_search_wrapper">
+  <div class="search-bar">
+    <section role="Main search">
+      <div class="search-box">
+        <form  action="{!$Site.CurrentSiteUrl}RCSupportPortalSearchNew">
+            <input type="text"  title='Search Support' id='globalSearch1' class="input {!IF(($CurrentPage.parameters.globalquery!='' && $CurrentPage.parameters.globalquery!='Search Support'),'searchTextStyle2','searchTextStyle')}" name="globalquery" value="{!IF(($CurrentPage.parameters.globalquery)=='','Search Support',$CurrentPage.parameters.globalquery)}"/>
+           <input type="hidden" value="1" name="start" class="input" title='start' />
+           <input type="hidden" class="input" name="pagenumber" value="1" />
+          <input type="submit" class="submit-search" name="Submit" value=" " />
+        </form>
+      </div>
+     
+       <a rel="nofollow" href="https://community.ringcentral.com/ringcentral/products/ringcentral_uk_support" class="primary-btn" style="padding-right:145px;">Ask Community</a>
+       <a rel="nofollow" href="{!$Site.CurrentSiteUrl}RCContactSupp" class="primary-btn">Contact Support</a> </section>
+  </div>
+</div>
+<div class="search-bar-footer">
+  <div class="search-bar-footerImgContainer">&nbsp;</div>
+</div>
+ <!-- <c:RCSupportPortalLiveChatOffline /> -->
+ <script>
+
+  $(document).ready(function () {
+   var navSubHeadObj, navObj = $('.main-nav li');
+   var currentObjectSubmenu = null;
+    /*
+     * On hover of sub navigation 
+     * relative sub menu will show up
+    */
+    
+    $(navObj).hover(function() {
+        navSubHeadObj = $(this).children().attr('class');
+        $(this).addClass('active');
+         var submenu='.'+navSubHeadObj+'-menu';
+        if(currentObjectSubmenu == null) {
+            currentObjectSubmenu = '.'+ navSubHeadObj + '-menu';
+        } else if(currentObjectSubmenu != submenu) {
+              $(currentObjectSubmenu).stop(true, true).fadeOut(1000);
+              currentObjectSubmenu = submenu;
+            $('.support').parent().removeClass('active');
+        }     
+    },function() {
+              $(this).removeClass('active');  
+       });
+    
+    $(navObj).click(function() {
+           if(!$('.support-menu').is(':visible')) {
+                $('.'+navSubHeadObj+'-menu').stop(true, true).fadeIn(500);
+                $('.support').parent().addClass('active');
+            } else if($('.support-menu').is(':visible')) {
+                $(".support-menu").stop(true, true).fadeOut(1000); 
+                $('.support').parent().removeClass('active');
+            }
+     });
+    
+    
+    $(".support-menu").click(function(e){
+       /*if('.'+$(this).attr('class') == currentObjectSubmenu){
+             console.log($(this).is(':visible'));
+            if(!$(this).is(':visible')) {
+                alreadyClick = 1;
+               // $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500);
+                $('.'+navSubHeadObj+'-menu').stop(true, true).fadeIn(50000);
+                $('.support').parent().addClass('active');
+            } else if($(this).is(':visible')) {
+                var $target = $(e.target);
+                if ($target.is("a") ) {
+                
+                } else {
+                    alreadyClick = 0;
+                    $(".support-menu").stop(true, true).fadeOut(1000);
+                    $('.support').parent().removeClass('active');
+                }
+            }
+       }*/
+           var $target = $(e.target);
+                if ($target.is("a") ) {
+                
+                } else {
+                    $(".support-menu").stop(true, true).fadeOut(1000);
+                    $('.support').parent().removeClass('active');
+                }
+    });
+    
+    $(".support-menu").hover(function(){
+       if('.'+$(this).attr('class')== currentObjectSubmenu) { 
+            $('.support').parent().addClass('active');
+        }
+     });
+    
+    $(".support-menu").mouseleave(function(){
+       if(!$(this).is(':visible')) {
+         $('.support').parent().removeClass('active'); 
+       }    
+   });
+    
+    /*$(navObj).click(function(event) {
+        if((alreadyClickMenu == 0) {
+            alert(1);
+            alreadyClickMenu = 1;
+            navSubHeadObj = $(this).children().attr('class');
+            $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500);    
+        } else if(alreadyClickMenu == 1) {
+            alert(2);
+            alreadyClickMenu = 0;
+            navSubHeadObj = $(this).children().attr('class');
+            $('.'+navSubHeadObj+'-menu').css('display','none');
+        }
+   });*/
+    
+  });
+
+   $("#globalSearch").live({
+      focus: function() {
+        if ($(this).val() == $(this).attr("title")) {
+            $(this).val("");
+        }
+      },
+      blur: function() {
+         if ($(this).val() == "") {
+            $(this).val($(this).attr("title"));
+        }
+      }
+    });
+    
+$("#globalSearch1").live({
+      focus: function() {
+        if ($(this).val() == $(this).attr("title")) {
+            $(this).val("");
+            $(this).removeClass('searchTextStyle');
+        }
+      },
+      blur: function() {
+         if ($(this).val() == "") {
+            $(this).val($(this).attr("title"));
+            $(this).addClass('searchTextStyle');
+        }
+      }
+    });
+     if('{!isTokenFound}'=='true'){
+        login();
+  }
+</script>
+
+ 
+<!-- <script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('57380000000CaZS', document.getElementById('liveagent_button_online_57380000000CaZS'));
+liveagent.showWhenOffline('57380000000CaZS', document.getElementById('liveagent_button_offline_57380000000CaZS'));
+});</script>
+ <script type='text/javascript' src='https://c.la1s1.salesforceliveagent.com/content/g/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1s1.salesforceliveagent.com/chat', '572800000008OQQ', '00D80000000aRUX');
+</script> -->
+
+</apex:component>

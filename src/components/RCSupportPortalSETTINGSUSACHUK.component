@@ -1,0 +1,94 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+      <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink">Advanced Call Handling</span>
+        </div>
+        <article>
+          <h4>Advanced Call Handling</h4>
+          <div class="video-desc">
+            <p>Advanced Call Handling lets you create additional rules for your extension. For example when you may be away on holiday, you may want to treat incoming calls differently. You can set up an advanced rule based on:</p>
+                <ul style="color:#333333;padding-left:17px;padding-top:5px">
+                    <li>Date and/or time of call,</li>
+                    <li>Caller ID,</li>
+                    <li>or the number called.</li>
+                </ul>
+            
+            <br/>
+            <p>These rules override your regular call-handling rules.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=Oz3lgF8SSqA" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+             
+                <img title="RingCentral Office - Advanced Call Handling for Users" alt="RingCentral Office - Advanced Call Handling for Users" 
+                src="http://i1.ytimg.com/vi/Oz3lgF8SSqA/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=Oz3lgF8SSqA?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Call Handling for Users">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=Oz3lgF8SSqA?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Call Handling for Users">RingCentral Office - Advanced Call Handling for Users&raquo;</a> </div>
+              </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_19" class="more">Messages &amp; Notifications</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5009?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3274%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up
+            ">How to add a custom rule in your extension</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5005?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dadvanced%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20access%20the%20advanced%20call%20handling%20feature
+            ">How to access the advanced call handling feature</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5049?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3606%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20weekly%20schedule
+            ">How to set a rule based on time of day or date range with a weekly schedule</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5047?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3609%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20a%20called%20number
+            ">How to set a rule based on a called number</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4962?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3608%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20an%20incoming%20caller%20ID
+            ">How to set a rule based on an incoming caller ID</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5047?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3609%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20a%20called%20number
+            ">How to set a rule based on a called number</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5049?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3606%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20weekly%20schedule
+            ">How to set a rule based on time of day or date range with a weekly schedule</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5129?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dblock%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20the%20Blocked%20Number%20settings%20of%20your%20extension
+            ">How to edit the Blocked Number settings of your extension</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+            
+            <img title="RingCentral Office - Set up Call Forwarding as an Administrator" alt="RingCentral Office - Set up Call Forwarding as an Administrator" 
+            src="http://i1.ytimg.com/vi/2eswqVR4aos/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=2eswqVR4aos?rel=0" rel="prettyPhoto" title="RingCentral Office - Set up Call Forwarding as an Administrator">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Set up Call Forwarding as an Administrator</span></li>
+          
+          <li>
+            
+            <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+            src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Notifications</span></li>
+          
+          <li>
+            
+                <img title="RingCentral - User Overview" alt="RingCentral - User Overview" 
+                src="http://i1.ytimg.com/vi/D2uWgyTzD8Y/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=D2uWgyTzD8Y?rel=0" rel="prettyPhoto" title="RingCentral - User Overview">    
+            <p class="play-video"></p>
+            </a><span>RingCentral - User Overview</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,153 @@
+<apex:component >
+<style>
+  .settinganchor{
+    //text-decoration: underline;
+    color:#f8981d;
+  }
+</style>
+<section class="lc-page">
+      <div class="left-container">
+        <!--<div id="BreadCrumb" style="padding-bottom: 10px;">
+             <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">Setting</a> &gt; 
+             <span class="breadcrumblink">User Settings</span>
+         </div>
+        --><article>
+          <h4>User Settings</h4> 
+          <div class="video-desc"> 
+            <p>What is a user? Every person that makes or receives call is a user. This section is for RingCentral Users or Administrators who are setting up user details.</p>
+            <br/>
+            <p style="line-height:normal !important"><!--
+                Administrators and department managers can:   
+                <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_15" class="settinganchor">Set up business hours</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_16">set greetings &amp; hold music</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_17">set call handling &amp; forwarding</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_18">set advanced call handling</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_19">set messages &amp; notifications</a>
+                and <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_20">set Caller ID</a>.-->
+                
+                <table style="width:340px">
+                    <tr>
+                        <td nowrap="nowrap" style="vertical-align:top;">
+                            <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_15" class="settinganchor">Set up business hours</a>
+                        </td>
+                        <td nowrap="nowrap" style="vertical-align:top;">
+                            <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_16">Set greetings &amp; hold music</a>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td nowrap="nowrap" style="vertical-align:top;">
+                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_17">Set call handling &amp; forwarding</a>
+                      </td>
+                      <td nowrap="nowrap" style="vertical-align:top;">
+                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_18">Set advanced call handling</a>
+                      </td>
+                    </tr>
+                    <tr>
+                       <td nowrap="nowrap" style="vertical-align:top;">
+                          <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_19">Set messages &amp; notifications</a>
+                       </td>
+                       <td nowrap="nowrap" style="vertical-align:top;">
+                            <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_20">Set Caller ID</a>
+                       </td>
+                    </tr>
+                 </table>
+                 
+                </p>
+                <br/>
+                <!--<br/>
+                -->
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=_CEqk7RFXP4" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+            <!--<img title="User Settings" alt="User Settings" 
+            src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg"  />
+            <a href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Settings">
+            <p class="play-video"></p>
+            </a><span>RingCentral – User Settings</span>
+            -->
+            
+            <img title="User Settings" alt="User Settings" 
+                src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg"  />
+              <a class="article-video" href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Settings"> 
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Settings">User Settings&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> 
+        <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_15" class="more">Set Up Business Hours</a>
+            <p style="line-height:normal !important;margin-top:30px;">Other Settings Sections:  
+                    <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="settinganchor">Company Settings</a>, 
+                    <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="settinganchor">Department Settings</a>
+            </p> 
+        </div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Users-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DUsers%2BOverview%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Users%20Overview
+            ">Users Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-your-Extension-s-Business-Hours-Rules-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3271%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extens
+            ">How to edit your extension's user hours rules</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-How-to-customize-your-extension-s-greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3913%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20customize%20your%20extension's%20greeting
+            ">How to customize your extension's greeting</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-your-Extension-s-Business-Hour-Voicemail-Greetings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dvoicemail%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20customize%20the%20user%20hours%20voicemail%20greeting%20of%20your%20extension
+            ">How to customize the user hours voicemail greeting of your extension</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Call-Handling-Forwarding-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3470%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Handling%20&%20Forwarding%20Overview
+            ">Call Handling &amp; Forwarding Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Adding-Extensions-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dadd%2Buser%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20add%20multiple%20extensions%20to%252
+            ">How to add multiple extensions to your RingCentral account</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Setting-up-your-Extension-s-Custom-Rule-Advanced-Options-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3274%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up
+            ">How to add a custom rule in your extension</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-your-Extension-s-Notification-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3613%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extension's%2
+            ">How to change your extension's Notification settings</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-your-Extension-s-Call-Information-via-Web-2013?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D2%26k%3Dcaller%2BID%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20Set%20up%20Incoming%20Call%20Information%20as%20an%20Extension%20User
+            ">How to Set up Incoming Call Information as an Extension User</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          
+            <img title="User Extensions Overview" alt="User Extensions Overview" 
+                src="http://i1.ytimg.com/vi/OuOxMNW3u8w/mqdefault.jpg"  />
+                <a href="http://www.youtube.com/watch?v=OuOxMNW3u8w?rel=0" rel="prettyPhoto" title="User Extensions Overview">
+            <p class="play-video"></p>
+            </a><span>User Extensions Overview</span></li>
+          <li>
+              <img title="Adding User Overview" alt="Adding User Overview" 
+            src="http://i1.ytimg.com/vi/FJr0_wy3nzA/mqdefault.jpg"  />
+           <!--  <a href="http://www.youtube.com/watch?v=_CEqk7RFXP4?rel=0" rel="prettyPhoto" title="Adding User Overview"> -->
+			<a href="http://www.youtube.com/watch?v=FJr0_wy3nzA" rel="prettyPhoto" title="Adding User Overview">
+            <p class="play-video"></p>
+            </a><span>Adding User Overview</span>
+          <!-- 
+          <img title="User Settings" alt="User Settings" 
+            src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg"  />
+            <a href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Settings">
+            <p class="play-video"></p>
+            </a><span>RingCentral – User Settings</span>
+           --> 
+           </li>
+          
+          <li>
+          
+          <img title="Call Handling and Forwarding Overview" alt="Call Handling and Forwarding Overview" 
+            src="http://i1.ytimg.com/vi/P_0OQez67f0/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=P_0OQez67f0?rel=0" rel="prettyPhoto" title="Call Handling and Forwarding Overview">
+            <p class="play-video"></p>
+            </a><span>Call Handling and Forwarding Overview</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

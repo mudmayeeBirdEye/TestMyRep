@@ -1,0 +1,30 @@
+<apex:component >
+ <section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">RingOut</span>
+        </div>
+        <article>
+          <h4>RingOut</h4>
+          <div class="video-desc">
+            <p>RingOut enables one-touch calling from any phone or Internet-enabled computer, allowing you to make calls using your business caller ID from any location, such as a hotel room. The RingOut icon appears near the top of every online account page.</p>
+          </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_5" class="more">Call Flip</a></div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5050?retURL
+            ">How to set the SoftPhone to use RingOut</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5000?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DRingOut%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20use%20RingOut%20from%20your%20RingCentral%20online%20account
+            ">How to use RingOut from your RingCentral online account</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

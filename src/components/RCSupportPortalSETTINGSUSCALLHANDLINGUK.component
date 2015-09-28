@@ -1,0 +1,77 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+      <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink"> Call Handling </span>
+        </div>
+        <article>
+          <h4>Call Handling </h4>
+          <div class="video-desc">
+            <p>Call Handling lets you customize how you receive calls and how you want them delivered to you. </p>
+            <br/>
+            <p>Each user can set their own rules.  Add forwarding numbers and set calls to ring sequentially or simultaneously.</p>
+             <br/>
+            <p>For example, set both your mobile and IP desk phone to ring simultaneously so that you don’t miss a call.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=Ly0syiFtLvs" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div> 
+            
+            <img title="RingCentral Office - Call Handling and Forwarding Overview" alt="RingCentral Office - Call Handling and Forwarding Overview" 
+                src="http://i1.ytimg.com/vi/Ly0syiFtLvs/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=Ly0syiFtLvs?rel=0" rel="prettyPhoto" title="RingCentral Office - Call Handling and Forwarding Overview">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=Ly0syiFtLvs?rel=0" rel="prettyPhoto" title="RingCentral Office - Call Handling and Forwarding Overview">RingCentral Office - Call Handling and Forwarding Overview&raquo;</a> </div>
+              </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_18" class="more">Advanced Call Handling</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4979?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3470%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Handling%20&%20Forwarding%20Overview
+            ">Call Handling &amp; Forwarding Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5027?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3271%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extens
+            ">How to edit your extension's user hours rules</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section><br/>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+            
+            <img title="RingCentral Office - Set up Call Forwarding as an Administrator" alt="RingCentral Office - Set up Call Forwarding as an Administrator" 
+                src="http://i1.ytimg.com/vi/2eswqVR4aos/mqdefault.jpg" />
+                <a href="http://www.youtube.com/watch?v=2eswqVR4aos?rel=0" rel="prettyPhoto" title="RingCentral Office - Set up Call Forwarding as an Administrator">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Set up Call Forwarding as an Administrator</span></li>
+          
+          <li>
+          <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+            src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Notifications</span></li>
+          
+          <li>
+          
+          <img title="RingCentral - User Overview" alt="RingCentral - User Overview" 
+            src="http://i1.ytimg.com/vi/D2uWgyTzD8Y/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=D2uWgyTzD8Y?rel=0" rel="prettyPhoto" title="RingCentral - User Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral - User Overview</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

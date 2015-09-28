@@ -1,0 +1,33 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Call Flip</span>
+        </div>
+        <article>
+          <h4>Call Flip</h4>
+          <div class="video-desc">
+            <p>Call Flip lets you transfer live conversations from one device to another quickly and easily.</p>
+            <br/>
+            <p>Flip a call from your IP desk phone to your mobile phone  when you need to leave the office or flip a mobile call to your home phone once you've finished your commute.</p>
+          </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_10" class="more">Reports</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Setting-up-your-Extension-s-Call-Flip-Options-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCall%2BFlip%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20up%20an%20extension%27s%20Call%20Flip
+            ">How to set up an extension's Call Flip</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Setting-up-an-Extension-s-Call-Flip-Options-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCall%2BFlip%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20up%20an%20extension%27s%20Call%20Flip%20options%20as%20an%20Administrator
+            ">How to set up an extension's Call Flip options as an Administrator</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

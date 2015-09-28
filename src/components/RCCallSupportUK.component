@@ -1,0 +1,96 @@
+<apex:component controller="RCSupportControllerHandler">
+ <!--   <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> -->
+   
+   <c:RCSystemStatus Text="Call Support"/>
+  
+  <apex:form forceSSL="false">
+  
+ <!-- <apex:include pageName="RCSystemStatus"/>-->
+  <!-- <div class="status-area">
+        <div class="call-support">Call Support</div>
+        <apex:include pageName="RCSystemStatus"/>
+     </div> -->
+  
+ <div class="call-support-container">
+  <div class="call-support-area"> <span class="caller">&nbsp;</span> <span class="desc">For technical, billing and account questions</span> </div>
+  <div class="flag-area">
+    <div class="flag-top">If you have a critical issue affecting all users , or need assistance opening a case, please call us.
+      For other requests, please open a case online.</div>
+    <div class="flag-bottom">
+      <div class="flag-call-support US">
+        <!--<h5>1-888-898-4591 <span>(within the United States)</span></h5>-->
+        <h5><a href="callto:18888984591">1-888-898-4591</a><span>(within the United States)</span></h5>
+      </div>
+      <div class="flag-call-support canada">
+        <!--<h5>800-591-6543 <span>(within Canada)</span></h5>-->
+        <h5><a href="callto:8005916543">800-591-6543</a><span>(within Canada)</span></h5>
+      </div>
+      <!-- <div class="flag-call-support outside-US">
+        <h5>1-925-301-8209<span>(outside the United States)</span></h5>
+      </div>-->
+      <div class="flag-call-support UK">
+        <!--<h5>0800 014 8091<span>(within the United Kingdom)</span></h5>-->
+        <h5><a href="callto:08000148091">0800 014 8091</a><span>(within the United Kingdom)</span></h5>
+      </div>
+      
+      <div class="flag-call-support US1">
+        <!--<h5>1-925-301-8209<span>(outside the United States)</span></h5>-->
+        <h5><a href="callto:19253018209">1-925-301-8209</a><span>(outside the United States)</span></h5>
+      </div>
+      <div class="flag-call-support canada1">
+        <!--<h5>1-647-933-2820<span>(outside Canada)</span></h5>-->
+        <h5><a href="callto:16479332820">1-647-933-2820</a><span>(outside Canada)</span></h5>
+      </div>
+      <div class="flag-call-support UK1">
+        <!--<h5>+44 203 514 9006<span>(outside the United Kingdom)</span></h5>-->
+        <h5><a href="callto:+442035149006">+44 203 514 9006</a><span>(outside the United Kingdom)</span></h5>
+      </div>
+    </div>
+  </div>
+  <div class="call-info">
+   <!-- <p>When calling , please be prepared to provide your RingCentral Phone Number and Security Answer</p>
+    <p>Phone Support Hours:<span>>> To open a case anytime, 
+         <apex:commandLink action="{!openCase}" style="color:#f8981d">click here</apex:commandLink></span></p>
+    <p>Office 2+ user accounts : 24/7</p>
+    <p>Fax: Monday-Friday, 8am-9pm EST / 5am-6pm PST</p>
+    <p>Professional or Single User Office plans:</p>
+    <p>Monday-Friday, 8am-9pm EST / 5am- 6pm PST</p>-->
+    <p>To open a case anytime, <!--<apex:commandLink action="{!openCase}" style="color:#f8981d;">click here</apex:commandLink>-->
+    &nbsp;<apex:outputLink value="{!$Site.CurrentSiteUrl}RCSupportPortalCreateNewCase" id="theLink" style="color:#f8981d;">click here</apex:outputLink>.</p>
+    <br/>
+    <p>When calling, please be prepared to provide your RingCentral Phone Number and Security Answer.</p>
+    <br/>
+    <!-- <p>Phone Support Hours:</p>
+    <p>Office Accounts with 2 or more users:  24/7</p>
+    <p>Office Accounts with 1 user only:  Monday – Friday, 8am – 9pm EST / 5am – 6pm PST</p>
+    <p>Professional Accounts:  Monday – Friday, 8am – 9pm EST / 5am – 6pm PST</p>
+    <p>Fax:  Monday – Friday, 8am – 9pm EST / 5am – 6pm PST</p>-->
+   <!--  <p>*24/7 Customer Support for Office subscribers with 2 or more Users</p>
+    <p>Monday – Friday, 8am – 9pm EST / 5am – 6pm PST for Fax, Professional and Office subscribers with 1 User</p>
+    <p>Fax 500 or Professional Pro Subscribers should open a case at 
+    <a style="color:#f8981d;" href="http://success.ringcentral.com/RCContactSupp">http://success.ringcentral.com/RCContactSupp</a>
+    <apex:commandLink action="{!openCase}" style="color:#f8981d;margin-left:5px;">click here</apex:commandLink>. 
+    --><!--<a href="http://success.ringcentral.com/RCCallSupport" style="Color:#f8981d;">http://success.ringcentral.com/RCCallSupport</a>
+ </p> -->
+ <p>*24/7 Customer Phone Support available for Office customers with 2 or more Users</p>
+    <p>Phone Support Monday – Friday, 8am – 6pm UK for Professional^and Office customers with 1 User</p>
+    <p>Customers with Fax or ^Professional Pro plans should open a case at  
+    <apex:commandLink action="http://success.ringcentral.co.uk/RCContactSupp" style="color:#f8981d;margin-left:5px;">http://success.ringcentral.co.uk/RCContactSupp</apex:commandLink>. 
+    <!--<a href="http://success.ringcentral.com/RCCallSupport" style="Color:#f8981d;">http://success.ringcentral.com/RCCallSupport</a>
+  --></p>
+  </div>
+  </div>
+   <!--
+  <div class="social-media" style="position:fixed;">
+    <ul>
+      <li><a href="#" class="fb" alt="Facebook" title="Facebook">&nbsp;</a></li>
+      <li><a href="#" class="tw" alt="Twitter" title="Twitter">&nbsp;</a></li>
+      <li><a href="#" class="gplus" alt="Google Plus" title="Google Plus">&nbsp;</a></li>
+      <li><a href="#" class="in" alt="In.Com" title="In.Com"></a>&nbsp;</li>
+      <li><a href="#" class="email" alt="Email Media" title="Email Media"></a>&nbsp;</li>
+    </ul 
+  </div>-->
+    </apex:form>
+</apex:component>

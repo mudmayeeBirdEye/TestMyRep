@@ -1,0 +1,73 @@
+<apex:component controller="MultiSheetExcelController">
+<apex:attribute name="datamodel" type="DataModel" assignTo="{!dModel}" description="All sheet data for excel sheet to generate data"/>
+<apex:attribute name="author" type="string" default="RingCentral" description="Author Info"/>
+{!xmlheader}
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  
+  </DocumentProperties>
+  <ExcelWorkbook 
+     xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8535</WindowHeight>
+  <WindowWidth>12345</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>90</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+  </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+  <Alignment ss:Vertical="Bottom"/>
+  <Borders/>
+  <Font/>
+  <Interior/>
+  <NumberFormat/>
+  <Protection/>
+  </Style>
+  <Style ss:ID="s23">
+  <Font x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  </Styles>
+ <!--
+author        : www.aslambari.com
+date          : 26 May, 2011
+description   : Multi Sheet Excel Generator Component
+ -->
+ <apex:repeat value="{!dModel.data}" var="model">
+ <Worksheet ss:Name="{!model.sheetname}">
+  <Table ss:ExpandedColumnCount="{!model.headers.size}"  ss:ExpandedRowCount="{!model.data.size + 1}"
+  x:FullColumns="1" x:FullRows="1">
+  <Column ss:Index="{!model.headers.size}" ss:AutoFitWidth="0" ss:Width="154"/>
+  <Row ss:StyleID="s23">
+  <apex:repeat value="{!model.headers}" var="header">
+  <Cell><Data ss:Type="String">{!header}</Data></Cell>
+  </apex:repeat>
+  </Row>
+  
+  <apex:repeat value="{!model.data}" var="row">
+  <Row>
+  <apex:repeat value="{!model.headers}" var="header">
+  <Cell><Data ss:Type="String">{!row[header]}</Data></Cell>
+  </apex:repeat>
+  </Row>
+  </apex:repeat>
+  </Table>
+  <WorksheetOptions 
+     xmlns="urn:schemas-microsoft-com:office:excel">
+  <Print>
+  <ValidPrinterInfo/>
+  <HorizontalResolution>300</HorizontalResolution>
+  <VerticalResolution>300</VerticalResolution>
+  </Print>
+  <ProtectObjects>False</ProtectObjects>
+  <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  </Worksheet>
+  </apex:repeat>
+  </Workbook>
+  <apex:outputText value="{!endfile}" escape="false"/>
+</apex:component>

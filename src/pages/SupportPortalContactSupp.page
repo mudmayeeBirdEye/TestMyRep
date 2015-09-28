@@ -1,0 +1,419 @@
+<apex:page controller="SupportPortalControllerNew" showHeader="false"
+    cache="true" expires="{!cacheMaxAge}">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700'
+        rel='stylesheet' type='text/css' />
+
+    <link
+        href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/uniform.form.min.css')}"
+        type="text/css" rel="stylesheet" media="screen" />
+    <link
+        href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/style.css')}"
+        type="text/css" rel="stylesheet" media="screen" />
+    <apex:variable var="newUI" value="newSkinOn"
+        rendered="{!isArticleDetailsPage}">
+        <link type="text/css" rel="stylesheet"
+            href="/sCSS/29.0/sprites/1362621144000/Theme3/default/gc/extended.css"
+            class="user" />
+        <style> 
+ul li,ol li {
+    margin-left: 0;
+}
+</style>
+    </apex:variable>
+    <apex:variable var="change" value="update"
+        rendered="{!($CurrentPage.parameters.popup)=='true'}">
+        <style>
+header {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+.-area {
+    display: none;
+}
+
+.bg__wrapper {
+    display: none;
+}
+
+.-bar-footer {
+    display: none;
+}
+</style>
+    </apex:variable>
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery-1.8.2.js')}"></script>
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 
+
+'supportPortal/js/libs/uniform.form.min.js')}"></script>
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 
+
+'supportPortal/js/libs/jquery.pajinate.js')}"></script>
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 
+
+'supportPortal/js/libs/jquery.validate.min.js')}"></script>
+    <script
+        src="{!URLFOR($Resource.RCBlockUI, 'blockUI/js/jquery.blockUI.js')}"></script>
+    <style>
+.TextStyle {
+    font-style: italic !important;
+    color: #ababab !important;
+    font-weight: normal !important;
+    font-size: 13px !important;
+}
+
+.TextStyle2 {
+    /* font-weight: bold;
+  color:#000 !important;*/
+    
+}
+
+.-bar .input {
+    color: #000;
+    font-weight: bold;
+    font: 16px arial, sans-serif;
+    height: 20px;
+}
+
+.
+.gsc-input {
+    background: none !important;
+    border: 0 none;
+    color: #FFF;
+    font-size: 12px;
+    padding-right: 3px;
+    padding-top: 0;
+    left: 60px;
+    top: 5px;
+    width: 166px; //
+    background-image: none !important;
+}
+
+.bottom_menu .botmenu {
+    width: 630px;
+}
+
+#{
+display
+
+
+:none
+
+
+;
+}
+.gsc--button {
+    /*  display:none; */
+    
+}
+
+.{
+}
+.
+input {
+    float: left;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+
+.cse .gsc-control-cse,.gsc-control-cse {
+    padding: 0px !important;
+    background: none !important;
+    border: 0px !important;
+    width: 215px !important;
+}
+
+.menu .column {
+    width: 125px !important;
+}
+
+.breadcrumblink {
+    color: #666666;
+    font-weight: 300;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+}
+
+div.share {
+    display: none;
+}
+/*
+    .livechat_img:hover {
+        background-position: -310px -51px;
+    }
+    .livechat_img {
+        background: url('{!URLFOR($Resource.RCSupportPortal, "supportPortal/img/top_sprite.png")}') 
+
+no-repeat scroll -310px -20px transparent;
+        color: #333;
+        font-size: 13px;
+        height: 31px;
+        left: 387px;
+        padding: 0 0 0 3px;
+        position: absolute;
+        text-align: center;
+        top: 2px;
+        width: 104px;
+        z-index: 9999;
+        font-weight: bold;
+        line-height: 26px;
+        cursor: pointer;
+    }*/
+.blockOverlay {
+    z-index: 10000 !important;
+}
+
+.blockPage {
+    z-index: 10011 !important;
+}
+
+#LP_DIV_1371060597644 .lpchat-label {
+    color: #636565 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 7px 5px 5px 15px !important;
+    /*z-index:2 !important;*/
+    /*zIndex:2 !important;*/
+}
+/* #LP_DIV_1373654177472 .lpchat-label {
+        color: #636565 !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        margin: 0 !important;
+        padding: 7px 5px 5px 15px !important;
+        /*z-index:2 !important;*/
+/*zIndex:2 !important;*/
+/*}*/
+#LP_DIV_1374515731753 .lpchat-label {
+    color: #636565 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 7px 5px 5px 15px !important;
+    /*z-index:2 !important;*/
+    /*zIndex:2 !important;*/
+}
+
+/* .livechat_img {
+        background: url('{!URLFOR($Resource.RCSupportPortal, "supportPortal/img/top_sprite.png")}') 
+
+no-repeat scroll transparent;
+        background-position:-313px -18px !important;
+        color: #333333;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        height: 31px;
+        line-height: 26px;
+        padding: 0 0 0 3px;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 104px;
+    }
+    .livechat_img:hover {
+        background-position:-313px -49px !important;
+    }*/
+.overLay {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    /* IE 5-7 */
+    filter: alpha(opacity =   60);
+    /* Netscape */
+    -moz-opacity: 0.6;
+    /* Safari 1.x */
+    -khtml-opacity: 0.6;
+    /*cursor: wait;*/
+}
+</style>
+
+    <!--    <style>
+.contact-support-container article.app {
+    padding: 2px !important;
+}
+
+.contact-support-container .img-container.chat_support {
+    background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+        icon_2.png ')}') 34px 10px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+/* .contact-support-container .img-container.case2 {
+    background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/img/icon_1.png ')}') 26px 
+
+0px no-repeat;
+    display: block;
+    width: 50px;
+} */
+
+.contact-support-container .img-container.call_support2 {
+    background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+        icon_3.png ')}') 29px 5px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+.contact-support-container .img-container.community2 {
+    background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+        icon_4.png ')}') 48px 0px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+.newapp {
+    height: 100px !important;
+    width: 200px !important;
+}
+
+.opencase {
+    height: 100px !important;
+    width: 200px !important;
+}
+
+.contact-support-container .container-desc h3 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+.chat-content {
+    width: 240px;
+    float: left;
+}
+</style>
+    <Style>
+.Chat_OfflineMsg {
+    background: url('{!URLFOR($Resource.RCSupportPortal, ' supportPortal/ img/
+        icon_2.png ')}') no-repeat scroll transparent;
+    display: block;
+    height: 200px;
+    float: right;
+    width: 200px;
+    position: absolute;
+    margin-left: 260px;
+}
+
+.link_set {
+    color: #4541E3;
+    cursor: pointer;
+    margin-top: 125px;
+    position: absolute;
+    margin-left: 22px;
+}
+
+.caseStatus-button {
+    margin-left: -21px;
+    width: 220px;
+}
+</Style>
+    <style>
+ul li,ol li {
+    margin-left: 0;
+}
+
+.menu .column {
+    width: 125px !important;
+}
+
+.supportPhoneNo {
+    font-weight: bold;
+    color: #658DA6;
+}
+
+.box_tab {
+    width: auto;
+}
+
+.box_tab .info_line {
+    width: auto;
+    width: 300px !important;
+    margin: 45px 443px 15px 0px !important;
+}
+
+.main_center {
+    width: auto;
+}
+
+.main_right {
+    width: 170px !important;
+    /*text-align:right !important;*/
+}
+
+.main_center h2 {
+    font-family: Helvetica;
+    color: #4B4B4B;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 3px -1px 0px;
+    text-shadow: none;
+}
+
+.contactSupportP {
+    color: #095183 !important;
+    font-family: Helvetica !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    padding-left: 20px !important;
+    font-weight: bold !important;
+    padding: 0px !important;
+}
+</style>
+ -->
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="content">
+            <apex:outputPanel layout="block">
+                <BR />
+                <BR />
+                <div class="tab_content">
+                    <div class="box_tab visible">
+                        <div class="info_line">
+
+
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Support</h2>
+                            <table width="70%"
+                                style="font-size: 11pt; lfont-weight: normal; margin-left: 6%;">
+                                <TR>
+                                    <TD width="100%">
+                                        <TABLE width="100%">
+                                            <TR>
+                                                <TD colspan="3" width='360px' style="padding-bottom: 5px;">
+
+
+                                                    <p class="contactSupportP">Customer care</p>
+
+
+                                                    <p style="padding-left: 8px; font-size: 12px;">
+
+                                                        24 hours a day, 7 days a week <b>0800-389-0598</b>
+
+
+                                                    </p>
+                                                </TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                            </table>
+                            <div
+                                style="border: 0px dotted; border-top: 1px dotted; margin-bottom: 5px; margin-right: 5px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <c:supportportalcontactsuppus />
+                <!-- <c:SupportPortalCaseView /> -->
+                <apex:include pageName="SupportPortalCaseCreate" />
+            </apex:outputPanel>
+
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,67 @@
+<apex:component >
+<style>
+    .suggestion {
+        float:none !important;
+    }
+</style>
+<section class="lc-page">
+      <div class="left-container">
+        <article>
+          <h4>Mobile Apps</h4>
+          <div class="video-desc">
+            <p>Take RingCentral everywhere you go.</p>
+            <br/>
+            <p>Configure and manage your settings from a smartphone and perform virtually all the same functions available through the web browser interface.</p>
+            <br/>
+          <!--   <p>The iPhone and Android mobile app comes with Business SMS beta. You can use your RingCentral number to send and receive texts with customers, colleagues, and even departments.</p> 
+            <br/>-->
+            <p>To download the RingCentral app, visit the 
+            <a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016" class="more">iTunes</a> or 
+            <a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016" class="more">Android</a> app stores. Once installed, you can log in using your RingCentral number and password.</p>
+            <p><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016" class="more">Download for iPhone&raquo;</a></p>
+            <p><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016" class="more">Download for Android&raquo;</a></p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=2dC0pkJ35M0" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+            
+            <img title="Smartphone Apps Overview" alt="Smartphone Apps Overview" 
+                src="http://i1.ytimg.com/vi/2dC0pkJ35M0/mqdefault.jpg" style="width: 280px;" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=2dC0pkJ35M0?rel=0" rel="prettyPhoto" title="Smartphone Apps Overview">
+              <p class="play-video"></p>
+              </a> 
+              <a href="http://www.youtube.com/watch?v=2dC0pkJ35M0?rel=0" rel="prettyPhoto" title="Smartphone Apps Overview" class="overview-call" >Smartphone Apps Overview&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=SoftPhone_0" class="more">Softphone</a>
+        </div>
+        <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+            <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_softphone_apps" 
+                target="_blank" class="more">
+                Learn more in the Community
+            </a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dsmartphone%2Bapps%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20download%20the%20RingCentral%20mobile%20app">How to download the RingCentral mobile app</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5029?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D4044%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20enable%20Mobile%20VoIP%20calling%20on%20iOS">How to enable mobile VoIP calling on iOS devices</a></li>
+        <!--    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5041?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3625%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20t">How to send an SMS (Text Messages) using your RingCentral Mobile App for iOS</a></li> 
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5042?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3626%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20an%20SMS%20to%">How to send an SMS to your department for Android</a></li> -->
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5028?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D4045%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20enable%20Mobile%20VoIP%20calling%20on%20Android">How to enable mobile VoIP calling on Android devices</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4977?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D4046%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20a%20Personal%20Contact%20via%20iOS">Adding a Personal Contact via iOS</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4975?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D4047%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20a%20Personal%20Contact%20via%20Android">Adding a Personal Contact via Android</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+     <c:RCVideoSupport />
+</apex:component>

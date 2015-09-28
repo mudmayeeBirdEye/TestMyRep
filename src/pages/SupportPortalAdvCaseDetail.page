@@ -1,0 +1,828 @@
+<apex:page standardController="Case"
+    extensions="SupportPortalAdvCaseDetail" showHeader="false"
+    sidebar="false" action="{!getCaseDetail}" docType="html-5.0"
+    standardStylesheets="false" id="page1" cache="false">
+    <apex:composition template="{!$Site.Template}">
+        <!--  <apex:define name="content" > -->
+        <apex:define name="casecontent">
+
+            <link href='https://fonts.googleapis.com/?family=Lato:300,400,700'
+                rel='stylesheet' type='text/css' />
+
+            <link
+                href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/uniform.form.min.css')}"
+                type="text/css" rel="stylesheet" media="screen" />
+            <link
+                href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/styleForCase.css')}"
+                type="text/css" rel="stylesheet" media="screen" />
+
+            <!-- <apex:variable var="newUI" value="newSkinOn"   rendered="{!isArticleDetailsPage}">
+        <link type="text/css" rel="stylesheet" href="/s/29.0/sprites/1362621144000/Theme3/default/gc/extended." class="user"/>
+        <style>ul li, ol li{margin-left:0;}</style>
+</apex:variable>
+<apex:variable var="change" value="update" rendered="{!($CurrentPage.parameters.popup)=='true'}">
+ <style>
+ header{
+   display:none;
+ }
+ footer{
+  display:none;
+ }
+ .search-area{display:none;}
+  .bg_search_wrapper{display:none;}
+  .search-bar-footer{display:none;}
+  </style>
+</apex:variable> -->
+            <style>
+
+/*     input[type="submit"], button {
+    background: url("../img/button_ask_community.png") no-repeat scroll 0px 0px transparent !important;
+    border: 0px none !important;
+    cursor: none !important;
+    height: 0px !important;
+    text-indent: none !important;
+} */
+.blueBg {
+    background: #C5C5C5;
+}
+
+.main_center2 {
+    width: 777px !important;
+    float: left !important;
+    margin-top: -37px !important;
+    margin-left: -28px !important;
+}
+
+.searchTextStyle {
+    font-style: italic !important;
+    color: #ababab !important;
+    font-weight: normal !important;
+    font-size: 13px !important;
+}
+
+.searchTextStyle2 {
+    /* font-weight: bold;
+  color:#000 !important;*/
+    
+}
+
+.search-bar .input {
+    color: #000;
+    font-weight: bold;
+    font: 16px arial, sans-serif;
+    height: 20px;
+}
+
+.search .gsc-input {
+    background: none !important;
+    border: 0 none;
+    color: #FFF;
+    font-size: 12px;
+    padding-right: 3px;
+    padding-top: 0;
+    left: 60px;
+    top: 5px;
+    width: 166px; //
+    background-image: none !important;
+}
+
+.bottom_menu .botmenu {
+    width: 630px;
+}
+
+.submit-case {
+    padding: 21px !important;
+}
+
+#search {
+    display: none;
+}
+
+.gsc-search-button {
+    display: none;
+}
+
+.search {
+    
+}
+
+.search input {
+    float: left;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+
+.cse .gsc-control-cse,.gsc-control-cse {
+    padding: 0px !important;
+    background: none !important;
+    border: 0px !important;
+    width: 215px !important;
+}
+
+.menu .column {
+    width: 125px !important;
+}
+
+.breadcrumblink {
+    color: #666666;
+    font-weight: 300;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+}
+
+div.share {
+    display: none;
+}
+/*
+    .livechat_img:hover {
+        background-position: -310px -51px;
+    }
+    .livechat_img {
+        background: url('{!URLFOR($Resource.RCSupportPortal, "supportPortal/img/top_sprite.png")}') no-repeat scroll -310px -20px transparent;
+        color: #333;
+        font-size: 13px;
+        height: 31px;
+        left: 387px;
+        padding: 0 0 0 3px;
+        position: absolute;
+        text-align: center;
+        top: 2px;
+        width: 104px;
+        z-index: 9999;
+        font-weight: bold;
+        line-height: 26px;
+        cursor: pointer;
+    }*/
+.form-new-case {
+    padding: 41px 25px 25px 25px !important;
+    overflow: hidden;
+}
+
+.blockOverlay {
+    z-index: 10000 !important;
+}
+
+.blockPage {
+    z-index: 10011 !important;
+}
+
+#LP_DIV_1371060597644 .lpchat-label {
+    color: #636565 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 7px 5px 5px 15px !important;
+    /*z-index:2 !important;*/
+    /*zIndex:2 !important;*/
+}
+/* #LP_DIV_1373654177472 .lpchat-label {
+        color: #636565 !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        margin: 0 !important;
+        padding: 7px 5px 5px 15px !important;
+        /*z-index:2 !important;*/
+/*zIndex:2 !important;*/
+/*}*/
+#LP_DIV_1374515731753 .lpchat-label {
+    color: #636565 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 7px 5px 5px 15px !important;
+    /*z-index:2 !important;*/
+    /*zIndex:2 !important;*/
+}
+
+/* .livechat_img {
+        background: url('{!URLFOR($Resource.RCSupportPortal, "supportPortal/img/top_sprite.png")}') no-repeat scroll transparent;
+        background-position:-313px -18px !important;
+        color: #333333;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        height: 31px;
+        line-height: 26px;
+        padding: 0 0 0 3px;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 104px;
+    }
+    .livechat_img:hover {
+        background-position:-313px -49px !important;
+    }*/
+.overLay {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    /* IE 5-7 */
+    filter: alpha(opacity =           60);
+    /* Netscape */
+    -moz-opacity: 0.6;
+    /* Safari 1.x */
+    -khtml-opacity: 0.6;
+    /*cursor: wait;*/
+}
+</style>
+
+            <script
+                src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery.validate.min.js')}"></script>
+
+            <!--<apex:includeScript value="{!URLFOR($Resource.jquery, 'js/jquery-1.4.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.RCBlockUI, 'blockUI/js/jquery.blockUI.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jquery_min, 'jquery_ui_min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JqueryUI, '/jQueryUI/js/jquery-1.5.1.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JqueryUI, '/jQueryUI/js/jquery-ui-1.8.14.custom.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JqueryUI, '/jQueryUI/css/ui-lightness/jquery-ui-1.8.14.custom.css')}" />-->
+            <!-- <apex:includescript value="https://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.min.js" />  -->
+            <link
+                href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/css/jqueryValidation.css')}"
+                type="text/css" rel="stylesheet" media="screen" />
+            <apex:form id="form1" styleclass="form-new-case">
+                <style>
+.divmid {
+    width: 100%;
+    margin: auto;
+    background-color: lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+}
+
+.header {
+    background: #E3F3FF !important;
+    height: 25px;
+    text-align: center;
+    border: none !important;
+    border-bottom: 1px solid #DBDBDB !important;
+    /*border-bottom:1px solid #DBDBDB !important;
+            border-right:1px solid #DBDBDB !important;*/
+}
+
+.rowData {
+    height: 25px; //
+    text-align: center;
+    padding-left: 10px;
+    border: none !important;
+    padding-bottom: 10px;
+    /*border-bottom:1px solid #DBDBDB !important;
+            border-right:1px solid #DBDBDB !important;*/
+}
+
+#overlay {
+    background: no-repeat scroll top center gray;
+    border: 0px solid #000000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+    height: 1000px;
+}
+
+dl .new-case-list {
+    margin-top: 0px !important;
+}
+
+.new-case-list {
+    display: block !important;
+}
+
+.save-comment {
+    display: inline-block;
+    background: #999;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    behavior:
+        url(resource/1361463810000/RCSupportPortal/supportPortal/PIE.htc);
+    margin-left: 5px;
+}
+
+.cancel-comment {
+    display: inline-block;
+    background: #999;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    behavior:
+        url(resource/1361463810000/RCSupportPortal/supportPortal/PIE.htc);
+    margin-left: 5px;
+}
+
+.form-new-case .primary-btn {
+    margin-left: 0px !important;
+    position: inherit !important;
+}
+
+#backtocases { //
+    line-height: 51px; //
+    float: left;
+    font-weight: 300;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #5d6067;
+    padding-top: 10px
+}
+
+.SubmittedText {
+    float: left;
+    font-weight: 300;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: #5d6067;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.wrapped {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -hp-pre-wrap;
+    word-wrap: break-word;
+    width: 420px;
+}
+
+dl.detail dt,dl.detail-asst dt {
+    width: 235px !important;
+}
+
+dl.detail dd,dl.detail-asst dd {
+    width: 470px !important;
+}
+</style>
+                <script>
+                    function showOverlay() {
+                        var o = document.getElementById('overlay');
+                        o.style.visibility = 'visible';
+                    }
+
+                    function hideOverlay() {
+                        var o = document.getElementById('overlay');
+                        o.style.visibility = 'hidden';
+                    }
+                    var stage = '{!$CurrentPage.parameters.IsView}';
+                    try {
+                        if (stage != null && stage != undefined
+                                && stage == 'true') {
+                            var cookieValue = getCookie("caseId");
+                            var caseId = '{!caseDetailObj.Id}';
+                            if (cookieValue == "" || cookieValue == null
+                                    || cookieValue == undefined
+                                    || cookieValue.indexOf(caseId) == -1) {
+                                s.evar36 = '{!caseDetailObj.Product_Assistance__c}';
+                                s.evar37 = '{!caseDetailObj.Product_Assistance_Lvl2__c}';
+                                s.evar38 = '{!caseDetailObj.Product_Assistance_Lvl3__c}';
+                                s.evar39 = '{!caseDetailObj.subject}';
+                                s.events = "event25,event22";
+                                try {
+                                    setCookie('caseId', caseId, 2 * 365);
+                                } catch (y) {
+                                }
+                                s.t();
+                            }
+                        }
+                    } catch (x) {
+                    }
+
+                    function setCookie(cname, cvalue, exdays) {
+                        try {
+                            var d = new Date();
+                            d.setTime(d.getTime()
+                                    + (exdays * 24 * 60 * 60 * 1000));
+                            var expires = "expires=" + d.toGMTString();
+                            document.cookie = cname + "=" + cvalue + "; "
+                                    + expires;
+                        } catch (x) {
+                        }
+                    }
+                    function getCookie(cname) {
+                        try {
+                            var name = cname + "=";
+                            var ca = document.cookie.split(';');
+                            for ( var i = 0; i < ca.length; i++) {
+                                var c = ca[i].trim();
+                                if (c.indexOf(name) == 0)
+                                    return c.substring(name.length, c.length);
+                            }
+                        } catch (x) {
+                        }
+                        return "";
+                    }
+                </script>
+                <apex:pageMessages />
+                <div class="status-area">
+                    <apex:outputPanel >
+                        <div id="backtocases">
+                            &lt; &nbsp;
+                            <apex:outPutLink value="{!$Site.CurrentSiteUrl}SupportPortalContact">Back to My Cases</apex:outPutLink>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!if($CurrentPage.parameters.IsView=='true',true,false)}">
+                        <div class="call-support">Case Submitted</div>
+                    </apex:outputPanel>
+                    <div class="user-login" style="padding-right: 30px;">
+                        <!--  <ul>
+                <li><a href="#">{!$User.FirstName}&nbsp;{!$User.LastName}</a></li>
+                <li class="sep">|</li>
+                <li><a href="#"><apex:outputLink value="{!$Site.CurrentSiteUrl}secur/logout.jsp" id="theLink" rendered="{!!if(CONTAINS
+
+($User.LastName,'Guest'),true,false)}">
+                        Logout
+                    </apex:outputLink></a></li>
+              </ul> -->
+                    </div>
+                    <apex:outputPanel rendered="{!if($CurrentPage.parameters.IsView=='true',true,false)}">
+                        <div class="SubmittedText" style="width: 100%;">
+                            <!--<p>Your Case has been submitted. You will receive a response within 2 Business Days.</p>
+              -->
+                            <!-- {!strTimeMessage} -->
+                            Your Case has been submitted.
+                            <!-- <p>Your case has been submitted. You will receive a response within &nbsp; -->
+                            <!--  <apex:outputText value="{!if(contains(caseDetailObj.Case_Severity__c,'Urgent'),'1 hour.','')}"></apex:outputText>  -->
+                            <!--  <apex:outputText value="{!if(contains(caseDetailObj.Case_Severity__c,'High'),'4 hours.','')}"></apex:outputText> -->
+                            <!--  <apex:outputText value="{!if(contains(caseDetailObj.Case_Severity__c,'Medium'),'8 hours.','')}"></apex:outputText>-->
+                            <!--  </p>  -->
+                        </div>
+                    </apex:outputPanel>
+                </div>
+
+                <div class="details">
+                    <p>Case Details</p>
+                    <!--<div class="rgt-align">
+              <p class="service">Your Service Level : Premium</p>
+              <p style="padding-right: 15px;">Response Time : 2 Business Days</p>
+            </div>
+          -->
+                </div>
+                <apex:outputPanel id="errorMsg1"
+                    rendered="{!toShowCommentErrorMessage}">
+                    <table Class="centerAlign"
+                        style="width: 100%; margin-bottom: 5px; background-color: linear-gradient(#FFF, #e9eaee); font-family: TRebuchet MS; font-weight: bold; border: 1px solid #e5e5e5; -moz-border-radius: 9px 9px 9px 9px; border-radius: 9px 9px 9px 9px; vertical-align: middle;">
+                        <tr>
+                            <td
+                                style="vertical-align: middle; width: 30px; text-align: center;">
+                                <apex:image value="/img/msg_icons/info24.png" width="30px"
+                                    height="28px" style="padding:5px" />
+                            </td>
+                            <td
+                                style="vertical-align: middle; padding-bottom: 5px; padding-top: 5px; text-align: left;">
+                                <apex:outputText style="padding:5px;color: red;" escape="false"
+                                    value="{!errorMessage}" />
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+                <div class="submit-case">
+                    <dl class="detail">
+                        <dt>Name :</dt>
+                        <dd>{!$User.FirstName} {!$User.LastName}&nbsp;</dd>
+                        <dt>Account Name:</dt>
+                        <dd>{!caseDetailObj.Account.Name}</dd>
+                        <dt>Case Status :</dt>
+                        <dd>{!caseDetailObj.status}</dd>
+                        <dt>Case Number:</dt>
+                        <dd>{!caseDetailObj.CaseNumber}</dd>
+                        <dt>Created Time/Date:</dt>
+                        <dd>{!strFormatDate}</dd>
+                    </dl>
+                    <dl class="detail-asst"
+                        style="if (isCaseInClosedStatus,'border-bottom: 1px solid #ccc; ',' border-bottom: none !important')">
+                        <apex:outputPanel rendered="{!toShowDispositionWebCase}">
+                            <apex:outPutPanel rendered="{!!ISBLANK(caseDetailObj.Product_Assistance__c)}">
+                                <dt>Support Case Disposition Level 1</dt>
+                                <dd>{!caseDetailObj.Product_Assistance__c}&nbsp;</dd>
+                            </apex:outPutPanel>
+                            <apex:outPutPanel rendered="{!!ISBLANK(caseDetailObj.Product_Assistance_Lvl2__c)}">
+                                <dt>Support Case Disposition Level 2</dt>
+                                <dd>{!caseDetailObj.Product_Assistance_Lvl2__c}&nbsp;</dd>
+                            </apex:outPutPanel>
+                            <apex:outPutPanel rendered="{!!ISBLANK(caseDetailObj.Product_Assistance_Lvl3__c)}">
+                                <dt>Support Case Disposition Level 3</dt>
+                                <dd>{!caseDetailObj.Product_Assistance_Lvl3__c}&nbsp;</dd>
+                            </apex:outPutPanel>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!!toShowDispositionWebCase}">
+                            <apex:outPutPanel rendered="{!!ISBLANK(caseDetailObj.Support_Disposition_Level_1__c)}">
+                                <dt>Support Case Disposition Level 1</dt>
+                                <dd>{!caseDetailObj.Support_Disposition_Level_1__c}&nbsp;</dd>
+                            </apex:outPutPanel>
+                            <apex:outPutPanel rendered="{!!ISBLANK(caseDetailObj.Support_Disposition_Level_2__c)}">
+                                <dt>Support Case Disposition Level 2</dt>
+                                <dd>{!caseDetailObj.Support_Disposition_Level_2__c}&nbsp;</dd>
+                            </apex:outPutPanel>
+                        </apex:outputPanel>
+                        <dt>Severity Level :</dt>
+                        <dd>{!caseDetailObj.Case_Severity__c}&nbsp;</dd>
+                        <dt>Subject:</dt>
+                        <dd>{!caseDetailObj.subject}&nbsp;</dd>
+                        <dt>Description:</dt>
+                        <dd style="width: 451px !important; white-space: pre-wrap;">{!caseDetailObj.Description}&nbsp;</dd>
+                        <dt>File attached:</dt>
+                        <dd style="width: 451px !important;"></dd>
+                        <dt style="margin-left: -215px;"></dt>
+                        <dd style="width: 700px !important;">
+                            <apex:outputPanel id="attachFilePnale">
+                                <apex:outputPanel id="attachFile"
+                                    rendered="{!!toShowAttachmentLinks}">
+                         None  &nbsp;&nbsp; 
+                         <div class="file-upload">
+                                <apex:outputPanel rendered="{!!if(isCaseInClosedStatus,true,false)}">
+                                            <apex:outputPanel >
+                                                <apex:inputFile value="{!attachment.body}"
+                                                    filename="{!attachment.name}" fileSize="{!fileSize}"
+                                                    id="file" style="width: 240px;margin-left: 247px;" />
+                                        </apex:outputPanel>
+                                            
+                                            <div class="upload" style="margin-left: 4px;vertical-align: 5px;">Upto 5MB</div>
+                                            <apex:CommandLink value="Upload" styleclass="cancel-comment"
+                                                action="{!attachFile}" />
+                                            <apex:OutputPanel rendered="{!toShowErrorMessage}">
+                                                <span style="color: Red">{!errorMessage}</span>
+                                            </apex:OutputPanel>
+                                </apex:outputPanel>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel id="attachlinks"
+                                    rendered="{!toShowAttachmentLinks}">
+                                    <table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                        <tbody>
+                                            <apex:variable value="{!1}" var="rowNum1" />
+                                            <apex:repeat value="{!caseDetailObj.Attachments}"
+                                                var="caseAttachObj">
+                                                <tr style="height: 10px;">
+                                                    <td style="width: auto; vertical-align: top; width: 100px;">
+                                                        <div style="word-wrap: break-word; width: 337px">
+                                                            <apex:outputLink target="_blank"
+                                                                value="/servlet/servlet.FileDownload?file={!caseAttachObj.Id}">{!caseAttachObj.Name}
+                                            </apex:outputLink>
+                                                        </div>
+                                                    </td>
+                                                    <td
+                                                        style="text-align: left; vertical-align: top; width: 100px;">
+                                                        <div style="word-wrap: break-word; width: 100px">
+                                                            <apex:OutPutPanel rendered="{!if(rowNum1==1 && !isCaseInClosedStatus,true,false)}">
+                                                                <ol type="1"><li>
+                                                                <apex:inputFile value="{!attachment.body}"
+                                                                    styleclass="uniform" filename="{!attachment.name}"
+                                                                    fileSize="{!fileSize}" id="file"
+                                                                    style="margin-left: -101px; width: 200px;" />
+                                                                </li></ol>
+                                                            </apex:OutPutPanel>
+                                                        </div>
+                                                    </td>
+                                                    <td
+                                                        style="text-align: left; vertical-align: top; width: 100px;">
+                                                        <apex:OutPutPanel rendered="{!if(rowNum1==1 && !isCaseInClosedStatus,true,false)}">
+                                                            <div class="upload" style="margin-left: -18px;">Upto 5MB</div>
+                                                            <apex:CommandLink value="Upload"
+                                                                styleclass="cancel-comment" action="{!attachFile}">
+                                                            </apex:CommandLink>
+                                                        </apex:OutPutPanel>
+                                                    </td>
+                                                </tr>
+                                                <!-- <tr style="height: 40px;">
+                                                    <td style="width: auto; vertical-align: top; width: 100px;">
+                                                    </td>
+                                                    <td
+                                                        style="text-align: left; vertical-align: top; width: 100px;">
+                                                        <apex:OutputPanel
+                                                            rendered="{!toShowErrorMessage && if(rowNum1==1,true,false)}">
+                                                            <span style="color: Red">{!errorMessage}</span>
+                                                        </apex:OutputPanel>
+                                                    </td>
+                                                    <td style="width: auto; vertical-align: top; width: 100px;">
+                                                    </td>
+                                                </tr> -->
+                                                <apex:variable var="rowNum1" value="{!rowNum1 + 1}" />
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </dd>
+                        <dt>Case Comments:</dt>
+                        <dd style="width: 703px !important;">
+                            <apex:outputPanel id="CaseComment">
+                                <apex:outputPanel id="casecommentAdd"
+                                    rendered="{!!if(caseDetailObj.CaseComments.size>0,true,false)}">
+                        None &nbsp;&nbsp; 
+                    </apex:outputPanel>
+                                <apex:outputPanel id="casecommentViewAdd"
+                                    rendered="{!if(caseDetailObj.CaseComments.size>0,true,false)}">
+                                    <div class="new-case-list">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr class="greyBg" style="vertical-align: top;">
+                                                <th>Comment</th>
+                                                <th>Opened By</th>
+                                                <th>Time/Date Opened</th>
+                                            </tr>
+                                            <apex:variable value="{!1}" var="rowNum" />
+                                            <apex:repeat value="{!commentWrapperList}"
+                                                var="casecommentObjWr">
+                                                <!--
+                                {!rowNum}
+                                -->
+                                                <tr style="vertical-align: top;"
+                                                    class="{!if(MOD(rowNum,2) == 0,'whiteBg','blueBg')}">
+                                                    <td class="rowData" style="width: 60%;"><apex:outputText escape="false">
+                                                            <pre class='wrapped'>{!casecommentObjWr.commentBody} </pre>
+                                                        </apex:outputText></td>
+                                                    <td class="rowData" style="width: 20%;"><apex:outputText value="{!casecommentObjWr.openedBy}" /></td>
+                                                    <td class="rowData" style="width: 20%;"><apex:outputText value="{!casecommentObjWr.openeddateformat}" /></td>
+                                                </tr>
+                                                <apex:variable var="rowNum" value="{!rowNum + 1}" />
+                                            </apex:repeat>
+
+                                        </table>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!!isCaseInClosedStatus}">
+                                    <a href="#" id="addComment" class="add-comment"
+                                        onclick="showCommentDiv(); return false;">Add Comment</a>
+                                    <br />
+                                    <br />
+                                    <div id="caseComment" style="width: 100%">
+                                        <table style="width: 100%">
+
+                                            <tr>
+                                                <td><br /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 10%; vertical-align: top;">Comment</td>
+                                                <td><apex:inputTextarea id="newDesc"
+                                                        value="{!commentDesc}"
+                                                        style="width: 80%;height: 100px;resize: none;background: white;" />
+                                                    <div class="errorMsg"></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><br /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 10%; vertical-align: top;"></td>
+                                                <td><apex:commandLink styleclass="save-comment"
+                                                        value="Save" reRender="CaseComment"
+                                                        onclick="validateComment();return false;" id="SaveComment" />&nbsp;
+                                                    <apex:commandLink styleclass="cancel-comment"
+                                                        value="Cancel" onclick="hideCommentDiv(); return false;"
+                                                        id="CancelComment" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <script>
+                                        var commentSize = '{!caseDetailObj.CaseComments.size}';
+                                        if (commentSize != 0) {
+                                            $('.add-comment').addClass(
+                                                    'comment');
+                                        }
+
+                                        function hideCommentDiv() {
+                                            if (document
+                                                    .getElementById('{!$Component.page1:LC_Form:form1:newDesc}') != null) {
+                                                document
+                                                        .getElementById('{!$Component.page1:LC_Form:form1:newDesc}').value = '';
+                                            }
+                                            $("#caseComment").hide();
+                                            //alert(commentSize);
+                                            if (commentSize != 0) {
+                                                $('.add-comment').addClass(
+                                                        'comment');
+                                            }
+                                        }
+                                    </script>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </dd>
+                        <apex:outputPanel rendered="{!if(isCaseInClosedStatus && (!ISBlank(caseDetailObj.Resolution__c)),true,false)}">
+                            <dt>Resolution:</dt>
+                            <dd>
+                                <pre class='wrapped'>
+                         <apex:outputText escape="false"
+                                        value="{!caseDetailObj.Resolution__c}"> 
+                         </apex:outputText>
+                         </pre>
+                            </dd>
+                        </apex:outputPanel>
+                        <!-- <!-- <dt>&nbsp;</dt> -->
+                        <dd></dd>
+                    </dl>
+                    <apex:outputPanel rendered="{!if(isCaseInClosedStatus,true,false)}">
+                        <div class="btnContainer pr-270">
+                            <input1 type="submit" class="primary-btn fr"
+                                onclick="callClone();return false;" value="Duplicate Case"
+                                style="cursor:pointer;">Duplicate Case</input1>
+                        </div>
+                    </apex:outputPanel>
+                </div>
+                <div id="overlay" style="text-align: center;">
+                    <!-- padding-top:700px -->
+                    <apex:image value="{!$Resource.loading}"></apex:image>
+                </div>
+
+
+
+                <apex:actionFunction action="{!deleteAttachment}"
+                    status="Ajaxstatus" name="deleteAttachment"
+                    reRender="attachFilePnale">
+                    <apex:Param assignTo="{!deleteAttachId}" value="" name="attachId"></apex:Param>
+                </apex:actionFunction>
+                <apex:actionFunction action="{!addCaseComment}" status="Ajaxstatus"
+                    name="addComment">
+                </apex:actionFunction>
+                <apex:actionFunction action="{!sentToClone}" name="clone">
+                </apex:actionFunction>
+                <apex:actionStatus id="Ajaxstatus" onStart="showOverlay();"
+                    onstop="hideOverlay();" />
+            </apex:form>
+            <script>
+                $("#caseComment").hide();
+                $('[id$=newDesc]').focus();
+                /*var commentSize = '{!caseDetailObj.CaseComments.size}';
+                if(commentSize != 0) {
+                    $('.add-comment').addClass('comment');
+                } */
+
+                function showCommentDiv() {
+                    $("#caseComment").show();
+                    $('[id$=newDesc]').focus();
+
+                }
+
+                /*function hideCommentDiv() {
+                    if(document.getElementById('{!$Component.page1:LC_Form:form1:newDesc}') != null) {
+                        document.getElementById('{!$Component.page1:LC_Form:form1:newDesc}').value = '';
+                    }
+                    $( "#caseComment").hide();
+                    alert(commentSize);
+                    if(commentSize != 0) {
+                        $('.add-comment').addClass('comment');
+                    } 
+                }*/
+
+                function callClone() {
+                    clone();
+                }
+
+                function deleteAttach(attachId) {
+                    var attachDelConfirm = confirm("Are you sure you want to delete the selected attachment?");
+                    if (attachDelConfirm) {
+                        deleteAttachment(attachId);
+                    }
+                }
+            </script>
+            <script type="text/javascript">
+                function validateComment() {
+                    // alert('save');
+                    var isValid = $('[id$=newDesc]').valid();
+                    //   alert(isValid);
+                    if (isValid) {
+                        addComment();
+                    }
+                    return false;
+                }
+
+                $(document)
+                        .ready(
+                                function() {
+                                    $('.form-new-case')
+                                            .validate(
+                                                    {
+                                                        rules : {
+                                                            "{!$Component.form1:newDesc}" : "required"
+                                                        },
+                                                        messages : {
+                                                            "{!$Component.form1:newDesc}" : "Please enter the comment."
+
+                                                        },
+                                                        errorPlacement : function(
+                                                                error, element) {//alert(element.attr("name"));
+                                                            error
+                                                                    .appendTo(element
+                                                                            .next("div"));
+                                                        }
+                                                    });
+                                });
+            </script>
+
+        </apex:define>
+    </apex:composition>
+</apex:page>

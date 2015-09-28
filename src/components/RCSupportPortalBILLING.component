@@ -1,0 +1,60 @@
+<apex:component >
+ <section class="lc-page">
+      <div class="left-container">
+        <article>
+          <h4>Billing</h4>
+          <div class="video-desc">
+            <p>As an administrator of the account, manage and make changes to the Service Plan, Payment Method and permissions for International Calling in Billing.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=pS4q8BGuBw8" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+            
+            <img title="Billing Overview" alt="Billing Overview" 
+                src="http://i1.ytimg.com/vi/pS4q8BGuBw8/mqdefault.jpg "/>
+                <a class="article-video" href="http://www.youtube.com/watch?v=pS4q8BGuBw8?rel=0" rel="prettyPhoto" title="Billing Overview">
+              <p class="play-video"></p>
+              </a> 
+              <a href="http://www.youtube.com/watch?v=pS4q8BGuBw8?rel=0" rel="prettyPhoto" title="Billing Overview" class="overview-call">Billing Overview&raquo;</a>
+              </div>
+             </div>
+        </article><!--
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" 
+                class="more">Top Features</a>
+        </div>
+      -->
+      <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+                <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_billing" 
+                    target="_blank" class="more">
+                    Learn more in the Community
+                </a>
+            </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-View-or-Print-Billing-Statement?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3671%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20View%20or%20Print%20Billing%20Statement
+            ">How to View or Print Billing Statement</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Frequently-Asked-Questions-Billing?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dbilling%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Frequently%20Asked%20Questions:%20Billing
+            ">Frequently Asked Questions: Billing</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-check-my-minute-usage?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCheck%2BMinutes%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20check%20my%20minute%20usage
+            ">How to check my minute usage</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Enable-Disable-International-Calling-Feature?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dinternational%2Bcalling%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20u
+            ">How to set up the international calling feature as an Administrator</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Credit-Card-Authorization-Form-CCAF?retURL
+            ">Credit Card Authorization Form (CCAF)</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Change-Payment-Method-2013?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dupdate%2Bcredit%2Bcard%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20change%20Payment%20Method">
+            Update Credit Card Number</a></li>
+            
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,78 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Group Settings Overview</a> &gt; 
+                <span class="breadcrumblink">Add Call Queue Members</span>
+        </div>
+        <article>
+          <h4>Add Call Queue Members</h4>
+          <div class="video-desc">
+            <p>Administrators and call queue managers can easily add users in seconds, and effortlessly manage the entire call queue members list.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=cShIyB5l5uE" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+            
+            <img title="RingCentral Office - Adding Call Queue Members" alt="RingCentral Office - Adding Call Queue Members" 
+                src="http://i1.ytimg.com/vi/8ZeSWtG3S44/mqdefault.jpg" />
+                <a class="article-video" href="https://www.youtube.com/watch?v=8ZeSWtG3S44" rel="prettyPhoto" title="RingCentral Office - Adding Call Queue Members">
+              <p class="play-video"></p>
+              </a> 
+              <a href="https://www.youtube.com/watch?v=8ZeSWtG3S44" rel="prettyPhoto" title="RingCentral Office - Adding Call Queue Members" class="overview-call">RingCentral Office - Adding Call Queue Members&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_11" class="more">Call Handling &amp; Forwarding</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate gallery">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5011?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3505%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20add%20departments
+            ">How to add Call Queue</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5037?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3675%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20make%20a%20use
+            ">How to make a user extension the manager of a Call Queue</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5017?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3522%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20a%20department%27s%20info
+            ">How to edit a call queue's information</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5081?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Ddepartment%2Bmember%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20change%20the%20number%20of%20your%20department%20members
+            ">How to add/remove  Call Queue  members</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+            
+             <img title="RingCentral Office - Setting Up Call Queue Hours" alt="RingCentral Office - Setting Up Call Queue Hours" 
+             src="http://i1.ytimg.com/vi/DBPZB4mNCLY/mqdefault.jpg"  />
+             <a href="https://www.youtube.com/watch?v=DBPZB4mNCLY" rel="prettyPhoto" title="RingCentral Office - Setting Up Call Queue Hours">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Setting Up Call Queue Hours</span></li>
+            
+          <li>
+            
+            <img title="RingCentral Office - Call Handling for Call Queues" alt="RingCentral Office - Call Handling for Call Queues" 
+            src="http://i1.ytimg.com/vi/Gt1YwwlGESQ/mqdefault.jpg" />
+            <a href="https://www.youtube.com/watch?v=Gt1YwwlGESQ" rel="prettyPhoto" title="RingCentral Office - Call Handling for Call Queues">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Call Handling for Call Queues</span></li>
+            
+          <li>
+            
+            <img title="RingCentral Office - Messages and Notifications for Call Queues " alt="RingCentral Office - Messages and Notifications for Call Queues " 
+            src="http://i1.ytimg.com/vi/BmLyB4P2qA/mqdefault.jpg"  />
+            <a href="https://www.youtube.com/watch?v=0BmLyB4P2qA" rel="prettyPhoto" title="RingCentral Office - Messages and Notifications for Call Queues ">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Messages and Notifications for Call Queues </span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+     <c:RCVideoSupport />
+</apex:component>

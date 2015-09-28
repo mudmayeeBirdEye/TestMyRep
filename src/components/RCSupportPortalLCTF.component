@@ -1,0 +1,41 @@
+<apex:component >
+    <section class="lc-page">
+      <div class="left-container">
+        <!--<div id="BreadCrumb" style="padding-bottom: 10px;">
+             <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">Setting</a> &gt; 
+             <span class="breadcrumblink">User Settings</span>
+         </div>
+        -->
+        <article>
+          <h4>Top Features</h4>
+          <div class="video-desc">
+            <p>Learn more about RingCentral's most popular features, such as Business SMS and Conferencing,  and how they can improve your professional image and increase employee productivity.</p>
+            <br/>
+            <p>Discover instructional articles and videos on how to successfully use all of our features.</p>
+          </div>
+          
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span> 
+        <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_1" class="more">Business SMS</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Top Features</h3>
+          <ul class="paginate">
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_1">Business SMS</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_2">Conferencing</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_3">Salesforce Integration</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_4">Presence</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_5">Call Flip</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_6">Call Recording</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_7">RingOut</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_8">Meetings</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_10">Reports</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_9">Templates</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

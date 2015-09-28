@@ -1,0 +1,213 @@
+<!-----------------------------------------------------------------------------
+* Project Name..........: RingCentral - Zuora Implementation                  * 
+* File..................: ConvertToSalesAgreement.Page                        *
+* Version...............: 1.0                                                 *
+* Created by............: Simplion Technologies                               *
+* Last Modified by......: Simplion Technologies                               *
+* Description...........: This page is used to Convert quoote to sales agree- *
+*                         ment.                                               * 
+*----------------------------------------------------------------------------->
+<apex:page > <!-- standardController="zqu__Quote__c" Id="pageId" extensions="ConvertToSalesAgreementExtn" title="Convert to Sales Agreement"
+            sidebar="false" showHeader="true" standardStylesheets="true" docType="html-5.0" cache="false" action="{!validateQuote}">
+
+<head>
+    <title>Implementation Scheduler</title>
+    <style>
+        .message.infoM3 {
+            text-align:left !important;
+        }
+        .overlay {
+            background-color: black;
+            opacity: 0.6;
+            /* Generic for Major browsers */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+            /* IE 5-7 */
+            filter: alpha(opacity=60);
+            /* Netscape */
+            -moz-opacity: 0.6;
+            /* Safari 1.x */
+            -khtml-opacity: 0.6;            
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            zIndex: 99;
+        }
+        
+        .formLabel {
+            font: Bold 16px arial;
+            text-align: left;
+            /*border: 2px solid steelblue;*/
+            float: left;
+            width: 30%;
+            margin-left: 25%;
+            margin-right: -10%;
+        }
+        
+        .upperdiv {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            height: 60px;
+            /*border: 1px solid black;*/
+            padding-left: 20px;
+            padding-right: 20px;
+            /* margin-left: 21%; */
+            box-shadow: 0px 0px 35px 5px lightgray inset;
+            /*border-radius: 10px;*/
+        }
+    
+        .lowerdiv {
+            box-shadow: 0px -71px 101px -19px #C7D6E9 inset;
+            background: #f8f8f8;
+            outline: none;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menuOption {
+            border: 1px solid steelblue;
+            width: 60%;
+            height: 30px;
+            font: Bold 16px arial;
+            padding-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px -4px 50px -2px lightblue inset;
+            cursor: pointer;
+            background-color: white;
+        }
+        
+        .menuOption:hover {
+            background-color: white;
+            text-decoration: underline;
+            box-shadow: 0px -4px 50px -2px #dbfdab inset;
+            cursor: pointer;
+        }
+        
+        .inputBox {
+            border: 2px solid steelblue;
+            width: 25%;
+            height: 25px;
+            border-radius: 5px;
+            /*text-align: center;*/
+            padding-left: 1%;
+        }
+
+        .fancybox-close { 
+            position: absolute; 
+            top: 8px; 
+            right: -55px; 
+            width: 36px; 
+            height: 36px; 
+            cursor: pointer; 
+            z-index: 8040; 
+            background-image: url('http://ringcentral.box5.cs12.force.com/RCSupportPortal/resource/1365653662000/RCSupportPortal/supportPortal/img/fancybox_sprite.png');
+        }
+        
+        .requiredfield {
+            width: 3px;
+            height: 28px;
+            background: #F00;
+            /*padding-top: 8px;*/
+            float: left;
+            margin-top: 1px;
+            margin-right: 2px;
+        }
+        
+        .msgPanelCls {
+            height: 30px;
+            width: auto;
+            border: 1px solid #3399FF;
+            padding: 2px;
+            background: #FFFFCC;
+            font-weight: bolder !important;
+            border-radius: 5px;
+        }
+        .datePicker {
+            z-index: 99999 !important;
+            position:fixed !important;
+        }
+        .message .messageText h4 {
+            display: none !important;
+        }
+        .message.errorM3 {
+            text-align:left !important;
+        }
+        .internal { 
+            width: 100%;
+            border: 1px solid lightblue;
+            height: 290px;
+            vertical-align: middle;
+            background: black;
+            opacity: 0.6;
+            /* Generic for Major browsers */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+            /* IE 5-7 */
+            filter: alpha(opacity=60);
+            /* Netscape */
+            -moz-opacity: 0.6;
+            /* Safari 1.x */
+            -khtml-opacity: 0.6; 
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            position: absolute;
+            top: 85px;
+            color: white;
+        }
+        .internalmsg {
+            margin-top: 18%;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+    </style>    
+    <script language="JavaScript" type="text/javascript">
+        function showOverlay() {
+            document.getElementById('internal').style.display = '';
+        }
+        function hideOverlay() {
+            document.getElementById('internal').style.display = 'none';
+        }
+    </script>
+</head> 
+    <apex:detail subject="{!quoteID}" relatedlist="false" id="detailId"/>
+    <a href="/{!quoteID}" style="cursor:wait;"><div class="overlay"></div></a>
+    <apex:outputPanel rendered="true" style="position: fixed;z-index: 99999;top: 15%;left: 20%;width: 55%;" id="main">
+        <div class="upperdiv" align="center">
+            <p style="font:Bold 25px arial; padding-top:12px;">Convert to Sales Agreement</p>
+        </div>
+        <apex:form id="formId" >
+            <div class="lowerdiv" align="center" id="menu">
+                <div style="width:100%;">
+                   <apex:outputPanel rendered="{!menuFlag}"> 
+                        <apex:pagemessages />
+                    </apex:outputPanel> 
+                </div>
+                
+               <apex:pageBlock rendered="{!IF(menuFlag,true, false)}">
+                    <apex:pageBlockSection collapsible="false" columns="1">
+                        <apex:inputField value="{!quote.zqu__InitialTerm__c}" styleClass="inputBox" id="initialTermId" required="true"/>
+                        <apex:inputField value="{!quote.zqu__RenewalTerm__c}" styleClass="inputBox" id="renewalTermId" required="true"/>
+                        <apex:inputField value="{!quote.zqu__StartDate__c}" styleClass="inputBox" id="startDateId" required="true"/>
+                        <apex:inputField value="{!quote.zqu__ValidUntil__c}" styleClass="inputBox" required="true"/>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                <div class="internal" id="internal" style="display:{!IF(menuFlag,'none', '')}">
+                    <div class="internalmsg">Please wait...</div>
+                </div>
+                <div> 
+                    <apex:commandButton style="width: 100px; height: 25px;" value="Continue" action="{!validateQuote}" status="counterStatus" rerender="formId" >
+                        <apex:actionStatus id="counterStatus" onStart="showOverlay();" onstop="hideOverlay();"/>
+                    </apex:commandButton>
+                    <apex:commandButton style="width: 100px; height: 25px;" value="Cancel" status="counterStatusNew" onclick="window.open('/{!quoteId}','_self');return false;"/>
+                </div>
+               
+            </div>
+           
+        </apex:form>
+             <a class="fancybox-item fancybox-close" href="/{!quoteId}" title="Close"></a>
+                 
+    </apex:outputPanel> -->
+</apex:page>

@@ -1,0 +1,796 @@
+<apex:component controller="RCSupportControllerHandler">
+    <apex:stylesheet value="{!URLFOR($Resource.RCHeaderFooter, 'header-footer-rc/includes/css/stylefooter.css')}" />
+    <style>
+    .bg_wrapper {
+        /* background: url("../img/top_sprite.png") repeat-x scroll left -97px #fff; */
+        position: relative;
+        z-index: 20;
+        height: 130px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu {
+        width:700px;
+        padding-left:35px;
+        padding-top:30px;
+        padding-bottom:29px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu ul {
+        float:left;
+        padding-left:50px;
+        padding-top:10px;
+        margin-bottom:-8px;
+        width:200px;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu ul:first-child {
+        padding-left:0;
+    }
+    
+    .header_wrapper .topmenu li.link_to_apps .submenu .video {
+        float:right;
+        width:219px;
+        margin-top:8px;
+    }
+    .nov_head {
+        height: 26px;
+        border-bottom: 1px solid #f2f2f2; 
+        padding: 27px 0 16px 0;
+        margin-bottom: 15px;
+        z-index: 1000;
+    }
+
+    .nov_head .login {
+        background: url(../images/topsprite.png) no-repeat 24px -88px;
+        padding-left: 48px;
+        line-height: 25px;
+        height: 26px;
+        border-left: 1px solid #dadada;
+        padding-right: 0;
+        margin-left: 0;
+        float: right;
+        margin-right: 0;
+    }
+    /*#LP_DIV_1371060597644 .lpchat-label {
+        font-weight: normal !important;
+        font-family: inherit !important;
+        font-size: 12px !important;
+        color: #a9a9a9 !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        line-height: 25px !important;
+    }*/
+    /*#LP_DIV_1371060597644 .lpchat-container {
+        width: 60px !important;
+    }*/
+    
+    /*#LP_DIV_1371060597644 .lpchat-label:hover {
+        color: #585858 !important; 
+    }
+    */
+   /* #LP_DIV_1373654177472 .lpchat-label {
+        font-weight: normal !important;
+        font-family: inherit !important;
+        font-size: 12px !important;
+        color: #a9a9a9 !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        line-height: 25px !important;
+    }*/
+  /*  #LP_DIV_1373654177472 .lpchat-container {
+        width: 60px !important;
+    }
+    
+    #LP_DIV_1373654177472 .lpchat-label:hover {
+        color: #585858 !important; 
+    }*/
+    
+    
+       
+    </style>
+    <apex:attribute type="Boolean" required="true" name="isGuestUser"
+        description="userType" />
+    <script>
+      function login(){
+       login();
+       return false;
+      }
+   </script>
+    <div class="bg_wrapper">
+        <div class="header_wrapper">
+            <header>
+            <div class="nov_head">
+                <a href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}" class="logo"
+                    title="RingCentral Virtual PBX, Phone and Internet Fax Service and Software"><span></span><b>RingCentral
+                        - Your Phone System Everywhere</b>
+                </a> 
+                <apex:outputLink value="https://service.ringcentral.com/login.asp"
+                    styleClass="login" rendered="{!isGuestUser}">Login</apex:outputLink>
+                <apex:outputLink value="/secur/logout.jsp" styleClass="login"
+                    rendered="{!!isGuestUser}">Logout</apex:outputLink>
+                
+               <!--   <div class="livepersonblock white homepage" style="cursor: pointer;">
+                    <!--<div id='LP_DIV_1371060597644' class="label">
+                    </div>-->
+                    
+                   <!--  <apex:OutputPanel rendered="{!if($Site.Name == 'rcsupport2013',true,false)}">
+                       <div id='LP_DIV_1371060597644' class="label">
+                       </div>
+                   </apex:OutputPanel> 
+           
+                   <apex:OutputPanel rendered="{!if($Site.Name == 'rcsupportCA2012',true,false)}">
+                       <div id='LP_DIV_1373654177472' class="label">
+                       </div>
+                   </apex:OutputPanel> 
+                    
+                </div> -->
+                
+                <div class="info">
+                    <ul class="menuNav">
+                        <li class="countriesNav"><span>Country: </span> <span
+                            class="arrow" id="header_country">{!defaultName}</span>
+                            <ul class="submenuNav">
+                                <li><a class="selected"
+                                    title="RingCentral US - Virtual Office Phone System" href="http://www.ringcentral.com/">
+                                        <span>United States</span> </a></li>
+                                <li><a
+                                    title="RingCentral Canada - Virtual Office Phone System"
+                                    href="http://www.ringcentral.ca"> <span>Canada</span> </a></li>
+                                <li><a title="RingCentral UK - Virtual Office Phone System"
+                                     href="http://www.ringcentral.co.uk"> <span>United Kingdom</span> </a></li>
+                            </ul></li>
+                        <li><a
+                            href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/contactus.html">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                    <!--<p class="sale_phones" style="margin-right: 30px">
+                        Sales<span class="office_phone" style="padding-left: 2px;"
+                            id="DinOfficePhone">800<code>-</code>820<code>-</code>3676</span>
+                    </p>-->
+                    <p class="sale_phones" style="margin-right: 30px">
+                        Sales<span class="office_phone" style="padding-left: 2px;"
+                        id="DinOfficePhone"><a href="callto:800-820-3676">800-820-3676</a></span>
+                    </p>
+
+                </div>
+                
+            </div>
+            <div class="searchbox id-rc-searchbox"
+                style="width: 22%; overflow: auto">
+                <form class="" action="{!$Site.CurrentSiteUrl}RCSupportPOrtalGlobalSearch" method="get">
+                    <input class="submit_search" type="submit" value="Search" name="Submit" /> 
+                    <input type="text" class="input" name="globalquery" value="" /> 
+                    <input type="hidden" value="1" name="start" class="input" title='start' id='globalSearch11123' />
+                </form>
+                <apex:form forceSSL="true" rendered="{!isTokenFound}">
+                    <apex:actionFunction action="{!login}" name="login" />
+                    <script>
+                if('{!isTokenFound}'=='true'){
+                       login();
+                 }
+             </script>
+                </apex:form>
+                
+            </div>
+            <nav class="topmenu">
+            <ul class="clearfix">
+                <li class="link_to_products sub"><a
+                    href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/how-it-works.html"
+                    title="Products" class="navLink"> <span>Products</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/how-it-works.html"
+                                title="Office">Office<span></span>
+                            </a>
+                            </li>
+                            <li><a href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/how-it-works.html"
+                                title="Overview">Overview</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/product-how-it-works.html"
+                                title="How it Works">How it Works</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/plansandpricing.html"
+                                title="Plans &amp; Pricing">Plans &amp; Pricing</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/phone-system-features.html"
+                                title="Features">Features</a>
+                            </li>
+                            <li class="br"></li>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}pro/features/how-it-works.html"
+                                title="Professional">Professional<span></span>
+                            </a>
+                            </li>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}fax/features/how-it-works.html"
+                                title="Fax">Fax<span></span>
+                            </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/phone-system-features.html">Features<span></span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/online-meetings/overview.html"
+                                title="Online Meetings">Online Meetings</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/video-conference/overview.html"
+                                title="Video Conferencing">Video Conferencing</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/business-sms/overview.html"
+                                title="Business SMS">Business SMS</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/toll-free-numbers/overview.html"
+                                title="Toll Free Number">Toll Free Number</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/virtual-pbx/overview.html"
+                                title="Virtual PBX">Virtual PBX</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/auto-attendant/overview.html"
+                                title="Auto-Receptionist">Auto-Receptionist</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/rc-conferencing/overview.html"
+                                title="Audio Conferencing">Audio Conferencing</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/call-forwarding/overview.html"
+                                title="Call Forwarding">Call Forwarding</a>
+                            </li>
+                        </ul>
+                        <div class="logoVideoBlock video-panel gallery">
+                            <a class="flatVideoHolder videoThumbnail video article-video"
+                                href="https://www.youtube.com/watch?v=_zWGe6DU3iM"
+                                rel="prettyPhoto" id="_zWGe6DU3iM"> <apex:image id="theImage"
+                                    value="{!URLFOR($Resource.RCHeaderFooter, 'header-footer-rc/includes/images/menuvideo.jpg')}" />
+                                <br /> <span>Watch the Ease of Management <br /> demo
+                                    video</span> </a>
+                        </div>
+                    </div></li>
+                <li class="link_to_apps"><a
+                    href="http://developer.ringcentral.com/app-gallery.html#/apps"
+                    title="Apps & Integrations" class="navLink"> <span>Apps &amp; Integrations</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="title"><a
+                                href="http://developer.ringcentral.com/app-gallery.html#/apps"
+                                title="Apps">Apps<span></span>
+                            </a>
+                            </li>
+                            <li><a href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/rcmobile/overview.html"
+                                title="Mobile App">Mobile App</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/desktop-apps/overview.html"
+                                title="Desktop App">Desktop App</a>
+                            </li>
+                            <li class="br"></li>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/developer-platform.html"
+                                title="Developer Platform">Developer Platform<span></span>
+                            </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="title"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/integrations/overview.html">Integrations<span></span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/box-integration/overview.html"
+                                title="Box">Box</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/ringcentral-for-google/overview.html"
+                                title="Google">Google</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/outlook-integration/overview.html"
+                                title="Outlook">Outlook</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/salesforce-integration/overview.html"
+                                title="Salesforce">Salesforce</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/zendesk-integration/overview.html"
+                                title="Zendesk">Zendesk</a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/desk-integration/overview.html"
+                                title="Desk">Desk</a>
+                            </li>
+                        </ul>
+                        <div class="logoVideoBlock video-panel gallery">
+                            <a class="flatVideoHolder videoThumbnail video article-video"
+                                href="https://www.youtube.com/watch?v=ePGXeFy5_Jc"
+                                rel="prettyPhoto" id="ePGXeFy5_Jc"> <img src="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}etc/designs/ringcentral/images/br_design/header/menuVideoIntegrations.jpg" />
+                                <br /> <span>RingCentral for Google <br /> Overview</span> </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="link_to_meetings"><a 
+                    href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/features/video-conference/overview.html"
+                    title="Web Meetings" class="navLink"><span>Web Meetings</span>
+                </a></li>
+                <li class="link_to_resources sub"><a
+                    href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}resources/learning-center.html"
+                    title="Resources" class="navLink"> <span>Resources</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="link_to_resources_learning"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}resources/learning-center.html  "
+                                title="Events"><span>Events</span>
+                            </a></li>
+                            <li class="link_to_resources_blog"><a target="_blank"
+                                href="http://blog.ringcentral.com/" title="Blog"><span>Blog</span>
+                            </a></li>
+                            <li class="link_to_resources_roi"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/roi-calculator/index.html"
+                                title="ROI Calculator"><span>ROI Calculator</span>
+                            </a></li>
+                            <li class="link_to_resources_documentation"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}office/documentation.html"
+                                title="Documentation"><span>Documentation</span>
+                            </a></li>
+                            <li class="link_to_resources_videos"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}resources/learning-center.html#videos"
+                                title="Videos"><span>Videos</span>
+                            </a></li>
+                        </ul>
+                    </div></li>
+                <li class="link_to_support sub"><a
+                    href="{!$Site.CurrentSiteUrl}" title="Support"
+                    class="navLink long"> <span>Support</span> </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="link_to_resources_learning"><a
+                                href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=getting_0" title="Learning Center"><span>Learning
+                                        Center</span>
+                            </a></li>
+                            <li class="link_to_support_community"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}community/index.html"
+                                title="Community"><span>Community</span>
+                            </a>
+                            </li>
+                            <li><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}solutions/professional-services.html"
+                                title="Professional Services"><span>Professional Services</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </div></li>
+                <li class="link_to_about sub"><a
+                    href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/company.html"
+                    title="About Us" class="navLink"><span>About Us</span>
+                </a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="link_to_about_company"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/company.html"
+                                title="Company"><span>Company</span>
+                            </a></li>
+                            <li class="link_to_about_leadership"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/leadership.html"
+                                title="Leadership"><span>Leadership</span>
+                            </a></li>
+                            <li class="link_to_about_customers"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/our_customers.html"
+                                title="Customers"><span>Customers</span>
+                            </a></li>
+                            <li class="link_to_about_news"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/inthenews.html"
+                                title="In The News"><span>In The News</span>
+                            </a></li>
+                            <li class="link_to_about_partner"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}partner/overview.html"
+                                title="Partner With Us"><span>Partner With Us</span>
+                            </a></li>
+                            <li class="link_to_about_press"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/company/pressreleases.html"
+                                title="Press"><span>Press</span>
+                            </a></li>
+                            <li class="link_to_about_careers"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/jobs.html"
+                                title="Careers"><span>Careers</span>
+                            </a></li>
+                            <li class="link_to_investors"><a
+                                href="http://ir.ringcentral.com/CorporateProfile.aspx?iid=4406983"
+                                title="Investors"><span>Investors</span>
+                            </a></li>
+                            <li class="link_to_about_contact"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}whyringcentral/contactus.html"
+                                title="Contact Us"><span class="bot_line">Contact Us</span>
+                            </a></li>
+                            <li class="link_to_about_legal"><a
+                                href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}legal.html"
+                                title="RingCentral's Legal"><span class="bot_line">Legal</span>
+                            </a></li>
+                        </ul>
+                    </div></li> 
+                <li class="link_to_login last"><a href="#" title="Login"
+                    rel="nofollow" class="navLink"><span>Login</span>
+                </a>
+                </li>
+            </ul>
+            </nav> <c:RCVideoSupport /> </header>
+        </div>
+    </div>
+    <apex:form forceSSL="{!isGuestUser}">
+        <div class="support-menu" role="sub menu">
+            <div class="area">
+                <div class="column"
+                    style="float: none; margin: 0 24px; margin-bottom: 10px;">
+                    <h3>
+                        <a href="{!$Site.CurrentSiteUrl}">Support Home</a>
+                    </h3>
+                </div>
+                <div class="column">
+                    <h3>Learning Center</h3>
+                    <ul>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=getting_0">Getting
+                                Started</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=number_0">Number
+                                Transfer</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21">Company
+                                Settings</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14">User
+                                Settings</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7">Group
+                                Settings</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=call_0">Call
+                                Quality</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Faxing_0">Faxing</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=DeskPhones_0">Phone Devices</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=SmartphoneApps_0">Smartphone
+                                Apps</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Desktop_0">Desktop Apps</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Billing_0">Billing</a>
+                        </li>
+                        <li><a
+                            href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0">Top
+                                Features</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Popular Topics</h3>
+                    <ul>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Call-Handling-Forwarding-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dcall%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Handling%20&%20Forwarding%20Overview
+                        ">
+                                Call Handling </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Change-Payment-Method-2013?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dupdate%2Bcredit%2Bcard%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20change%20Payment%20Method
+                        ">
+                                Update Credit Card </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Download-and-Install-the-RingCentral-SoftPhone-on-a-Windows-PC?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dsoftphone%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Download%20and%20Install%20the%20RingCentral%20SoftPhone%20on%20a%20Windows%20PC
+                        ">
+                                Softphone Installation Setup </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Transferring-your-Phone-Number-to-RingCentral-Number-Porting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dporting%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Transfer%20Existing%20Phone%20Number%20to%20RingCentral
+                        ">
+                                How to Transfer a Number to RingCentral </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Frequently-Asked-Questions-Billing?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dplan%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Frequently%20Asked%20Questions:%20Billing
+                        ">
+                                Billing Questions </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Basic-Troubleshooting-Tips-for-your-Phones?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dqos%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Basic%20troubleshooting%20tips%20for%20your%20phones
+                        ">
+                                Phone Troubleshooting </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/New-Password-Reset-Tool?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dpassword%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=New%20Password%20Reset%20Tool
+                        ">
+                                Resetting Password </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Uploading-Company-Business-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dgreetings%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Customize%20Company%20Hours%20Greeting%20as%20an%20Administrator
+                        ">
+                                Custom Company Greeting </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-your-Extension-s-Notification-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dnotification%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20change%20your%20extension's%20Notification%20settings
+                        ">
+                                Notification Settings </a></li>
+                        <li><a
+                            href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Department-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DDepartments%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Department%20Overview
+                        ">
+                                Setting up Departments </a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                           <a
+                            href=" http://netstorage.ringcentral.com/documents/creditcardauthorizationform.pdf"
+                            target="_blank" title="Credit Card Auth Form"> Credit Card
+                                Form </a></li>
+                        <li><a href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}webinars"
+                            target="_blank" title="Webinars"> Webinars </a></li>
+                        <li><a
+                            href="http://netstorage.ringcentral.com/guides/Professional_Office_Userguide.pdf"
+                            target="_blank" title="Admin Guide">Admin Guide</a></li>
+                        <li><a
+                            href="http://netstorage.ringcentral.com/guides/office_non-admin_userguide.pdf"
+                            target="_blank" title="User Guide">User Guide</a></li>
+                        <li><apex:outputLink rendered="{!if($Site.Name == 'RCSupportPortal',true,false)}"
+                                value="{!$Site.CurrentSiteUrl}FAXFeatureFAQ" title="Top Fax FAQ">Top Fax FAQ</apex:outputLink>
+                            <apex:outputLink rendered="{!!if($Site.Name == 'RCSupportPortal',true,false)}"
+                                value="{!$Site.CurrentSiteUrl}FAXFeatureFAQCA"
+                                title="Top Fax FAQ">Top Fax FAQ</apex:outputLink></li>
+                        <li><a
+                            href="{!if($Site.Name == 'rcsupport2013' && !UKPortal,'http://www.ringcentral.com/','http://www.ringcentral.ca/')}support/fordevelopers.html"
+                            target="_blank" title="For Developers">For Developers</a></li>
+                      </ul>
+                </div>
+                <div class="column">
+                    <h3>Contact Support</h3>
+                    <ul>
+                        <li>
+                            <apex:commandLink action="{!openCase}">Open a Case</apex:commandLink>
+                        </li>
+                        <li>
+                           <apex:commandLink action="{!openMyCase}">My Case Status</apex:commandLink></li>
+                        <li>
+                            <a href="{!$Site.CurrentSiteUrl}RCCallSupport">Call Support</a>
+                        </li>
+                        <li>
+                            <!-- <a href="{!$Site.CurrentSiteUrl}RCSupportPortalForumPage">Ask Community</a> -->
+                            <apex:outputLink value="https://community.ringcentral.com" rendered="{!isGuestUser}">Ask Community</apex:outputLink>
+                            <apex:outputLink value="http://www.ringcentral.com/inc/php/salesforce/salesforce.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}">Ask Community</apex:outputLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!--<apex:actionFunction name="openContactSupport" action="{!openContactSupport}"/>--> 
+    </apex:form>
+    <!--  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link> -->
+    <!--  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>   -->
+    <!--  <script src="http://code.jquery.com/ui/1.8.24/jquery-ui.js"></script> -->
+    <!--  <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" /> -->
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery-ui.js')}"></script>
+    <script
+        src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/Support_Portal_Articles.js')}"></script>
+    <link
+        href="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/jquery-ui.css')}"
+        rel='stylesheet' type='text/css' />
+    <style>
+    .ui-autocomplete {
+        z-index: 10000 !important;
+        max-height: 300px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+        width: 70% !important;
+    }
+    /* IE 6 doesn't support max-height
+          * we use height instead, but this forces the menu to always be this tall
+          */
+    * html .ui-autocomplete {
+        height: 100px;
+    }
+    </style>
+    <script> 
+      $(function() {
+      
+        $( "#globalSearch1" ).autocomplete({
+                //source: staticResourceArr,
+                 source: function(request, response) {
+                    var searchText=$.trim(request.term);
+                    searchText=searchText.replace(/ {2,}/g, ' ');
+                   // var matcher = new RegExp( $.ui.autocomplete.escapeRegex(searchText), "");
+                     var matcher = new RegExp(searchText+"?", "i");
+                    var data = $.grep( staticResourceArr, function(value) {
+                        return matcher.test( value.label || value.value || value );
+                    });
+                     response(data);
+                },
+         /* minLength: 2,*/
+          select: function( event, ui ) {
+          //console.log(ui.item.value);
+          $(this).val(ui.item.value);
+          $(".submit-search").click();
+          }
+        }).keydown(function(e){
+          if (e.keyCode === 13){
+              $(".submit-search").click();
+          }
+          });
+      });
+   </script>
+    <div class="bg_search_wrapper">
+        <div class="search-bar">
+            <section role="Main search">
+            <div class="search-box">
+                <form action="{!$Site.CurrentSiteUrl}{!IF($CurrentPage.Name=='RCSupportPortalSearchNew2','RCSupportPortalSearchNew2','RCSupportPortalSearchNew')}">
+                    <input type="text" title='Search Support' id='globalSearch1'
+                        class="input {!IF(($CurrentPage.parameters.globalquery!='' && $CurrentPage.parameters.globalquery!='Search Support'),'searchTextStyle2','searchTextStyle')}"
+                        name="globalquery"
+                        value="{!IF(($CurrentPage.parameters.globalquery)=='','Search Support',$CurrentPage.parameters.globalquery)}" />
+                    <input type="hidden" value="1" name="start" class="input"
+                        title='start' /> <input type="hidden" class="input"
+                        name="pagenumber" value="1" /> <input type="submit"
+                        class="submit-search" name="Submit" value=" " />
+                </form>
+            </div>
+<!--             <a rel="nofollow" href="http://community.ringcentral.com"
+                class="primary-btn" style="padding-right: 145px;">Ask Community</a> -->
+                <apex:outputLink styleClass="primary-btn" style="padding-right: 145px;" value="https://community.ringcentral.com" rendered="{!isGuestUser}">Ask Community</apex:outputLink>
+                <apex:outputLink styleClass="primary-btn" style="padding-right: 145px;" value="http://www.ringcentral.com/inc/php/salesforce/salesforce.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}">Ask Community</apex:outputLink>
+            <!--<a rel="nofollow" onclick="openContactSupport();return false;"
+                class="primary-btn">Contact Support</a>-->
+            
+            <a rel="nofollow" href="{!$Site.CurrentSiteUrl}RCContactSupp" class="primary-btn">Contact Support</a>   
+            </section>
+        </div>
+    </div>
+    <div class="search-bar-footer">
+        <div class="search-bar-footerImgContainer">&nbsp;</div>
+    </div>
+
+    <!-- 
+      <c:RCSupportPortalLiveChatOffline />
+      -->
+    <script>
+      $(document).ready(function () {
+       var navSubHeadObj, navObj = $('.main-nav li');
+       var currentObjectSubmenu = null;
+        /*
+         * On hover of sub navigation 
+         * relative sub menu will show up
+        */
+        
+        $(navObj).hover(function() {
+            navSubHeadObj = $(this).children().attr('class');
+            $(this).addClass('active');
+           /* $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500); */
+            var submenu='.'+navSubHeadObj+'-menu';
+            if(currentObjectSubmenu == null) {
+                currentObjectSubmenu = '.'+ navSubHeadObj + '-menu';
+            } else if(currentObjectSubmenu != submenu) {
+                alreadyClick = 0;
+                $(currentObjectSubmenu).css('display','none');
+                currentObjectSubmenu = submenu;
+                $('.support').parent().removeClass('active');
+            }     
+        },function() {
+            //$('.'+navSubHeadObj+'-menu').css('display','block');
+                //alert(1);
+                $(this).removeClass('active');  
+           });
+        
+        var alreadyClick = 0;
+        $(navObj).click(function() {
+                //alert('1');
+            // if('.'+$(this).attr('class') == currentObjectSubmenu) {
+                if(alreadyClick == 0) {
+                    //alert(alreadyClick);
+                    alreadyClick = 1;
+                    $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500);
+                    $('.support').parent().addClass('active');
+                } else if(alreadyClick == 1) {
+                    alreadyClick = 0;
+                    $(".support-menu").hide(); 
+                    $('.support').parent().removeClass('active');
+                }
+            // }
+        });
+        
+        
+        $(".support-menu").click(function(e){
+           if('.'+$(this).attr('class') == currentObjectSubmenu){
+                if(alreadyClick == 0) {
+                    alreadyClick = 1;
+                    $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500);
+                    $('.support').parent().addClass('active');
+                } else if(alreadyClick == 1) {
+                    var $target = $(e.target);
+                    if ($target.is("a") ) {
+                    
+                    } else {
+                        alreadyClick = 0;
+                        $(".support-menu").hide(); 
+                        $('.support').parent().removeClass('active');
+                    }
+                }
+           }
+        });
+        
+        $(".support-menu").hover(function(){
+           if('.'+$(this).attr('class')== currentObjectSubmenu) { 
+                $('.support').parent().addClass('active');
+            }
+         });
+        
+        $(".support-menu").mouseleave(function(){
+           if(alreadyClick == 0) {
+             $('.support').parent().removeClass('active'); 
+           }    
+       });
+        
+        /*$(navObj).click(function(event) {
+            if((alreadyClickMenu == 0) {
+                alert(1);
+                alreadyClickMenu = 1;
+                navSubHeadObj = $(this).children().attr('class');
+                $('.'+navSubHeadObj+'-menu').css('display','block').fadeIn(500);    
+            } else if(alreadyClickMenu == 1) {
+                alert(2);
+                alreadyClickMenu = 0;
+                navSubHeadObj = $(this).children().attr('class');
+                $('.'+navSubHeadObj+'-menu').css('display','none');
+            }
+       });*/
+        
+      });
+      
+       $("#globalSearch").live({
+          focus: function() {
+            if ($(this).val() == $(this).attr("title")) {
+                $(this).val("");
+            }
+          },
+          blur: function() {
+             if ($(this).val() == "") {
+                $(this).val($(this).attr("title"));
+            }
+          }
+        });
+        
+        $("#globalSearch1").live({
+          focus: function() {
+            if ($(this).val() == $(this).attr("title")) {
+                $(this).val("");
+                $(this).removeClass('searchTextStyle');
+            }
+          },
+          blur: function() {
+             if ($(this).val() == "") {
+                $(this).val($(this).attr("title"));
+                $(this).addClass('searchTextStyle');
+            }
+          }
+        });
+        
+        if('{!isTokenFound}'=='true'){
+          login();
+        }
+   </script>
+
+</apex:component>

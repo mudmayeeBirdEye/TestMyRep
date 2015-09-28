@@ -1,0 +1,82 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Business SMS beta</span>
+        </div>
+        <article>
+          <h4>Business SMS beta</h4>
+          <div class="video-desc">
+            <p>It's more than simply texting, it's Business SMS!</p>
+            <br/>
+            <p>Use your RingCentral number to send and receive texts with customers, colleagues, and even departments. It easily integrates with your iPhone or Android smartphone, tablet and PC.</p>
+            <br/>
+            <span style="color:#333333;">You'll get:</span>
+            <ul style="color:gray;padding-left:17px;"><!--
+                <li class="list-head"></li>
+              --><li>Unlimited texting</li>
+              <li>Texting to Departments</li>
+              <li>Texting from multiple devices using the RingCentral smartphone app</li>
+            </ul>
+            <br/>
+            <p>All you need to do is download the latest iPhone or Android app.</p>
+            <br/>
+            <ul>
+                <li style="list-style:none;">
+                    <a href="https://itunes.apple.com/us/app/ringcentral-mobile/id293305984?mt=8" class="more" >Download smartphone app  for iPhone&raquo;</a>
+                </li>
+                <li style="list-style:none;">
+                    <a href="https://play.google.com/store/apps/details?id=com.ringcentral.android" class="more" >Download smartphone app for Android&raquo;</a>
+                </li>
+            </ul>
+            <br/>
+            <p>Please note that Business SMS is currently only available on select plans.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=wAPXTQfEyiM" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+           
+            <img title="RingCentral Business SMS – Cloud Phone System" alt="RingCentral Business SMS – Cloud Phone System" 
+                src="http://i1.ytimg.com/vi/wAPXTQfEyiM/mqdefault.jpg"  />
+                 <a class="article-video" href="http://youtu.be/wAPXTQfEyiM?rel=0" rel="prettyPhoto" title="RingCentral Business SMS – Cloud Phone System">
+              <p class="play-video"></p>
+              </a> 
+              <a href="http://youtu.be/wAPXTQfEyiM?rel=0" rel="prettyPhoto" title="RingCentral Business SMS – Cloud Phone System" class="overview-call">RingCentral Business SMS – Cloud Phone System&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_2" class="more">Conferencing</a></div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-send-an-SMS-with-your-RingCentral-Softphone-for-Android?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3623%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20a
+            ">How to send an SMS with your RingCentral Android mobile app</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-send-an-SMS-Text-Messages-using-your-RingCentral-Mobile-App-for-iOS?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3625%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20t
+            ">How to send an SMS (Text Messages) using your RingCentral Mobile App for iOS</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-send-an-SMS-to-your-department-for-Android?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3626%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20an%20SMS%20to%
+            ">How to send an SMS to your department for Android</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-view-sent-and-received-SMS-for-Android?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3628%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20view%20sent%20and%20recei
+            ">How to view sent and received SMS for Android</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-delete-a-text-message-from-your-RingCentral-Mobile-App-for-iOS?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3630%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20d
+            ">How to delete a text message from your RingCentral Mobile App for iOS</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-download-the-RingCentral-mobile-app?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3631%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20download%20the%20RingCentral
+            ">How to download the RingCentral mobile app</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-forward-a-text-message-from-your-RingCentral-Mobile-App-for-iOS?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3632%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20
+            ">How to forward a text message from your RingCentral Mobile App for iOS</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/RingCentral-Business-SMS-Frequently-Asked-Questions?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3633%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentral%20Business%20SMS%2
+            ">RingCentral Business SMS beta Overview</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

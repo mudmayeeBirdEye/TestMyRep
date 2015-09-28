@@ -1,0 +1,61 @@
+<apex:page standardController="Opportunity" extensions="AddressValidationController" action="{!ValidateAccountAddress}" sidebar="{!currentCallSource!='ViewTax'}" showHeader="{!currentCallSource!='ViewTax'}">
+<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+<script src="{!URLFor($Resource.ZuoraJQuery)}"></script>
+<script>
+  /* $('.radio input:radio').live('click',function() {
+            j$('.productSelection input:radio').filter(':checked').not(this).removeAttr('checked');
+            j$('.productSelection input:radio').attr('disabled', 'disabled');
+            displayProductRatePlan();
+    });*/
+  
+   /*j$('.AddressSelection input:radio').live('click',function() {
+            j$('.AddressSelection input:radio').filter(':checked').not(this).removeAttr('checked');
+            j$('.AddressSelection input:radio').attr('disabled', 'disabled');
+    }); */
+    $('input[name=address]').live('click',function() {
+   
+       $('.frm').children("input[type='hidden']:eq(1)").val($("input[name=address]:checked").val());
+    });
+    
+    
+function validateSelectedValue(){
+	if($("input[name=address]:checked").length > 0) {
+		$('.frm').children("input[type='hidden']:first").val($("input[name=address]:checked").val());
+		return true;
+  	}else{
+   		alert('Please select at least one address');
+ 	}
+	return false;
+}
+</script>
+<apex:form id="frmId" styleClass="frm">
+<apex:inputHidden value="{!strSelectedID}" id="theHiddenInput"/>
+<apex:pageBlock mode="Edit" title="{!titleBarMessage}">
+  <apex:pageBlockSection columns="1" showHeader="false" title="Multiple Address Found">
+     <apex:outputpanel rendered='{!lstAddressDetail.size>0}'>
+     <apex:pageBlockTable id="tblProduct" title="lstAddressDetail" var="objAddressDetail"  value="{!lstAddressDetail}" columns="2" cellpadding="3%"
+                            cellspacing="3%" style="width:100%" styleClass="list" >
+          <apex:column width="1%">
+               <input type='radio' name='address' value='{!objAddressDetail.strAddressId}' class='radio'/>
+            </apex:column>
+            <apex:column width="99%">
+               <apex:facet name="header">Address Detail</apex:facet>
+                {!objAddressDetail.strAddressDetail}
+           </apex:column>
+     </apex:pageBlockTable>
+  </apex:outputpanel>
+     <apex:pageMessage escape="false" detail="<b>System couldn't find any Jurisdiction for this Quote because of no Zip code  exists on the associated Account. <br/><br/>Click<a href='/{!objOPP.Account}' target='_blank'>here</a>to go to associated Account to update ZIP.<br/><br/></b>" rendered="{!!ZipFound }" severity="Error" strength="3" />
+     <!--  <apex:pageMessage escape="false" detail="J Code not found for associated Account's Zip. <br/><br/>Click<a href='/{!objOPP.Account}' target='_blank'>here</a>to go to associated Account to update ZIP.<br/>" rendered="{!!isJURISDICTIONFound}" severity="Error" strength="3" />-->
+     <apex:pageMessage escape="false" detail="J Code not found for associated Account's Zip. <br/><br/>Click<a href='/{!objOPP.Account}' target='_blank'>here</a>to go to associated Account to update ZIP.OR click on 'Continue without J-code' button.<br/>" rendered="{!!isJURISDICTIONFound}" severity="Warning" strength="3" />
+     <apex:pageMessage detail="Account address could not be blank in associated Account." rendered="{!isAddressEmpty}" severity="Error" strength="3" />
+     <apex:outputtext rendered="{!OR(!isJURISDICTIONFound,isAddressEmpty)}" escape="false">
+     </apex:outputtext>
+     <apex:outputpanel >
+	     <apex:commandButton action="{!CreateQuote}" value="Continue" onclick="return validateSelectedValue();" rendered='{!lstAddressDetail.size>0}'/>
+	     <apex:commandButton action="{!CreateQuote}" value="Continue without Jurisdiction" rendered="{!!isJURISDICTIONFound}" />
+     </apex:outputpanel>
+     
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

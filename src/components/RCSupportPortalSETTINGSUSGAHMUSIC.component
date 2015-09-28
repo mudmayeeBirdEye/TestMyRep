@@ -1,0 +1,77 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+       <div id="BreadCrumb" style="padding-bottom: 10px;">
+              	<!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+              	--><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+              	<span class="breadcrumblink">Greeting &amp; Hold Music</span>
+      	</div>
+        <article>
+          <h4>Greeting &amp; Hold Music</h4>
+          <div class="video-desc">
+            <p>Customize the greeting and hold music that people hear when they call you.  You can choose a default greeting, record a custom message over the phone, or import a pre-recorded greeting from your computer.</p>
+            <br/>
+            <p>You even can add hold music. Choose from a variety of music or upload your own.</p>
+          </div>
+          <div class="video-panel gallery" style="margin-bottom: 20px;">
+            <div class="share-video"> <div class="share">
+                                           			<apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=e8hpRhJLe0I" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                           		</div>
+            
+            <img title="Screening, Greeting & Hold music overview" alt="Screening, Greeting & Hold music overview" 
+            	src="http://i1.ytimg.com/vi/e8hpRhJLe0I/mqdefault.jpg" />
+            	<a class="article-video" href="http://www.youtube.com/watch?v=e8hpRhJLe0I?rel=0" rel="prettyPhoto" title="Screening, Greeting & Hold music overview">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=e8hpRhJLe0I?rel=0" rel="prettyPhoto" title="Screening, Greeting & Hold music overview">Screening, Greeting &amp; Hold music overview&raquo;</a>
+              </div>
+               </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_17" class="more">Call Handling</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-How-to-customize-your-extension-s-greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3913%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20customize%20your%20extension's%20greeting
+            ">How to customize your extension's greeting</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-your-Extension-s-Business-Hour-Voicemail-Greetings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dvoicemail%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20customize%20the%20user%20hours%20voicemail%20greeting%20of%20your%20extension
+            ">How to customize the user hours voicemail greeting of your extension</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          	
+          		<img title="Change what callers hear" alt="Change what callers hear" 
+          			src="http://i1.ytimg.com/vi/b-v5i4Nuia4/mqdefault.jpg" />
+          			<a href="http://www.youtube.com/watch?v=b-v5i4Nuia4?rel=0" rel="prettyPhoto" title="Change what callers hear">
+            <p class="play-video"></p>
+            </a><span>Change what callers hear</span></li>
+          
+          <li>
+          	
+          	<img title="Messages and Notifications for Users" alt="Messages and Notifications for Users" 
+          		src="http://i1.ytimg.com/vi/3fPdh2pc8JM/mqdefault.jpg" />
+          		<a href="http://www.youtube.com/watch?v=3fPdh2pc8JM?rel=0" rel="prettyPhoto" title="Messages and Notifications for Users">
+            <p class="play-video"></p>
+            </a><span>Messages and Notifications for Users</span></li>
+          
+          <li>
+          	
+          	<img title="Setting up business hours for users" alt="Setting up business hours for users" 
+          		src="http://i1.ytimg.com/vi/S21jJY87d-o/mqdefault.jpg" />
+          		<a href="http://www.youtube.com/watch?v=S21jJY87d-o?rel=0" rel="prettyPhoto" title="Setting up business hours for users">
+            <p class="play-video"></p>
+            </a><span>Setting up business hours for users</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

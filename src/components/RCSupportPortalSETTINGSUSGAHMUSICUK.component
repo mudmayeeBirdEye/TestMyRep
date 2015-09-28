@@ -1,0 +1,77 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+       <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink">Greeting &amp; Hold Music</span>
+        </div>
+        <article>
+          <h4>Greeting &amp; Hold Music</h4>
+          <div class="video-desc">
+            <p>Customize the greeting and hold music that people hear when they call you.  You can choose a default greeting, record a custom message over the phone, or import a pre-recorded greeting from your computer.</p>
+            <br/>
+            <p>You even can add hold music. Choose from a variety of music or upload your own.</p>
+          </div>
+          <div class="video-panel gallery" style="margin-bottom: 20px;">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=S7SYZ87XPkw" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+            
+            <img title="RingCentral Office - Screening, Greeting &amp; Hold music overview" alt="RingCentral Office - Screening, Greeting &amp; Hold music overview" 
+                src="http://i1.ytimg.com/vi/S7SYZ87XPkw/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=S7SYZ87XPkw?rel=0" rel="prettyPhoto" title="RingCentral Office - Screening, Greeting &amp; Hold music overview">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=S7SYZ87XPkw?rel=0" rel="prettyPhoto" title="RingCentral Office - Screening, Greeting &amp; Hold music overview">RingCentral Office - Screening, Greeting &amp; Hold music overview&raquo;</a>
+              </div>
+               </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_17" class="more">Call Handling</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5097?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3913%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20customize%20your%20extension's%20greeting
+            ">How to customize your extension's greeting</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5096?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dvoicemail%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20customize%20the%20user%20hours%20voicemail%20greeting%20of%20your%20extension
+            ">How to customize the user hours voicemail greeting of your extension</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+            
+                <img title="RingCentral Office - Change What Callers Hear" alt="RingCentral Office - Change What Callers Hear" 
+                    src="http://i1.ytimg.com/vi/n18JN5UQz3Y/mqdefault.jpg" />
+                    <a href="http://www.youtube.com/watch?v=n18JN5UQz3Y?rel=0" rel="prettyPhoto" title="RingCentral Office - Change What Callers Hear">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Change What Callers Hear</span></li>
+          
+          <li>
+            
+            <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+                src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg" />
+                <a href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Notifications</span></li>
+          
+          <li>
+            
+            <img title="RingCentral Office - Setting up User Business Hours" alt="RingCentral Office - Setting up User Business Hours" 
+                src="http://i1.ytimg.com/vi/rZfAlcD86LM/mqdefault.jpg" />
+                <a href="http://www.youtube.com/watch?v=rZfAlcD86LM?rel=0" rel="prettyPhoto" title="RingCentral Office - Setting up User Business Hours">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Setting up User Business Hours</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

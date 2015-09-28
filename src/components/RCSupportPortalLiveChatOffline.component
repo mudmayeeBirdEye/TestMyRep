@@ -1,0 +1,289 @@
+<apex:component >
+<style>
+    /* FINISH File "/css/design2012/br_hp_content.css" */
+/* START File "/css/design2012/livechat.css" */
+.show_livechatofflineform .offline_form_inputs{display:block;}
+.show_livechatthankyou .offline_form_thankyou{display:block;}
+.form_position{position:relative;width:565px;margin:0 auto;z-index:99999;}
+.offline_form{display:none;position:absolute;top:127px;width:565px;border:4px solid #f8f8f8;border-radius:15px;z-index:99999;right:7px;
+background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #f8f8f8 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f8f8f8));
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+background: -o-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+background: -ms-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#f8f8f8 100%);
+padding-bottom:10px;
+line-height:1;
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+.offline_form.ie7fixOffice{left:170px;}
+.offline_form p{margin:0;padding:0;}
+
+.no-borderradius .offline_form,
+.no-cssgradients .offline_form
+{
+border:none;border-radius:none;background:url(http://ringcentral.com/images/design2012/chat/bg.png) no-repeat right top;padding:4px 4px 10px 4px;height:398px;
+}
+
+.offline_form .h1{color:#ec7929;font-size:36px;padding-left:32px;padding-top:20px;}
+.offline_form .h2{color:#999;font-size:18px;padding-left:34px;padding-top:20px;}
+.offline_form .h3{color:#999;font-size:14px;padding-left:35px;line-height:20px;padding-top:23px;background:url(http://ringcentral.com/images/design2012/chat/shad.gif) no-repeat 20px bottom;padding-bottom:23px;}
+.offline_form form{overflow:hidden;padding:20px 0 0 0;}
+.offline_form form .inputs{float:left;padding-left:32px;}
+.offline_form form .input{border:1px solid #999;position:relative;padding:3px 8px;margin-bottom:8px;border-radius:5px;-moz-border-radius:5px;background:#FFF;} 
+
+.offline_form form .input.input_red{border:1px solid #F00;}
+
+.no-borderradius .offline_form form .input{border:none;background:url(http://ringcentral.com/images/design2012/chat/input.gif) no-repeat left top;padding:4px 9px 0 9px;height:20px;}
+.no-borderradius .offline_form form .input.input_red{background-position:bottom;}
+
+.offline_form form .input .holder{position:absolute;top:5px;left:8px;color:#999;font-size:12px;z-index:5;}
+.offline_form form .input .holder span{position:relative;top:-3px;color:#ec7929;font-weight:bold;}
+.offline_form form .input input{border:none;width:234px;font-size:12px;position:relative;z-index:10;background:url(http://ringcentral.com/img/1.gif);margin:0;padding:0;display:block;}
+.offline_form form .asterix{color:#999;font-size:12px;padding:6px 0 0 10px;}
+.offline_form form .asterix span{position:relative;top:-3px;color:#ec7929;font-weight:bold;}
+
+.offline_form form .form-right{float:right;padding-right:21px;padding-bottom:10px;width:251px;}
+
+.offline_form form .form-right .select{position:relative;padding:0;margin-bottom:7px;background:url(http://ringcentral.com/images/design2012/chat/sselect.gif) no-repeat left top;height:25px;font-weight:normal;} 
+.offline_form form .form-right .select.input_red{background-position:bottom;}
+.offline_form form .form-right .select .holder{position:absolute;top:7px;left:13px;color:#999;font-size:12px;z-index:5;}
+.offline_form form .form-right .select .holder span{position:relative;top:-3px;color:#ec7929;font-weight:bold;}
+.offline_form form .form-right .select select{border:none;width:251px;font-size:12px;background:url(http://ringcentral.com/images/design2012/chat/select.gif) repeat-x center;opacity:0;  filter: alpha(opacity=0);z-index:10;position:relative;padding:2px 5px;height:25px;}
+.offline_form form .form-right .select option{background:#FFF;padding:2px;}
+
+
+.offline_form form .form-right .textarea{border:1px solid #999;position:relative;padding:3px 13px;margin-bottom:7px;border-radius:5px;-moz-border-radius:5px;background:#FFF;} 
+.offline_form form .form-right .textarea textarea{border:none;width:223px;font-size:12px;background:none;height:76px;font-family:Arial;z-index:10;position:relative;display:block; resize: none; margin:0;padding:0;}
+
+.no-borderradius  .offline_form form .form-right .textarea{border:none;background:url(http://ringcentral.com/images/design2012/chat/tarea1.gif) no-repeat left top;padding:4px 14px 6px 14px;}
+
+.offline_form form .form-right .textarea .holder{position:absolute;top:5px;left:13px;color:#999;font-size:12px;z-index:5;}
+.offline_form form .form-right .submit{width:108px;border-radius:5px;color:#FFF;float:right;margin:5px 0 0 0;font-size:13px;padding:0;
+background: #ef9f26;height:22px;line-height:22px;border:1px solid #f6cc8b;box-shadow:0 3px 3px #bdbdbd;
+background: -moz-linear-gradient(top,  #ef9f26 0%, #e26931 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ef9f26), color-stop(100%,#e26931));
+background: -webkit-linear-gradient(top,  #ef9f26 0%,#e26931 100%);
+background: -o-linear-gradient(top,  #ef9f26 0%,#e26931 100%);
+background: -ms-linear-gradient(top,  #ef9f26 0%,#e26931 100%);
+background: linear-gradient(to bottom,  #ef9f26 0%,#e26931 100%);
+}
+
+.no-borderradius  .offline_form form .form-right .submit{background:url(http://ringcentral.com/images/design2012/chat/submit.gif) no-repeat center top;width:114px;padding:2px 0 5px 0;border:none;box-shadow:none;height:30px;}
+.livechat_wrapper .livechat_img{position: absolute;;cursor:pointer;   left: 615px;    top: 48px;}
+.livechat_wrapper  a{text-decoration:none;}
+.offline_form .x{position:absolute;right:7px;top:5px;cursor:pointer;}
+.offline_form .x.spanx{width:18px;height:19px;background:url(http://ringcentral.com/images/br_design/header/top_sprite.png) no-repeat -241px -33px;display:block;}
+
+.no-borderradius  .offline_form .x,
+.no-cssgradients  .offline_form .x
+{right:11px;top:9px;}
+
+.offline_form_thankyou .h3{background:none;padding-bottom:8px;}
+
+.no-borderradius  .offline_form_thankyou,
+.no-cssgradients  .offline_form_thankyou
+{
+border:none;border-radius:none;background:url(http://ringcentral.com/images/design2012/chat/bt_thank.png) no-repeat right top;padding:4px 4px 5px 4px;height:193px;
+}
+
+</style>
+<script>
+    var liveWrapper={
+        data:{},    
+        init: function(chat_data) {
+           if(typeof(chat_data)=="undefined"){
+                var chat_data={
+                    'src':'https://c.la1s1.salesforceliveagent.com/content/g/deployment.js',
+                    'init':['https://d.la1s1.salesforceliveagent.com/chat','572800000008OQQ','00D80000000aRUX'],
+                    'online':['57380000000CaZS','liveagent_button_online_57380000000CaZS'],
+                    'offline':['57380000000CaZS','liveagent_button_offline_57380000000CaZS']
+                };
+    
+           }
+             var self=this;
+             self.data=chat_data;
+             var liveLoad=document.createElement("script");
+        
+             liveLoad.type = 'text/javascript';
+        
+             liveLoad.src=self.data.src;
+        
+             document.body.appendChild(liveLoad);
+        
+             var done = false;
+             liveLoad.onload= liveLoad.onreadystatechange=function() {
+               if ( !done && (!this.readyState ||
+                    this.readyState === "loaded" || this.readyState === "complete") ) {
+                    done = true;
+                    
+                    liveagent.init(self.data.init[0], self.data.init[1], self.data.init[2]);
+                    
+                    if (!window._laq) { window._laq = []; }
+                        window._laq.push(function(){liveagent.showWhenOnline(self.data.online[0], document.getElementById(self.data.online[1]));
+                        liveagent.showWhenOffline(self.data.offline[0], document.getElementById(self.data.offline[1]));
+                    });            
+                    
+                    liveLoad.onload = liveLoad.onreadystatechange = null;
+                }
+            };
+        }
+    }
+    liveWrapper.init();
+</script>
+
+<!--
+
+<apex:includeScript value="{!URLFOR($Resource.RCSupportPortalLiveAgentJS)}" />
+-->
+<!-- 
+<div class="offline_form offline_form_inputs">
+    <span class="spanx x" id="offline_livechat_form_close_button"></span>
+    <p class="h1">Sorry!</p>
+    <p class="h2">RingCentral LiveChat is currently off-line.</p>
+    <p class="h3">Please fill out a form below and our sales representative<br/>
+    will contact you within 24 hours.</p>
+    <form id="LCSFForm">
+        <div class="inputs">
+
+        <div class="input">
+<input type="text" name="fname" maxlength="50" />
+<p class="holder">First Name <span>*</span></p>
+</div>
+
+<div class="input">
+<input type="text" name="lname" maxlength="50"/>
+<p class="holder">Last Name <span>*</span></p>
+</div>
+
+<div class="input">
+<input type="text" name="company" maxlength="50"/>
+<p class="holder">Company <span>*</span></p>
+</div>
+
+<div class="input">
+<input type="text" name="email" maxlength="50"/>
+<p class="holder">Email <span>*</span></p>
+</div>
+
+<div class="input">
+<input type="text" name="phone" maxlength="50"/>
+<p class="holder">Phone Number <span>*</span></p>
+</div>
+
+<p class="asterix">Required fields <span>*</span></p>
+</div>
+
+<div class="form-right">
+
+<div class="input">
+<input type="text" name="title" maxlength="50"/>
+<p class="holder">Job Title <span>*</span></p>
+</div>
+
+<div class="select">
+
+<select id="employeeslc" name="employees">
+<option selected="selected" value="-1" disabled="">How many employees do you have?</option>
+<option value="Just me">Just me</option>
+<option value="2-19">2-19</option>
+<option value="20-49">20-49</option>
+<option value="50-99">50-99</option>
+<option value="100-249">100-249</option>
+<option value="250-499">250-499</option>
+<option value="500+">500+</option>
+</select>
+
+<p class="holder">How many employees do you have? <span>*</span></p>
+
+</div>
+
+<div class="textarea">
+<textarea name="description"></textarea>
+<p class="holder">How can we help?</p>
+</div>
+
+<input type="submit" class="submit" value="Submit" id="LCSFButton" />
+
+</div>
+</form>
+
+</div>
+ -->
+<div class="offline_form offline_form_thankyou"><span class="spanx x" id="offline_livechat_thankyou_close_button"></span>
+<p class="h1">Thank you for your interest in RingCentral</p>
+<!--<p class="h2">A solutions specialist will contact you within 24 hours.</p>
+--><p class="h2">Sorry, no agents are available at the moment.</p>
+<p class="h3">If you'd like to speak with someone now, please call 1-877-857-9210. </p>
+</div>
+<script>
+$(document).ready(function() {
+    $('#livechat_img_button').click(function () {
+        $(document.body).addClass('show_livechatthankyou' );
+    });
+    $('#offline_livechat_thankyou_close_button').click(function () {
+        $(document.body).removeClass('show_livechatthankyou' );
+    });
+    
+});
+</script>
+<!-- SCRIPT CODE -->
+<!--
+<script>
+    
+$(document).ready(function() {
+    try {
+    $('#livechat_img_button').click(function () {
+        $(document.body).addClass('show_livechatofflineform');
+        $(document.body).removeClass('show_livechatthankyou' );
+    });
+
+    $('#offline_livechat_thankyou_close_button').click(function () {
+        $(document.body).removeClass('show_livechatthankyou' );
+    });
+    
+    $('#offline_livechat_form_close_button').click(function () {
+        $(document.body).removeClass('show_livechatofflineform' );
+    });
+    $('#LCSFForm input, #LCSFForm textarea').focus(function(){
+        $(this).next().hide();
+    });
+    $('#LCSFForm input, #LCSFForm textarea').blur(function(){
+        if (!$.trim($(this).val())) $(this).next().show();
+    });
+
+    $('#LCSFForm select').change(function () {
+        var val = $(this).val();
+        $(this).next().addClass('selectedval');
+        $(this).next().text( val );
+        return true;
+    });
+    } catch(x) {alert(x)}
+    var app = new SFLApp();
+    var config = {
+        formid   : '#LCSFForm',
+        submitid : '#LCSFButton',
+        id :  9,
+        names: {
+            description: 'description'
+        },
+        ph : {
+            description : 'How can we help?'
+        }
+}
+var h = {
+        success: function() {
+            $(document.body).removeClass('show_livechatofflineform');
+            $(document.body).addClass('show_livechatthankyou' );
+        }
+};
+    if ( app.init(config, h ) ) {
+        app.run();
+    } else {
+    }
+});
+</script>
+ -->
+</apex:component>

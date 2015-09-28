@@ -1,0 +1,74 @@
+<apex:component >
+    <apex:component >
+<style>
+    .video-desc1 {
+        list-style-position: outside !important;
+        /*margin-left: 16px;*/
+    }
+</style>
+
+    <section class="lc-page">
+    <div class="left-container">
+    <!-- <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">RingCentral for Desktop</span>
+     </div> -->
+    <article>
+    
+        <h4>RingCentral for Desktop</h4>
+        <div class ="video-desc"  >
+        <p>RingCentral for Desktop is a comprehensive communications solution on your desktop for calls, texts, faxes and conferencing. RingCentral Desktop App syncs with your accounts and company directory so you can easily collaborate with colleagues and customers.  </p><br />
+        
+           <b>With RingCentral for Desktop you can:</b>
+           <ul style="list-style-position: outside !important;width:100%;margin-left:16px;margin-top:6px;">
+                <li class="video-desc1" > Initial and receive calls, texts and faxes from your computer.</li>
+                <li class="video-desc1" > Transfer, flip, park, record calls and add up to 4 callers to an existing call.</li>
+                <li class="video-desc1" > Host conferences and send invitations with international dial-in numbers. </li>
+                <li class="video-desc1" > View faxes and listen to voice messages with the app.</li>
+                <li class="video-desc1" > View colleagues’ real-time phone presence and make a quick call or chat.</li>
+           </ul> 
+           <br />
+           Get Started by downloading 
+            <a href="http://netstorage.ringcentral.com/guides/desktop_quick_reference_guide.pdf" class="more" target="_blank">RingCentral for Desktop Quick Reference Guide.</a>
+           <br />
+        </div>
+
+        <div class="video-panel gallery" >
+            <div class="share-video">
+                 
+                <img title="How to Use RingCentral for Desktop" alt="How to Use RingCentral for Desktop" 
+                src="http://i1.ytimg.com/vi/VbaXBqSnjX8/mqdefault.jpg" />
+                <a class="article-video" href="https://www.youtube.com/watch?v=VbaXBqSnjX8&feature=youtu.be" rel="prettyPhoto" title="How to Use RingCentral for Desktop">
+                    <p class="play-video"></p>
+                </a> 
+              <a href="https://www.youtube.com/watch?v=VbaXBqSnjX8&feature=youtu.be" rel="prettyPhoto" title="How to Use RingCentral for Desktop" 
+                class="overview-call">How to Use RingCentral for Desktop</a>
+            </div>
+        </div>     
+    </article>
+      <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Billing_0" class="more">Billing</a>
+        </div>
+    </div>
+     <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7269?retURL">RingCentral for Desktop Overview </a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7365?retURL">How to install RingCentral for Desktop</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7206?retURL">How to answer call from RingCentral for Desktop?</a></li>
+             <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7212?retURL">How to host a conference on RingCentral for Desktop?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7247?retURL">How to add colleagues to Favorites and view their presences?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7214?retURL">How to Use the SMS Feature?</a></li>
+             <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7248?retURL">How to set up outbound caller ID?</a></li>
+             <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7211?retURL">How to access voicemail and faxes on RingCentral for Desktop?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7271?retURL">How to screen a call with RingCentral for Desktop </a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7217?retURL">How to use Text to Speech Reply for Incoming Calls? </a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7216?retURL">How to use FaxOut of RingCentral for Desktop?</a></li>
+
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>
+</apex:component>

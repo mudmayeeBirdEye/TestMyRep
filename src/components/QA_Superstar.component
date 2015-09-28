@@ -1,0 +1,19 @@
+<apex:component controller="Employee_Email_Component_CLS"
+    access="global">
+    <apex:attribute name="EmpId" type="String"
+        description="Id of the Employee" assignTo="{!employeeId}" />
+    <!--[if gte mso 9]>
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" id="userImage" style='position:absolute;margin-left:530px;margin-top:60px; height: 175px; width: 175px;z-index:3;' src="{!UserProfilePicURL}" />
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" id="backgroundImage" style='position:relative;width: 900px; height: 400px;z-index:1;' src="{!publicDomain}{!URLFOR($Resource.QA_Superstar)}" />
+    <![endif]-->
+    <table
+        style="width: 900px; height: 400px; background-repeat: no-repeat; border-collapse: collapse;"
+        background="{!publicDomain}{!URLFOR($Resource.QA_Superstar)}"
+        cellpadding="0">
+        <tr>
+            <td><apex:image url="{!UserProfilePicURL}"
+                    style="margin-left: 530px;margin-bottom: 145px;max-height: 175px;max-width: 175px;" />
+            </td>
+        </tr>
+    </table>
+</apex:component>

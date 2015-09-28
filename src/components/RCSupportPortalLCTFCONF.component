@@ -1,0 +1,71 @@
+<apex:component >
+ <section class="lc-page">
+      <div class="left-container">
+      <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Conferencing</span>
+        </div>
+        <article>
+          <h4>Conferencing</h4>
+          <div class="video-desc">
+            <!--<p>With <a href="http://www.ringcentral.com/office/features/rc-conferencing/overview.html?mkt_tok=3RkMMJWWfF9wsRow5%2FmYJoDpwmWGd5mht7VzDtPj1OY6hB8oJbyJK1TtuMFUGpsqOPuXDwUTFp510g1U
+            " class="more">RingCentral Conferencing</a>, set up and join conference calls anywhere, anytime, even from your smartphone</p>
+            -->
+            <p>With RingCentral Conferencing, set up and join conference calls anywhere, anytime, even from your smartphone</p>
+            <br />
+            <span>You'll get:</span>
+            <ul style="color:#333333;padding-left:17px;">
+                <!--<li class="list-head">You'll get:</li>
+                --><li>Free unlimited conference calling</li>
+                <li>Dedicated conference bridge dial-in number</li>
+                <li>Host and participant access codes for each RingCentral user</li>
+                <li>International numbers for in-country dialing</li>
+            </ul>
+            <br/>
+            <!--<p>Please note that <a class="more" href="http://www.ringcentral.com/office/features/rc-conferencing/overview.html?mkt_tok=3RkMMJWWfF9wsRow5%2FmYJoDpwmWGd5mht7VzDtPj1OY6hB8oJbyJK1TtuMFUGpsqOPuXDwUTFp510g1U
+            ">RingCentral Conferencing</a> is currently only available on select plans.</p>
+          -->
+          <p>Please note that RingCentral Conferencing is currently only available on select plans.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=2lCvFD4s8Bo" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+           
+            <img title="RingCentral Conferencing – Cloud Phone System" alt="RingCentral Conferencing – Cloud Phone System" 
+                src="http://i1.ytimg.com/vi/2lCvFD4s8Bo/mqdefault.jpg"  />
+                 <a class="article-video" href="http://youtu.be/2lCvFD4s8Bo?rel=0" rel="prettyPhoto" title="RingCentral Conferencing – Cloud Phone System">
+              <p class="play-video"></p>
+              </a> </div>
+            <a class="overview-call" href="http://youtu.be/2lCvFD4s8Bo?rel=0" rel="prettyPhoto" title="RingCentral Conferencing – Cloud Phone System">RingCentral Conferencing – Cloud Phone System&raquo;</a> </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_9" class="more">Templates</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Conference-Calling-Touch-Tone-Commands-and-International-Dial-In-numbers?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3104%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentr
+            ">RingCentral Conference Calling Overview</a></li>
+            <!-- <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Amarosa-Conference-Calling-Touch-Tone-Commands?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3493%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Conference%20Calling:%20Touch%20Ton
+            ">Conference Calling: Touch Tone Commands and International Dial-In numbers</a></li> -->
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Conference-Calling-Touch-Tone-Commands-and-International-Dial-In-Numbers-v2">
+            Conference Calling Touch Tone Commands</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Conference-Calling-Touch-Tone-Commands-and-International-Dial-In-Numbers-v2#IDIN">
+            Conference Calling: International Dial-in Numbers</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Conference-calling-from-your-online-account?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3622%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Conference%20calling%20from%20your%20o
+            ">Conference calling from your online account</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Conference-calling-from-your-RingCentral-mobile-app?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3624%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Conference%20calling%20from%20
+            ">Conference calling from your RingCentral mobile app</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

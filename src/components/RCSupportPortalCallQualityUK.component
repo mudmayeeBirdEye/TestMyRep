@@ -1,0 +1,96 @@
+<apex:component >
+<style>
+            /*.learning-center ul.lc-nav a.last {
+                padding : 0px 0px 0px 0px !important;
+            }*/
+            .liBullet {
+                list-style-type: disc !important;
+                
+            }
+    .suggestion {
+        float:none !important;
+    }
+    </style>
+   
+   <section class="lc-page">
+            <div class="left-container">
+                <article>
+                  <h4>Call Quality</h4>
+                  <div class="video-desc">
+                    <p style="line-height:normal !important">
+                    RingCentral delivers reliable, high-quality voice service.  Learn how your local network, internet connection, 
+                    and routers contribute to overall call quality</p><br/>
+                    <p style="line-height:normal !important">
+                        Read about best practices and tools:
+                    </p>
+                    <ul style="padding-left: 18px;line-height: 20pxU;"> 
+                        <li class="liBullet"> 
+                            <a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5065?retURL" style="color:#f8981d;">Improving Call Quality</a> 
+                        </li>
+                        <li class="liBullet">
+                            <a href="http://www.ringcentral.co.uk/support/qos-information.html" style="color:#f8981d;">Test your Bandwidth</a>
+                        </li>
+                        <li class="liBullet">
+                            <a href="http://www.ringcentral.co.uk/support/qos-router.html" style="color:#f8981d;">Approved Routers</a>
+                        </li>
+                        <li  class="liBullet">
+                            <a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5056?retURL" style="color:#f8981d;">Approved Headsets </a>
+                        </li>
+                    </ul>
+                    <br/><br/><br/> 
+                  </div>
+                   <!-- <div class="video-panel">
+                    <div class="share-video">
+                    </div>
+                  </div> -->
+                </article>
+                <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5175?retURL" class="more">Company Settings Overview</a></div>
+                <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+                     <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_call_quality" 
+                        target="_blank" class="more">
+                       Learn more in the Community
+                    </a>
+                </div>
+                </div>
+        
+            <div id="article" class="right-container">
+                <aside>
+                    <h3>Related Topics</h3> 
+                    <ul class="paginate">
+                        <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5065?retURLF=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DImproving%2BCall%2BQuality%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Tips%20on%20how%20to%20impove%20phone%20call%20quality
+                        ">Tips on how to improve phone call quality</a></li>
+                        <li><a href="http://www.ringcentral.co.uk/support/capacity.html
+                        ">Test Your Connection's Capacity <!-- (General Web) --></a></li>
+                        <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4963?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dbasic%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=List%20of%20tested%20deskphones%20with%20RingCentral
+                        ">List of tested deskphones with RingCentral</a></li>
+                        <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5062?retURL
+
+                        ">RingCentral recommended routers with QoS <!-- (General Web) --></a></li>
+                        <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5065?retURL
+                        ">Assuring High-Quality Voice Calls <!-- (General Web) --></a></li>
+                        <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5056?retURL
+                        ">Recommended Headsets and Speakers</a></li>
+                    </ul>
+                </aside>
+                <div class="page_navigation"></div>
+            </div>
+        </section> 
+            <!--<aside id ="lc-video" class="lc-video"> 
+                <div class="video-section">
+                        <ul class="paginate">
+                            <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>Interface Overview </span></li>
+                            <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>Company Settings
+                            </span></li>
+                            <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>RingCentral � User Settings
+                            </span></li>
+                            <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>4 Ring A Number only during After Hours</span></li>
+                            <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                            <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                        </ul>
+                    </div> 
+                    <div class="page_navigation"></div>
+            </aside>
+ 
+   
+
+--></apex:component>

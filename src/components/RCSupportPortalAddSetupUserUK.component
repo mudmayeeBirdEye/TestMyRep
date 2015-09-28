@@ -1,0 +1,98 @@
+<apex:component >
+  <style>
+    /*.breadcrumblink {
+        color: #666666;
+        font-weight: 300;
+        font-family: 'Lato', Helvetica, Arial, sans-serif; 
+        font-size: 14px;
+        line-height: normal;
+    }*/
+  </style>
+  <section class="lc-page">
+        <div class="left-container">
+            <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+                <span class="breadcrumblink">Add and Set Up Users</span>
+            </div>
+            <article>
+              <h4>Add and Set Up users</h4>
+              <div class="video-desc">
+                <p style="line-height:normal !important">As an administrator, add or create new users in the RingCentral 
+                system. Administrators can edit or assign new extensions for users.
+                </p><br/>
+                  </div>
+              <div class="video-panel gallery">
+                <div class="share-video">
+                <div class="share">
+                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=_CEqk7RFXP4" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                </div>
+                <img title="RingCentral Office - User Section Overview" alt="RingCentral Office - User Section Overview" src="http://i1.ytimg.com/vi/rA3AFAgxIEs/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=rA3AFAgxIEs?rel=0" rel="prettyPhoto">
+                
+                  <p class="play-video"></p>
+                </a>
+                <a class="overview-call" href="http://www.youtube.com/watch?v=rA3AFAgxIEs?rel=0" rel="prettyPhoto"
+                title="RingCentral Office - User Section Overview" >RingCentral Office - User Section Overview &raquo;</a>
+                </div>
+              </div>
+            </article>
+            <div class="suggestion"><span class="next">Next Suggested Topic: </span>
+            <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_1" class="more">Add and Set Up Departments</a></div>
+            </div>
+    
+        <div id="article" class="right-container">
+            <aside>
+                <h3>Related Topics</h3>
+                <ul class="paginate">
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5072?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3112%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20can%20I%20add%20extensions%20to%20my%20accoun
+                    ">How to add multiple extensions to your RingCentral account as an Administrator</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5026?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3135%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20Extension%20Direct%20Numbers
+                    ">How to add extension direct numbers as an Administrator</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5023?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3388%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20Dial-by-Name-Directory%20Se
+                    ">How to edit the Dial-by-Name directory settings as an Administrator</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5032?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3237%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20the%20Extension%20Permiss
+                    ">How to give administrative access to an extension as an Administrator</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5073?retURL =%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3136%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20Phones%20to%20other%20exte
+                    ">How to Add or Purchase a Phone or DigitalLine from the Online Account</a></li>
+                </ul>
+            </aside>
+            <div class="page_navigation"></div>
+        </div>
+    </section>
+        <aside id ="lc-video" class="lc-video"> 
+            <div class="video-section"> 
+                    <ul class="paginate gallery">
+                        
+                        <li>
+                         <img title="RingCentral Office - Set Up Notifications as an Account Admin" 
+                        alt="RingCentral Office - Set Up Notifications as an Account Admin" 
+                        src="http://i1.ytimg.com/vi/s3hp0rxNbNw/mqdefault.jpg" />
+                        <a href="http://www.youtube.com/watch?v=s3hp0rxNbNw?rel=0" rel="prettyPhoto" title="RingCentral Office - Set Up Notifications as an Account Admin">
+                       <p class="play-video"></p></a><span>RingCentral Office - Set Up Notifications as an Account Admin</span></li>
+                        
+                        <li> <img title="User Overview" alt="User Overview" 
+                        src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg" /><a href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Overview">
+                       
+                        <p class="play-video"></p></a><span>RingCentral – User Overview
+                        </span></li>
+                        
+                        <li> <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+                        src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg" /><a href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+                       <p class="play-video"></p></a><span>RingCentral Office - User Notifications
+
+                        </span></li>
+                        
+                        <li> <img title="RingCentral Office - Deleting an Extension" alt="RingCentral Office - Deleting an Extension" 
+                        src="http://i1.ytimg.com/vi/B26ax1qQmkk/mqdefault.jpg"  /><a href="http://www.youtube.com/watch?v=B26ax1qQmkk?rel=0" rel="prettyPhoto" title="RingCentral Office - Deleting an Extension">
+                       <p class="play-video"></p></a><span>RingCentral Office - Deleting an Extension</span></li>
+                        
+                        <!--
+                        <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                        <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                    --></ul>
+                </div> 
+                <div class="page_navigation"></div>
+                <c:RCVideoSupport />
+        </aside>
+</apex:component>

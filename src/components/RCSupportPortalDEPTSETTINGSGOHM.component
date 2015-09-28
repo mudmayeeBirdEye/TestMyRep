@@ -1,0 +1,84 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+             <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt;
+             --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Group Settings Overview</a> &gt;  
+             <span class="breadcrumblink">Greeting &amp; Hold Music</span>
+         </div>
+        <article>
+          <h4>Greeting &amp; Hold Music</h4>
+          <div class="video-desc">
+            <p>Administrators and call queue managers can set a call queue to have its own greeting. This is what callers will hear before connecting to a call queue member. For example, “Thank you for calling Sales, please wait until we connect you to the next available agent”.
+            </p>
+            <br/>
+            <p>Change the greeting by recording a custom message over the phone or import a pre-recorded greeting from your computer..</p>
+            <br/>
+            <p>Choose from a variety of music or upload your own to customize hold music for call queues.
+            </p>
+          </div>
+          <div class="video-panel gallery" style="padding-bottom:20px;">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=e8hpRhJLe0I" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div> 
+            
+            <img title="Screening, Greeting & Hold Music Overview" alt="Screening, Greeting & Hold Music Overview" 
+                src="http://i1.ytimg.com/vi/e8hpRhJLe0I/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=e8hpRhJLe0I?rel=0" rel="prettyPhoto" title="Screening, Greeting & Hold Music Overview">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=e8hpRhJLe0I?rel=0" rel="prettyPhoto" title="Screening, Greeting & Hold Music Overview">Screening, Greeting &amp; Hold music overview&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_10" class="more">Add Call Queue Members</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-enable-or-disable-greetings-of-a-department?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3528%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20enable%20or%20disabl
+            ">How to enable or disable call the queue greeting</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-upload-after-hours-voicemail-greetings-for-a-department?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3531%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20upload%2
+            ">How to upload after hours voicemail for a group</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-upload-after-hours-greetings-for-a-department?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3532%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20upload%20after%20h
+            ">How to upload after hours greetings for a group</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-set-up-or-edit-the-on-hold-music?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Don-hold%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20up%20or%20edit%20the%20on-hold%20music
+            ">How to set up or edit the on-hold music</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          
+          <img title="Change what callers hear" alt="Change what callers hear" 
+            src="http://i1.ytimg.com/vi/b-v5i4Nuia4/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=b-v5i4Nuia4?rel=0" rel="prettyPhoto" title="Change what callers hear">
+            <p class="play-video"></p>
+            </a><span>Change what callers hear</span></li>
+          
+          <li>
+          
+          <img title="Call Handling for Call Queues" alt="Call Handling for Call Queues" 
+            src="http://i1.ytimg.com/vi/RSdtzR_gQwA/mqdefault.jpg" />
+            <a href="https://www.youtube.com/watch?v=RSdtzR_gQwA" rel="prettyPhoto" title="Call Handling for Call Queues">
+            <p class="play-video"></p>
+            </a><span>Call Handling for Call Queues</span></li>
+          
+          <li>
+          
+          <img title="Messages and Notifications for Call Queues " alt="Messages and Notifications for Call Queues " 
+            src="http://i1.ytimg.com/vi/UPCPZmpFCuc/mqdefault.jpg" />
+            <a href="https://www.youtube.com/watch?v=UPCPZmpFCuc" rel="prettyPhoto" title="Messages and Notifications for Call Queues ">
+            <p class="play-video"></p>
+            </a><span>Messages and Notifications for Call Queues </span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

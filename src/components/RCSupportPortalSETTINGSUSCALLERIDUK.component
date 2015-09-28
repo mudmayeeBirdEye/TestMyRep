@@ -1,0 +1,85 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink">Caller ID</span>
+        </div>
+        <article>
+          <h4>Caller ID</h4>
+          <div class="video-desc">
+            <p>Caller ID  is the number that will appear to others when you call.</p>
+            <br/>
+            <p>Customize your caller ID on on your desk phone, softphone, RingOut, and more.</p>
+            <br/>
+            <p>By default, Internal Caller ID is set to “ON”.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=6ECj7zD2wc0" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+            
+            <img title="RingCentral Office - Outbound Caller ID Overview" alt="RingCentral Office - Outbound Caller ID Overview" 
+                src="http://i1.ytimg.com/vi/6ECj7zD2wc0/mqdefault.jpg"/>
+              <a class="article-video" href="http://www.youtube.com/watch?v=6ECj7zD2wc0?rel=0" rel="prettyPhoto" title="RingCentral Office - Outbound Caller ID Overview">   
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=6ECj7zD2wc0?rel=0" rel="prettyPhoto" title="RingCentral Office - Outbound Caller ID Overview">RingCentral Office - Outbound Caller ID Overview&raquo;</a> 
+              </div>
+            </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_14" class="more">User Setting Overview</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5007?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DInternal%2BCaller%2BID%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Internal%20Caller%20ID%20Overview
+            ">Internal Caller ID Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5012?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DOutbound%2BCaller%2BID%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Outbound%20Caller%20ID%20Overview
+            ">Outbound Caller ID Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Caller-ID-Spoofing-FAQs?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCaller%2BID%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Caller%20ID%20Spoofing%20FAQs
+            ">Caller ID Spoofing FAQs</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4997?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCaller%2BID%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Frequently%20Asked%20Questions:%20Caller%20ID%20Name/Company%20Name%20%28CNAM%29
+            ">Frequently Asked Questions: Caller ID Name/Company Name (CNAM)</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5018?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCaller%2BID%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20an%20extension's%20Caller%20ID%20settings%20as%20an%20Administrator
+            ">How to edit an extension's Caller ID settings as an Administrator</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+              <img title="RingCentral Office - Call Handling and Forwarding Overview" alt="RingCentral Office - Call Handling and Forwarding Overview" 
+                src="http://i1.ytimg.com/vi/Ly0syiFtLvs/mqdefault.jpg " />
+                <a href="http://www.youtube.com/watch?v=Ly0syiFtLvs?rel=0" rel="prettyPhoto" title="RingCentral Office - Call Handling and Forwarding Overview">
+                <p class="play-video"></p>
+                </a><span>RingCentral Office - Call Handling and Forwarding Overview</span></li>
+          <li>
+          
+          <img title="RingCentral Office - Advanced Call Handling for Users" alt="RingCentral Office - Advanced Call Handling for Users" 
+                src="http://i1.ytimg.com/vi/Oz3lgF8SSqA/mqdefault.jpg " />
+            <a href="http://www.youtube.com/watch?v=Oz3lgF8SSqA?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Call Handling for Users">    
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Advanced Call Handling for Users</span></li>
+          
+          <li>
+          
+          <img title="RingCentral Office - Setting up User Business Hours" alt="RingCentral Office - Setting up User Business Hours" 
+                    src="http://i1.ytimg.com/vi/rZfAlcD86LM/mqdefault.jpg " />
+            <a href="http://www.youtube.com/watch?v=rZfAlcD86LM?rel=0" rel="prettyPhoto" title="RingCentral Office - Setting up User Business Hours">        
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Setting up User Business Hours</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

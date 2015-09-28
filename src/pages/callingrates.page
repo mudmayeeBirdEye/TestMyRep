@@ -1,0 +1,305 @@
+<!-------------------------------------------------------------------------------------------------
+* Project Name..........: Support Portal                                                          *
+* File..................: SupportPortalCallingRates.Page                                          *
+* Version...............: 1.0                                                                     *
+* Created by............: Simplion Technologies                                                   *
+* Created Date..........: 14 November 2014                                                        *
+* Last Modified by......: Simplion Technologies                                                   *
+* Last Modified Date....:                                                                         *
+* Description...........: This page is for Support Portal Calling Rates.                          *
+ATTInternationalratesCsvhnadler
+-------------------------------------------------------------------------------------------------->
+
+<apex:page showHeader="false" sidebar="false" controller="callingrates">
+    <style>
+.areaListTd {
+    max-width: 200px !important;
+    width:200px !important;
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.typeTd {
+    vertical-align: top;
+    padding: 5px;
+}
+
+.rateTd {
+    text-align: center;
+    vertical-align: top;
+    padding: 5px;
+}
+
+div.left-menu1 {
+    width: 94.5%;
+    border: 1px solid #D9D9D9;
+    background-color: #FFF;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    margin-bottom: 90px;
+    min-height: 288px;
+    font-family: Arial;
+}
+
+div.ie-browser1 {
+    display: block !important;
+}
+
+.left-menu1 p.heading {
+    font-weight: bold;
+    font-family: Arial;
+    padding: 7px 0 0 18px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.brows1 {
+    background: none repeat scroll 0 0 #C3DAE8;
+    border: 1px solid #C3DAE8;
+    border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    font-family: Arial;
+}
+
+.headerDiv {
+    font-family: Arial;
+    color: #4B4B4B;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 3px -1px 0px;
+    text-shadow: none;
+    font-size: 16px;
+    color: #333333;
+}
+
+.headerDiv2 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: #666666;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.selectDiv {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-family: Arial;
+}
+
+.searchSelection a {
+    text-decoration: underline;
+    padding: 6px;
+    font-weight: bolder;
+    font-size: 12px;
+    color: #063f60;
+    font-family: Arial;
+}
+
+.selectedText {
+    color: #666666 !important;
+    text-decoration: none !important;
+}
+
+th {
+    font-size: 12px;
+    font-weight: bold;
+    color: #666666;
+    font-family: Arial;
+}
+
+.resultBlock tr:nth-child(even) {
+    background-color: #F4F2F3;
+}
+
+.resultBlock tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.resultBlock {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #666666;
+    font-family: Arial;
+}
+
+.selectClass {
+    width: 250px;
+    font-family: Arial;
+    border-radius: 6px;
+    height: 25px;
+}
+
+select {
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+}
+
+.searchButton {
+    background: #093E63;
+    font-size: 15px;
+    font-family: Arial;
+    color: #fff;
+    width: 90px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border: 1px solid #093E63;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+</style>
+
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="content">
+            <apex:form id="frmId">
+                <c:actionstatus />
+                <div>
+                    <span style="color: gray; font-style: italic;">If you would
+                        like to search the list of area codes for your Dialling Code,
+                        please press <strong>ctrl+f (Windows)</strong> or <strong>cmd+f
+                            (Mac)</strong> and type your Dialling Code prefix in the search bar</span>
+                    <div class='headerDiv' style="margin-top: 15px;">Calling
+                        Rates</div>
+                    <div class='headerDiv2'>
+                        <table>
+                            <tr>
+                                <td>Use pull-down menu to view international rates by
+                                    country, or</td>
+                                <td><apex:commandLink style="font-size:12px;color:#063f60;font-weight:bold;text-decoration:underline;"
+                                        action="{!getAllDomesticRates}" reRender="frmId"
+                                        status="status" value="View all Domestic Rates">
+                                        <apex:param value="a_" assignTo="{!strDomesticName}" />
+                                    </apex:commandLink>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><apex:commandLink style="font-size:12px;color:#063f60;font-weight:bold;text-decoration:underline;"
+                                        action="{!getCountryWiseRates}" reRender="frmId"
+                                        status="status" value="View all International Rates">
+                                        <apex:param value="a_" assignTo="{!strSelectedCountry}" />
+                                    </apex:commandLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <span style="color: gray; font-style: italic;">For other charges and information please see the <a href="http://www.bt.com/pricing/current/Cust_Opts_Bus_boo/3240_d0e1.htm#3240-d0e1" target="_blank" ><u><strong>BT Price List</strong></u></a></span>
+                    <div class="ie-browser1 left-menu1 sub-active-none" id="left-nav">
+                        <p class="heading brows1" style="background: #C3DAE8;">Domestic
+                            Call Rates</p>
+                        <div>
+                            <div class='selectDiv'>
+                                <div style='float: left'>
+                                    <apex:selectList value="{!strDomesticName}" size="1"
+                                        styleclass="selectClass">
+                                        <apex:selectOptions value="{!lstDomesticCode}"></apex:selectOptions>
+                                    </apex:selectList>
+                                </div>
+                                <div>
+                                    <apex:commandButton action="{!getDomesticRates}"
+                                        reRender="frmId" status="status" value="Search"
+                                        styleclass="searchButton">
+                                    </apex:commandButton>
+                                </div>
+                                <div style="margin-top: 10px; margin-bottom: 10px;"></div>
+                                <apex:outputpanel rendered="{!showDomesticResultPanel}">
+                                    <apex:pageMessages ></apex:pageMessages>
+                                    <table width='93%' class='resultBlock'>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Dialling Code</th>
+                                            <th>Pence Per Minute</th>
+
+                                        </tr>
+                                        <apex:repeat value="{!lstDomesticName}" var="domesticType">
+                                            <apex:repeat value="{!mapDomesticRates[domesticType]}"
+                                                var="lstRWWrap">
+                                                <apex:repeat value="{!lstRWWrap}" var="rwWrap">
+                                                    <tr>
+                                                        <td class="typeTd">{!rwWrap.domesticType}</td>
+                                                        <td><div class="areaListTd">{!rwWrap.areaList}</div></td>
+                                                        <td class="rateTd">{!rwWrap.rates}</td>
+                                                    </tr>
+                                                </apex:repeat>
+                                            </apex:repeat>
+                                        </apex:repeat>
+                                    </table>
+                                </apex:outputpanel>
+                            </div>
+                            <p class="heading brows1" style="background: #C3DAE8">International
+                                Call Rates</p>
+                            <div>
+                                <div class='selectDiv'>
+                                    <div style='float: left'>
+                                        <apex:selectList value="{!strSelectedCountry}" size="1"
+                                            styleclass="selectClass">
+                                            <apex:selectOptions value="{!lstCountry}"></apex:selectOptions>
+                                        </apex:selectList>
+                                    </div>
+                                    <div>
+                                        <apex:commandButton action="{!getCountryWiseRates}"
+                                            reRender="frmId" status="status" value="Search"
+                                            styleclass="searchButton">
+                                        </apex:commandButton>
+                                    </div>
+                                    <div style="margin-top: 10px; margin-bottom: 10px;">
+                                        <apex:outputpanel rendered="{!strSelectedCountry == 'a_'}">
+                                            <div
+                                                style='background: #C3DAE8; margin-top: 15px; padding: 11px 0px 11px 0px; margin-left: -19.5px; margin-right: -20px;'
+                                                class='searchSelection'>
+                                                <apex:repeat value="{!filterKey}" var="obj">
+                                                    <apex:commandLink action="{!getAlphaWiseRates}"
+                                                        reRender="frmId" status="status" value="{!obj}"
+                                                        styleclass="{!IF(strSingleWord == obj,'selectedText','')}">
+                                                        <apex:param value="{!obj}" name="{!obj}"
+                                                            assignTo="{!strSingleWord}" />
+                                                    </apex:commandLink>
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </div>
+                                    <apex:outputpanel rendered="{!showInternationalResultPanel}">
+                                        <apex:pageMessages ></apex:pageMessages>
+                                        <table width='93%' class='resultBlock'>
+                                            <tr>
+                                                <th>Country</th>
+                                                <th>Type</th>
+                                                <th>Pence Per Minute</th>
+
+                                            </tr>
+                                            <apex:repeat value="{!lstCountryName}" var="countryName">
+                                                <apex:variable value="{!0}" var="Count" />
+                                                <apex:repeat value="{!mapInternationalRates[countryName]}"
+                                                    var="lstRWWrap">
+                                                    <apex:repeat value="{!lstRWWrap}" var="rwWrap">
+                                                        <tr>
+                                                            <td><apex:outputText rendered="{!Count==0}">{!rwWrap.countryName}</apex:outputText>
+                                                                <apex:variable value="{!Count+1}" var="Count" />
+                                                            </td>
+                                                            <td>{!rwWrap.internationalType}</td>
+                                                            <td class="rateTd">{!rwWrap.rates}</td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </apex:repeat>
+                                            </apex:repeat>
+                                        </table>
+                                    </apex:outputpanel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </apex:form>
+        </apex:define>
+    </apex:composition>
+</apex:page>

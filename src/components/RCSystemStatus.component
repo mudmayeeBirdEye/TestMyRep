@@ -1,0 +1,208 @@
+<apex:component controller="RCSupportPortalSystemStatusController" >
+<script src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/readmore.js')}"></script>
+        <style>
+        
+        .overflowClass{
+            overflow-y:scroll !important; 
+            overflow-x: scroll!important;
+        }
+        .status {
+            background-position:2px -609px;
+        }
+        
+        .readmore-js-section {
+            color: #666666;
+        }
+        .status-area .call-support {
+            float: none; 
+            }
+        .status {
+            float: none;
+            background: #ffffff;
+            width: 956px;
+            z-index: 9995;
+            position: absolute;
+            border-radius: 5px;
+            border: 1px solid #E5E5E5;
+            margin-top: 10px;
+          }
+        
+        .status .status-bg-left1 {
+            display: inline-block;
+            padding-left: 0px;
+            font-weight: 300;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #5d6067;
+            float: left;
+            padding: 4px;
+        }
+        
+        .system-msg1 {
+            display: block;
+            width: 84%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            float: right;
+            line-height: 20px;
+            padding-top: 8px;
+            padding-right: 2px;
+            margin-right: 5px;
+        }
+        
+        .systemstatus{
+            float: right;
+            line-height: 27px;
+            padding-left: 10px;
+        }
+        
+        .readmore-js-toggle {
+            margin-left:85%;
+            color: blue;
+        }
+        
+        .readmore-js-expanded {
+            max-height: 550px !important;
+            padding-bottom: 5px;
+            
+        }
+        
+        .status-bg-right-red1{
+            border-radius: 20px;
+        }
+        .status-bg-right-orange1{
+            border-radius: 20px;
+        }
+        
+        .status-bg-right-green1{
+            border-radius: 20px;
+        }
+     </style>
+    
+   <apex:outputPanel rendered="{!!isPublicDescFound}" layout="none">
+    <style>
+        .status-area {
+            height: 100px;
+            margin: 30px 0 30px 0px;
+        }
+        
+        .flag-area{
+            margin-top: 68px;
+        } 
+    </style>
+   </apex:outputPanel>
+   
+   <apex:outputPanel rendered="{!isPublicDescFound}" layout="none" >
+    <style>
+        .status-area {
+            height: 106px;
+            margin: 30px 0 60px 0px;
+            margin-bottom: 47px;
+        }
+        
+        .flag-area {
+            margin-top: 115px;
+            }
+    </style>
+   </apex:outputPanel>
+    
+  <apex:attribute type="String" required="true" name="Text" description="text"/>
+   <div class="status-area">
+  <div class="call-support">{!Text}</div>
+  
+  <div class="status" id="status">
+    <div class="status-bg-left1">
+        <span class="{!strClassName}1"></span> <span class="systemstatus">Service Status</span>
+    </div>
+    
+     <div class="system-msg1" id="system-msg1">
+      <article1 class="slide readmore-js-section" style="overflow: hidden;border-left: 1px solid #E5E5E5; padding-left: 8px;">
+         <div>
+           <apex:variable var="countOpen" value="{!0}"/>
+           <apex:outputText rendered="{!if(isPublicDescFound && openDescriptionLst.size > 0,true,false)}" escape="false">
+                <h4>Current Issues</h4>
+                <apex:repeat var="descStr" value="{!openDescriptionLst}">
+                    <apex:variable var="countOpen" value="{!countOpen + 1}"/>
+                    <p style="white-space:pre-wrap; width:752px;" class="test">{!descStr}</p>
+                    <apex:outputPanel rendered="{!if(countOpen == openDescriptionLst.size,false,true)}"  layout="none">
+                        <p>-----------------------------------------</p>
+                    </apex:outputPanel>
+                </apex:repeat>
+             <br/>    
+            </apex:outputText>
+           <apex:variable var="count" value="{!0}"/>
+            <apex:outputText rendered="{!if(isPublicDescFound && resolveDescriptionLst.size >0,true,false)}" escape="false">
+                <h4>Resolved Issues</h4>
+                <apex:repeat var="descStr" value="{!resolveDescriptionLst}">
+                <apex:variable var="count" value="{!count + 1}"/>
+                    <p style="white-space:pre-wrap; width:752px;">{!descStr}</p>
+                    <apex:outputPanel rendered="{!if(count == resolveDescriptionLst.size,false,true)}" layout="none">
+                        <!-- <p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------</p> -->
+                        <p>-----------------------------------------</p>
+                    </apex:outputPanel>
+                </apex:repeat>
+            </apex:outputText>
+
+            <apex:outputText rendered="{!if(isPublicDescFound,true,false)}" escape="false">
+            
+            <p class="imp" style="margin-left: 346px; color: #666666;" >To see if your account may be affected, go to the <a href="https://servicestatus.ringcentral.com/" target="_blank" style="color: blue; text-decoration: underline;"> Service Status site</a>. </p>
+            </apex:outputText>
+           <apex:outputText rendered="{!!isPublicDescFound}"  escape="false">
+                No Known Issues
+                <p></p>
+                <p>For more information, go to the <a href="https://servicestatus.ringcentral.com/" target="_blank" style="color: #666666; text-decoration: underline;"> Service Status site</a>.</p>
+            </apex:outputText>
+            
+        </div>
+    </article1> 
+  </div> 
+  
+</div>
+
+</div>
+  <script>
+  
+    $('article1').readmore();
+    
+      var alreadysystemClick = 0;
+      /*$('.status').click(function(event) {
+         // alert(2);
+          if(alreadysystemClick == 0) {
+              alreadysystemClick = 1;
+              $('.system-msg').show();
+          } else if(alreadysystemClick == 1) {
+              var $target = $(event.target);
+              //alert($target);
+              if ($target.is("a") ) {
+                   //alert(1); 
+              } else {
+                  alreadysystemClick = 0;
+                  $('.system-msg').hide();   
+              } 
+          }  
+      });*/
+      
+      $(document).click(function(e) {
+        if ($(e.target).is('.status,.status *')) {
+            if(alreadysystemClick == 0) {
+              alreadysystemClick = 1;
+              $('.system-msg').show();
+            } else if(alreadysystemClick == 1) {
+              var $target = $(e.target);
+              //alert($target);
+              if ($target.is("a") ) {
+                   //alert(1); 
+              } else {
+                  alreadysystemClick = 0;
+                  $('.system-msg').hide();   
+              } 
+            } 
+        } else {
+            alreadysystemClick = 0;
+            $('.system-msg').hide();   
+        }
+      });
+  </script>
+  
+</apex:component>

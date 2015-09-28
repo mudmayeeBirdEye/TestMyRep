@@ -1,0 +1,617 @@
+<apex:component controller="VarLocatorController" >
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjIY5HKM1dAlao6yUU8EzwPzdUh2ZNj0g&sensor=false&v=3&sensor=true&libraries=geometry"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <apex:form styleClass="parentForm">
+           <style>
+            body{
+                margin:0px;
+                padding:0px;
+            }
+            
+            
+            
+            .fypContainer{
+                width:850px;
+                overflow:hidden;
+                margin:0px auto;
+                min-height:500px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:16px;
+                color:#9d9d9d;
+                background:no-repeat url('{!URLFOR($Resource.partnerimages)}') right 20px;
+            }
+            .fypContainer .leftContent{
+                float:left;
+                margin-top:80px;
+                width:350px;
+                padding-left:50px;
+                text-align:left;
+            }
+            .fypContainer h2{
+                margin:0px;
+                padding:0px;
+                font-size:30px;
+                font-weight:normal;
+                padding-bottom:20px;
+            
+            }
+            .fypContainer label.left{
+                float:left;
+                clear:both;
+                width:88px;
+                font-size:12px;
+                margin-bottom:15px;
+                line-height:30px;
+            }
+            .fypContainer .inputBox{
+                float:left;
+                width:250px;
+                border-radius:5px;
+                border:1px solid #e8e8e8;
+                height:25px;
+                outline:none;
+                padding:0px 5px;
+            }
+            .fypContainer .inputBox.gradientBg{
+                background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f2f2f4));
+                background: -moz-linear-gradient(top, #fdfdfd, #f2f2f4);
+                background: -o-linear-gradient(top, #fdfdfd, #f2f2f4);
+                background: -ms-linear-gradient(top, #fdfdfd, #f2f2f4);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#f2f2f4');
+            }
+            
+            .fypContainer .inputBox select{
+                width:100%;
+                border:none;
+                outline:none;
+                background:transparent;
+                margin-top:3px;
+            }
+            .searchBtn{
+                float:left;
+                clear:both;
+                border-radius:5px;
+                background-color:#cc6a0b;
+                color:#fff;
+                font-size:12px;
+                font-weight:bold;
+                border: 0px;
+                padding:3px 40px;
+                cursor:pointer;
+                background: -webkit-gradient(linear, left top, left bottom, from(#f7951a), to(#d96606));
+                background: -moz-linear-gradient(top, #f7951a, #d96606);
+                background: -o-linear-gradient(top, #f7951a, #d96606);
+                background: -ms-linear-gradient(top, #f7951a, #d96606);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951a', endColorstr='#d96606');
+                margin-top:10px;
+                outline:none;
+                box-shadow: 0px 0px 2px #676767;
+                width:175px;
+                height:32px;
+                margin-left:3px;
+            }
+            .searchBtn:hover{
+                background-color:#cc6a0b;
+                background: -webkit-gradient(linear, left top, left bottom, from(#d96606), to(#f7951a));
+                background: -moz-linear-gradient(top, #d96606, #f7951a);
+                background: -o-linear-gradient(top, #d96606, #f7951a);
+                background: -ms-linear-gradient(top, #d96606, #f7951a);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d96606', endColorstr='#f7951a');
+            }
+            #map {
+                font-family: Arial;
+                font-size:12px;
+                line-height:normal !important;
+                height:500px;
+                /*width: 800px;*/
+                background:transparent;
+                
+                float:none !important;
+            }
+           .gm-style-iw {
+                width: auto;
+                height: 100px;
+                overflow: hidden ;
+            }
+            
+            .fancybox-close { position: absolute; top: -18px; right: -20px; width: 36px; height: 36px; cursor: pointer; z-index: 8040; background-image: url("{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/fancybox_sprite.png')}"); }
+            
+            .fancybox-closeError {
+            position: absolute;
+            margin:0px auto;
+            top: -15px;
+            right: -15px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            z-index: 10000;
+            background-image:
+                url("{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/fancybox_sprite.png')}");
+            }
+            .message {
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+            }
+            .message {
+                background-color: #ffc;
+                border-style: solid;
+                border-width: 1px;
+                color: #000;
+                padding: 6px 8px 6px 6px;
+                margin: 4px 20px;
+            }
+            .infoM6, .infoM4, .infoM3, .infoM2, .infoS1 {
+                border-color: #39f;
+            }
+            .message .messageTable .messageCell {
+                vertical-align: middle;
+            }
+            .msgPanel {
+                width:90%;margin-top: 10px;margin-bottom:5px;background-color: #ffc; font-family:TRebuchet MS;font-weight: bold;border: 1px solid #39f;-moz-border-radius:9px 9px 9px 9px;border-radius: 4px;vertical-align:middle;
+            }
+            .overlayNew{
+                z-index: 99;
+                zIndex:99;
+                border: none;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                background-color: rgb(0, 0, 0);
+                opacity: 0.6;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+                /* IE 5-7 */
+                filter: alpha(opacity=60);
+                /* Netscape */
+                -moz-opacity: 0.6;
+                /* Safari 1.x */
+                -khtml-opacity: 0.6;
+                /*cursor: wait;*/
+                position: fixed;
+                display:none; 
+            } 
+            .overlayNewError{
+                z-index: 99;
+                zIndex:99;
+                border: none;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                background-color: rgb(0, 0, 0);
+                opacity: 0.6;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+                /* IE 5-7 */
+                filter: alpha(opacity=60);
+                /* Netscape */
+                -moz-opacity: 0.6;
+                /* Safari 1.x */
+                -khtml-opacity: 0.6;
+                /*cursor: wait;*/
+                position: fixed;
+                display:block; 
+            } 
+            
+            .loader-static { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1000; *position: absolute; *top: expression(parseInt(document.documentElement.scrollTop, 0) + 'px'); text-align: center; }
+            .loader-static .loader-fix { content: ""; width: 0; height: 100%; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; }
+            .loader-static .loader-static-panel { border: 1px solid #000000; position: relative; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; background-color: rgba(255, 255, 255, 0.8); background-color: transparent\9; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#bbffffff, endColorstr=#bbffffff); text-align: center; padding: 20px; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; }
+            .loader-static .loader-static-panel img { width: 32px; height: 32px; }
+            .loader-static .loader-static-panel div { margin-top: 10px; color: #063f60; }
+            .loader-staticerror { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1000; *position: absolute; *top: expression(parseInt(document.documentElement.scrollTop, 0) + 'px'); text-align: center; }
+            </style>
+            <script>
+                var status = 0;
+            </script>
+            <a class="fancybox-item fancybox-close" href="Javascript:void(0);" title="Close" onclick="closePanel();return false;">&nbsp;</a>
+            <apex:outputPanel id="pb">
+            
+            <!-- <apex:outputPanel id="errorMsg1" rendered="{!toShowErrorMsg}"> -->
+            <div id="errorDiv" style="display: none;"
+                onclick="javascript:document.getElementById('errorDiv').style.display = 'none';document.getElementById('j_id0:j_id1:j_id7:j_id8:j_id10:searchBtn').focus();">
+                <div id="overlayNew1" class="overlayNewError" style="text-align: center; padding-top: 190px;">&nbsp;</div>
+                <div class="loader-static" id="contentIndex1"
+                    style="z-index: 9999; zIndex: 9999;">
+                    <div class="loader-static-panel" style="width: 285px">
+                         <a class="fancybox-item fancybox-closeError"
+                    href="Javascript:void(0);" title="Close"
+                    onclick="javascript:document.getElementById('errorDiv').style.display = 'none';">&nbsp;</a>
+                       <!-- <apex:outputText style="padding:5px; color:black;" escape="false"
+                            value="ddddddd"></apex:outputText>  -->
+                            <span style="padding:5px;">{!errorValue}</span>
+                    </div>
+                    <div class="loader-fix">&nbsp;</div>
+                </div>
+            </div>  
+                <!-- </apex:outputPanel> -->
+                <apex:outputPanel rendered="{!not(refe)}">
+                    <div class="fypContainer" id="div1" onclick="setFocus(event);">
+                        <div class="leftContent" >
+                            <h2>Find a Reseller</h2>
+                            Please enter a postal code to find a RingCentral Certified Reseller near you.<br/><br /><br/>
+                                <label class="left">Postal Code</label>
+                                <apex:inputText value="{!pin}" styleClass="inputBox inputboxcls" onkeypress="javascript:status = 1;if(event.keyCode == '13'){callSearch(event);return false;}else return true;" />   
+                               <label class="left">Country</label>
+                               <div id="inputtext" class="inputBox gradientBg">
+                                   <apex:selectList value="{!selectedCountry}" size="1" id="selectlist1" onchange="document.getElementById('j_id0:j_id1:j_id7:j_id8:j_id10:searchBtn').focus();">
+                                        <apex:selectOptions value="{!CountryItems}"/>
+                                   </apex:selectList> 
+                               </div> 
+                            <apex:commandButton value="Search" id="searchBtn" status="status" action="{!getZipCodesInRadius}" oncomplete="search();" reRender="pb,Mypanel,errorMsg2" 
+                                styleClass="searchBtn" />
+                        </div>
+                    </div>
+                    <apex:Actionfunction Name="callSearch1" status="status" action="{!getZipCodesInRadius}" oncomplete="search();" 
+                                    reRender="pb,Mypanel" />
+                    <script>
+                        function callSearch() {                                                             
+                            callSearch1(); 
+                        }
+                        if('{!toShowErrorMsg}' == 'true') {
+                                $('#errorDiv').show();
+                        }
+                        function setFocus(e) {
+                            if(e.target.id == 'div1') {
+                                $('.searchBtn').focus();
+                            }
+                        }
+                    </script>   
+                
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!!not(refe)}">
+                    <div style="margin:10px;">
+                        <div style="height:55px;font-size:30px;">
+                            <div style="float:left;"><span>Reseller Locator</span><span style="color:#E6E6E6;">(results:{!IF(lstwrap == null ,'0',lstwrap.size)})</span></div>
+                            <div style="float:right;"><apex:commandButton value="New Search" status="status" action="{!newSearchForParners}" oncomplete="search1();"  styleClass="searchBtn" reRender="pb" /></div>
+                        </div>
+                        <apex:pageMessages />
+                        <div style="border:1px solid lightgray;border-radius:5px;"> 
+                            <div style="float:left;width:350px;text-align:left;padding-left:5px;">
+                                <ul style="list-style-type:none; border:none;solid #000; margin-right:10px;overflow-y:scroll; height:500px;">
+                                    <apex:variable var="count" value="0" />
+                                   <apex:repeat value="{!lstwrap}"  var="address">
+                                        <li style="border-bottom:{!if(lstwrap.size == (Value(count)+1),'none','1px solid #ccc')}; padding:5px; color:#212121;margin:3px;padding-bottom: 10px;">
+                                        <div style="color:#0000FF ;text-decoration: underline; padding-Bottom:5px;" > 
+                                            <apex:outputLabel styleClass="accountText{!count}" value="{!address.accName}"  /> 
+                                        </div> 
+                                        <div style="padding-Bottom:5px;">
+                                            <apex:outputtext value="{!address.fulladdress}"/><br/> <!-- onmouseover="chk('{!address.fulladdress}','{!address.accName}'); " -->
+                                        </div>                                       
+                                        <div style="padding-Bottom:5px;"> 
+                                            <apex:outputLabel value="Website  : " for="theCheckbox" rendered="{!if(address.accWebsite !=null,true,false)}"/>  
+                                            <apex:outputlink rendered="{!if(address.accWebsite !=null,true,false)}" value="{!address.accWebsite}" target="_blank">{!address.accWebsite}</apex:outputlink>
+                                        </div>                                  
+                                        
+                                        <div style="padding-Bottom:5px;" > 
+                                            <apex:outputLabel value="Phone  : " for="thChecbox" rendered="{!if(address.accPhone!=null,true,false)}"/> 
+                                            <apex:outputtext rendered="{!if(address.accPhone !=null,true,false)}" value="{!address.accPhone}"></apex:outputtext>
+                                        </div>
+                                        <!-- <div> Status : <apex:outputLabel value="{!address.accObj.Website}"/></div>-->   
+                                        </li>
+                                        <apex:variable var="count" value="{!VALUE(count)+1}" />
+                                    </apex:repeat>
+                                </ul>
+                            </div>
+                            <div>
+                                <div id="map" ></div> 
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:actionStatus id="status" onStart="showOverlay();" onstop="hideOverlay();" />
+                 <div id="overlayNew" class="overlayNew" style="text-align:center;padding-top:190px;"></div>
+                 <div class="loader-static" id="contentIndex" style="z-index:9999;zIndex:9999;display:none;">
+                  <div class="loader-static-panel">
+                      <div style='margin-top:0px;font-weight:bold;'>Please wait...</div>
+                  </div>
+                  <div class="loader-fix"></div>
+                    </div>
+                     
+                  <script>
+                   function showOverlay() {
+                       var o = document.getElementById('overlayNew');
+                       o.style.display = 'block';
+                       var oVar = document.getElementById('contentIndex');
+                       oVar.style.display = 'block';
+
+                   }
+
+                   function hideOverlay() {
+                       var o = document.getElementById('overlayNew');
+                       o.style.display = 'none';
+                       var oVar = document.getElementById('contentIndex');
+                       oVar.style.display = 'none';
+                   }
+                </script>
+                <script>
+                    function closePanel() {
+                        if('{!refe}' == 'true') {
+                            clearMapValues();
+                        } else {
+                            clearMapValues1();
+                            document.getElementById('varPanel').style.display='none';
+                            document.getElementById('overlay').style.display='none';
+                        }
+                    }
+                    
+                    function closeerrorPanel() {
+                        $('#errorDiv').show();                   
+                           //clearMapValues2();                            
+                   }
+                    function closePanelAfterComplete() {
+                        document.getElementById('varPanel').style.display='none';
+                        document.getElementById('overlay').style.display='none';
+                    }
+                </script>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="Mypanel">
+                <script type="text/javascript">
+                        //var geocoder = new google.maps.Geocoder();
+                        //var map = null;
+                        var gmarkers = [];
+                        //var mapOptions; 
+                        //var circle = null;
+                        //center: new google.maps.LatLng(54, -2),
+                        //zoom: 4,    
+                        //google.maps.visualRefresh = true;
+                        /*var myOptions = {
+                            zoom : 5,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };*/
+                        
+                        /*function initialize() {
+                          geocoder = new google.maps.Geocoder();
+                          var latlng = new google.maps.LatLng(54, -2);
+                          mapOptions = {
+                            zoom: 4,
+                            center: latlng,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                          }
+                          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                        }*/
+                        
+                        //google.maps.event.addDomListener(window, 'load', initialize);
+                     
+                        function search(){
+                            var geocoder = new google.maps.Geocoder();
+                            var myOptions = {
+                                zoom : 5,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                            };    
+                            var map = new google.maps.Map(document.getElementById("map"), myOptions);
+                            var addressArray = [];
+                            var addressArray = new Array();
+                            <apex:repeat value="{!listOfAddresses}" id="repeats" var="address">
+                                //alert('{!address}');
+                                addressArray.push("{!address}");      
+                            </apex:repeat>
+                            var accNameArray = [];
+                            var accNameArray = new Array();
+                            var accPhoneArray = new Array();
+                            var accWebsiteArray = new Array();
+                            <apex:repeat value="{!lstwrap}" id="repeats1" var="accValue">
+                                accNameArray.push("{!accValue.accName}"); 
+                                accPhoneArray.push("{!accValue.accPhone}"); 
+                                accWebsiteArray.push("{!accValue.accWebsite}");      
+                            </apex:repeat>
+                            //alert(accNameArray);
+                            var markerBounds = new google.maps.LatLngBounds();  
+                            var infowindow = new google.maps.InfoWindow();
+                            for (var i = 0; i < addressArray.length; i++) {
+                                 geocoder.geocode( { 'address': addressArray[i]}, function(results, status) {
+                                     if (status == google.maps.GeocoderStatus.OK) {
+                                        var marker = new google.maps.Marker({
+                                            map: map,
+                                            position: results[0].geometry.location
+                                        });
+                                        //alert(accNameArray[gmarkers.length]);
+                                        marker.set('accountName', accNameArray[gmarkers.length]);
+                                        marker.set('accountPhone', accPhoneArray[gmarkers.length]);
+                                        marker.set('accountWebsite', accWebsiteArray[gmarkers.length]);
+                                        marker.set('accountText', ('accountText'+gmarkers.length));
+                                        gmarkers.push(marker);                    
+                                        //add listeners
+                                        
+                                        google.maps.event.addListener(marker, 'mouseover', function() {
+                                            var phoneHtml = '';
+                                            var webSiteHtml = '';
+                                            if(marker.accountWebsite != '' && marker.accountWebsite != null) {
+                                                webSiteHtml = '<b>Website :</b> <a href= ' + marker.accountWebsite + ' target="_blank">' + marker.accountWebsite + '</a>' + '<br/>';
+                                            }
+                                            if(marker.accountPhone != '' && marker.accountPhone != null) {
+                                                phoneHtml = '<b>Phone :</b> ' + marker.accountPhone + '<br/>'
+                                            }
+                                            var infoHtml = '<div style="width:250px;">'+ '<b>' + marker.accountName + '</b>' + '<br/>' + results[0].formatted_address + '<br/>' + webSiteHtml + phoneHtml + '</div>';
+                                            infowindow.setContent(infoHtml);
+                                            infowindow.open(map,marker);
+                                            //map.setZoom(15);
+                                        });
+
+                                        /*google.maps.event.addListener(marker, 'mouseout', function() {
+                                            infowindow.close();
+                                        });*/
+                                        
+                                        google.maps.event.addListener(map, 'click', function() {
+                                            infowindow.close();
+                                        });
+                                        
+                                        /*google.maps.event.addListener(marker, 'click', function() {
+                                            map.setZoom(15);
+                                        });*/
+                                        
+                                        $('.'+marker.accountText).click(function() {
+                                            var phoneHtml = '';
+                                            var webSiteHtml = '';
+                                            if(marker.accountWebsite != '' && marker.accountWebsite != null) {
+                                                webSiteHtml = '<b>Website :</b> <a href= ' + marker.accountWebsite + ' target="_blank">' + marker.accountWebsite + '</a>' + '<br/>';
+                                            }
+                                            if(marker.accountPhone != '' && marker.accountPhone != null) {
+                                                phoneHtml = '<b>Phone :</b> ' + marker.accountPhone + '<br/>'
+                                            }
+                                            var infoHtml = '<div style="width:250px;">'+ '<b>' + marker.accountName + '</b>' + '<br/>' + results[0].formatted_address + '<br/>' + webSiteHtml + phoneHtml + '</div>';
+                                            //infowindow.setContent('<div style="width:200px;">'+ marker.accountName + '<br/>' + results[0].formatted_address + '<br/>' + '<a href= ' + marker.accountWebsite + ' target="_blank">' + marker.accountWebsite + '</a>' + '<br/>' + marker.accountPhone + '<br/>' + '</div>');
+                                            infowindow.setContent(infoHtml);
+                                            infowindow.open(map,marker);
+                                            map.setZoom(15);
+                                        });
+                                        markerBounds.extend(results[0].geometry.location);
+                                        map.fitBounds(markerBounds);
+                                        if(addressArray.length == 1) { 
+                                            map.setZoom(15);
+                                        }   
+                                    } else {
+                                        //alert("Geocode was not successful for the following reason: " + status);
+                                    }
+                                });
+                            }
+                        }
+                        
+                        /*$(document).ready(function () {
+                            $('.gm-style-iw').hover(function() {
+                                $('.gm-style-iw').stop(true, true).fadeIn(1);
+                              },function(){
+                                $('.gm-style-iw').stop(true, true).fadeOut(1000);
+                            });
+                        });*/
+                        
+                        /*var activeWindow;
+                        function chk(val,accountName){
+                            return;
+                            var geocoder = new google.maps.Geocoder();   
+                            activeWindow.close();
+                            var infowindow = new google.maps.InfoWindow();
+                            var markerBounds = new google.maps.LatLngBounds(); 
+                            geocoder.geocode({ 'address': val}, function(results, status) {
+                                if (status == google.maps.GeocoderStatus.OK) {
+                                        var marker = new google.maps.Marker({
+                                            map: map,
+                                            position: results[0].geometry.location
+                                        });
+                                        gmarkers.push(marker);
+                                        infowindow.setContent('<div style="width:200px;">'+ accountName + '<br/>' + results[0].formatted_address +'</div>');
+                                        infowindow.open(map,marker);
+                                        activeWindow = infowindow;
+                                        //infowindow.close();
+                                        markerBounds.extend(results[0].geometry.location);
+                                        map.fitBounds(markerBounds);    
+                                } else {
+                                    //alert("Geocode was not successful for the following reason: " + status);
+                                }
+                            });
+                        }
+                                                 
+                       function codeAddress() {
+                            return;
+                            var address = 'Noida';
+                            var radius = 20*1000;
+                            geocoder.geocode( { 'address': address}, function(results, status) {
+                              if (status == google.maps.GeocoderStatus.OK) {
+                                map.setCenter(results[0].geometry.location);
+                                var marker = new google.maps.Marker({
+                                  map: map,
+                                  position: results[0].geometry.location
+                                });
+                                if (circle) circle.setMap(null);
+                                circle = new google.maps.Circle({center:marker.getPosition(),
+                                                               radius: radius,
+                                                               fillOpacity: 0.35,
+                                                               fillColor: "#FF0000",
+                                                               map: map});
+                                var bounds = new google.maps.LatLngBounds();
+                                for (var i=0; i<gmarkers.length;i++) {
+                                  if (google.maps.geometry.spherical.computeDistanceBetween(gmarkers[i].getPosition(),marker.getPosition()) < radius) {
+                                    bounds.extend(gmarkers[i].getPosition())
+                                    gmarkers[i].setMap(map);
+                                  } else {
+                                    gmarkers[i].setMap(null);
+                                  }
+                                }
+                                map.fitBounds(bounds);
+                          
+                              } else {
+                                alert('Geocode was not successful for the following reason: ' + status);
+                              }
+                            });
+                          }*/
+                </script>
+               
+               
+                 <!-- <button onmouseover="codeAddress();"> circle Radius</button> -->
+        </apex:outputPanel>
+        <apex:actionfunction name="clearMapValues" action="{!callClearMapValues}" oncomplete="closePanelAfterComplete();" reRender="Mypanel,pb"/>
+        <apex:actionfunction name="clearMapValues1" action="{!callClearMapValues}" reRender="Mypanel,pb"/>
+        <!--<apex:actionfunction name="clearMapValues2" action="{!callClearerrormsg}" reRender="pb"/>-->
+        
+   
+    <script> 
+     function search1() {
+        document.getElementById('j_id0:j_id1:j_id7:j_id8:j_id10:searchBtn').focus();
+     }
+   </script>
+    
+    </apex:form>
+    
+     
+     
+</apex:component>
+
+
+
+
+
+
+
+
+<!-- /*var markers = new Array(accNameArray.length);
+                            for (var i = 0; i < markers.length; i++) {
+                                markers[i] = new google.maps.Marker({
+                                    position: new google.maps.LatLng(0, 0),
+                                    title:accNameArray[i],
+                                });
+                                markers[i].setMap(map);
+                            }*/
+                            for (var i = 0; i < markers.length; i++) {
+                                geocoder.geocode( { 'address': addressArray[i]}, function(results, status) {
+                                    if (status == google.maps.GeocoderStatus.OK) {
+                                        var marker = new google.maps.Marker({
+                                            map: map,
+                                            position: results[0].geometry.location,
+                                        });
+                                        //  alert(accNameArray[i]);
+                                        gmarkers.push(marker);                    
+                                        //add listeners
+                                        google.maps.event.addListener(marker, 'mouseover', function() {
+                                            infowindow.setContent('<div style="width:200px;">'+ 'Title' + '<br/>' + results[0].formatted_address +'</div>');
+                                            infowindow.open(map,marker);
+                                        });
+                                
+                                        google.maps.event.addListener(marker, 'mouseout', function() {
+                                            infowindow.close();
+                                        });               
+                                        markerBounds.extend(results[0].geometry.location);
+                                        map.fitBounds(markerBounds);
+                                    } else {
+                                        // alert("Geocode was not successful for the following reason: " + status);
+                                    }
+                                });
+                                /*var marker = markers[i];
+                                google.maps.event.addListener(marker, 'mouseover', function() {
+                                    geocoder.geocode( { 'address': address}, function(results, status) {
+                                        if (status == google.maps.GeocoderStatus.OK) {
+                                            marker.position= results[0].geometry.location;
+                                            infowindow.setContent('<div style="width:200px;">'+ marker.title + '<br/>' + results[0].formatted_address +'</div>');
+                                            infowindow.open(map,marker);
+                                            gmarkers.push(marker);     
+                                            markerBounds.extend(results[0].geometry.location);
+                                            map.fitBounds(markerBounds);
+                                        }
+                                    });
+                                });  
+                                google.maps.event.addListener(marker, 'mouseout', function() {
+                                    infowindow.close();
+                                });*/ -->

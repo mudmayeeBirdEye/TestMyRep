@@ -1,0 +1,122 @@
+<apex:component >
+    <section class="lc-page">
+    <div class="left-container">
+        <article>
+        <h4>Transferring your phone numbers</h4>
+        <div class="video-desc">
+            <p style="line-height: normal !important">If your existing phone
+                number is still with your previous provider, you can transfer it to
+                your RingCentral account</p>
+            <br />
+            <p style="line-height: normal !important">Just follow these
+                steps:</p>
+            <ul style="padding-left: 18px; line-height: 20px; color: #333333;">
+                <li style="list-style-type: decimal">Continue using your
+                    existing number. Don't cancel your current service.</li>
+                <li style="list-style-type: decimal">Read the <a
+                    style="color: #f8981d"
+                    href="http://marketo.ringcentral.com/rs/ringcentral/images/Transferring-Your-Phone-Number-to-RingCentral-Tips-and-Checklist.pdf">Tips
+                        to Speed up the Number Transfer Process</a> and gather the documents
+                    you’ll need.</li>
+                <li style="list-style-type: decimal">Submit a <a
+                    style="color: #f8981d"
+                    href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Transferring-your-Phone-Number-to-RingCentral-Number-Porting?retURL=%2Frcsupport2013%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dtransfer%2Brequest%26action%3DSearchAnswer%26sortBy%3D%26token%3DxnO8o6o2R5Ol%2B9hXYQG5eP4Z0qB8UxyMiGI1rFn7PIC10tP%2Bu0CVyde0JjfO2GWYTIIKrrR1tVNK8WxrpMkGTlh2fbYTPTq95beO4bETRJE%253D&popup=false&Title=Transferring%20your%20phone%20numbers:%20How%20to%20start%20a%20number%20transfer%20request">transfer
+                        request</a> online.</li>
+            </ul>
+            <!-- <p style="line-height:normal !important;margin-top: 20px;">
+                                        We'll send the request to your current provider and email you when the transfer is complete. 
+                                        (Please note: Number transfers can take 15-30 days.)
+                                        </p> -->
+            <div class="video-panel gallery"
+                style="padding-left: 18px; padding-left: 16px; float: left; padding-top: 5px;">
+                <div class="share-video">
+                    <div class="share">
+                        <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" 
+                                                            addthis:url="http://www.youtube.com/watch?v=9B5cudlpe24" href="javascript:void(0)"><span>Share</span></a>'
+                            escape="false">
+                        </apex:outputtext>
+                    </div>
+                    <img title="Transfer Number" alt="Transfer Number"
+                        src="{!$Resource.NumberTransfer}" />
+                    <!-- http://i1.ytimg.com/vi/9B5cudlpe24/mqdefault.jpg -->
+                    <a class="article-video"
+                        href="http://www.youtube.com/watch?v=9B5cudlpe24?rel=0"
+                        rel="prettyPhoto"
+                        title="How To Transfer (Port) a Number to RingCentral">
+                        <p class="play-video"></p> </a> <a class="overview-call"
+                        title="Transfer Number"
+                        href="http://www.youtube.com/watch?v=9B5cudlpe24?rel=0"
+                        rel="prettyPhoto"></a>
+                </div>
+            </div>
+            <br />
+        </div>
+        <div class="video-panel">
+            <!--<div class="share-video">
+                                        <a class="share">share &raquo;</a>
+                                        <a class="article-video"><img title="article video" alt="article video" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-Video-Big.png')}" />
+                                          <p class="play-video"></p>
+                                        </a>
+                                        </div>
+                                        <a class="overview-call">RingCentral Ease of Management - Business Phone System &raquo;</a>-->
+            <iframe
+                src="http://www.ringcentral.com/inc/PortabilityToolCheck.html"
+                width="250" height="287" frameborder="0" border="0"
+                style="width: 250px; height: 287px; border: 0px solid transparent; overflow: hidden;"></iframe>
+        </div>
+        </article>
+        <div class="suggestion" style="float: none;">
+            <span class="next">Next Suggested Topic: </span><a
+                href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=call_0"
+                class="more">Call Quality</a>
+        </div>
+        <div class="suggestion" style="margin-top: 0px;">
+            <a
+                href="https://community.ringcentral.com/ringcentral/products/ringcentral_number_transfer"
+                target="_blank" class="more"> Learn more in the Community </a>
+        </div>
+    </div>
+
+    <div id="article" class="right-container">
+        <aside>
+        <h3>Related Topics</h3>
+        <ul class="paginate">
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Speed-up-the-Number-Transfer-Process?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D2393%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Speed%20up%20the%20Number%20Transfer%20Process
+                                            ">How
+                    to Speed up the Number Transfer Process</a>
+            </li>
+            <!-- <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Transferring-your-phone-numbers-How-to-get-started?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DNumber%2Btransfer%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Transferring%20you
+                                            ">Transferring your phone numbers: How to get started</a></li> -->
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Transferring-your-phone-numbers-How-to-start-a-number-transfer-request">How
+                    to check the status of your number transfer request</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Transferring-your-Phone-Number-to-RingCentral-Number-Porting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3667%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Transferrin
+                                            ">How
+                    to start a number transfer request</a>
+            </li>
+        </ul>
+        </aside>
+        <div class="page_navigation"></div>
+    </div>
+    </section>
+    <c:RCVideoSupport />
+    <!--<aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section">
+                                            <ul class="paginate">
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>Interface Overview </span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>Company Settings
+                                                </span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>RingCentral – User Settings
+                                                </span></li>
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>4 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            </ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+-->
+</apex:component>

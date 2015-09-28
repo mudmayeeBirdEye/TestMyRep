@@ -1,0 +1,21 @@
+<apex:component controller="Employee_Email_Component_CLS"
+    access="global">
+    <apex:attribute name="QmfId" type="String"
+        description="Id of the QMF" assignTo="{!QMF_Id}" />
+    <!--[if gte mso 9]>
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" id="userImage" style='position:absolute;margin-left:520px;margin-top:80px; height: 266px; width: 200px;z-index:3;' src="{!UserProfilePicURLQMF}" />
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" id="backgroundImage" style='position:relative;width: 800px; height: 418px;z-index:1;' src="{!publicDomain}{!URLFOR($Resource.QA_Superstar)}" />
+    <![endif]-->
+    <table
+        style="width: 786px; height: 418px; background-repeat: no-repeat;"
+        background="{!publicDomain}{!URLFOR($Resource.QA_Superstar)}"
+        cellpadding="0">
+        <tr>
+            <td><apex:image url="{!UserProfilePicURLQMF}"
+              style="margin-left: 510px;margin-bottom: 10px;max-height: 276px;max-width: 210px;" />
+            
+            </td>
+        </tr>
+    </table>
+    
+</apex:component>

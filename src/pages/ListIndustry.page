@@ -1,0 +1,36 @@
+<apex:page controller="GetIndustry">
+    <style>   
+  <!-- Css for Tab onIndustry Page -->  
+     .industryBtn {
+     width: 220px;
+     height: 32px;
+     background-position: 63px -183px !important;    
+   }
+   <!-- Css  Hover for Tab Button onIndustry Page -->
+  .industryBtn :hover {
+    background-position: 63px -132px !important;
+    color: white !important;
+  }  
+ 
+</style>
+    <apex:sectionHeader title="Industry" />
+    <apex:form >
+        <apex:pageBlock >
+            <div style="width: 500px;">
+                <apex:commandButton action="{!URLFOR($Action.Industry__c.New)}"
+                value="Create a new Industry" />
+                <br /> <br />
+                <apex:pageBlockSection columns="8">
+                    <apex:repeat value="{!Summaries}" var="summary">
+                        <apex:commandbutton value="{!summary.Name}"
+                            title="{!summary.Name}" style="width: 220px; height:50px;"
+                            action="/apex/SalesBattleCards?id={!summary.Id}"
+                            styleClass="industryBtn">
+                        </apex:commandbutton>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+                        </apex:repeat>
+                </apex:pageBlockSection>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

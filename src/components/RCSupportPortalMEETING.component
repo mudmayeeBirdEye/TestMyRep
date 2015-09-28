@@ -1,0 +1,58 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_8" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">RingCentral Meetings<sup><font size="1">TM</font></sup></span>
+        </div>
+        <article>
+          <h4>RingCentral Meetings<sup><font size="1">TM</font></sup></h4>
+          <div class="video-desc">
+            <p>RingCentral Meetings gives you the power to video conference and web share, as part of your complete business communication solution. Hold face-to-face
+            meetings in high definitions and share your desktop or documents with anyone, anytime, anywhere. 
+            </p>
+            <br/><br/>
+            <ul style="color:gray;padding-left:17px;">
+             <li>Hold HD video conferencing with upto 50 participants from around the world whenever you want.</li><br />
+              <li>Manage your entire system of locations, departments and individual extension wherever you go. </li><br/>
+              <li>Use your computer (PC or Mac), smartphone (iPhone or Android), tablet (iPhone or Android)</li>
+            </ul>
+            <br/>
+            <p>RingCentral Meetings is available with RingCentral Office Editions in US.</p> <br /><!-- Enterprise --> 
+             Visit the <a class="more" href="http://marketo.ringcentral.com/rcmeeting.html" title="RingCentral Meeting Resource" >RingCentral Meetings Resource Center</a>
+            
+          </div>
+           <div class="video-panel gallery" >
+            <div class="share-video">
+                 
+                <img title="How to Use RingCentral Meetings" alt="How to Use RingCentral Meetings" 
+                src="http://i1.ytimg.com/vi/BuWig_HM3Rk/mqdefault.jpg" />
+                <a class="article-video" href="https://www.youtube.com/watch?v=BuWig_HM3Rk&feature=youtu.be" rel="prettyPhoto" title="How to Use RingCentral Meetings">
+                    <p class="play-video"></p>
+                </a> 
+              <a href="https://www.youtube.com/watch?v=BuWig_HM3Rk&feature=youtu.be" rel="prettyPhoto" title="RingCentral Meetings - Cloud Phone System" 
+                class="overview-call">How to Use RingCentral Meetings</a>
+              </div>
+             </div> 
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_2" class="more">Conferencing</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5541?retURL">RingCentral Meetings Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/4639?retURL">Downloading and Installing Meeting App</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/4630?retURL">Hosting a Meeting</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/4631?retURL">Inviting Meeting participants</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7755">International Dial-in Numbers</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/4629?retURL">FAQs</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

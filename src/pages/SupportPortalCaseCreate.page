@@ -1,0 +1,9 @@
+<apex:page controller="SupportPortalControllerNew" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" cache="false">
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="casecontent">
+            <apex:include pageName="SupportPortalCaseCreatePage"  />   
+        </apex:define>
+         
+    </apex:composition>
+    
+</apex:page>

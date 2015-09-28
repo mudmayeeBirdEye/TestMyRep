@@ -1,0 +1,38 @@
+<apex:component >
+	<style>
+        #overlay {
+            background: no-repeat scroll top center gray;
+            border: 0px solid #000000;
+            bottom: 0;
+            left: 0;
+            opacity: 0.75;
+            position: absolute;
+            top: 0;
+            visibility: hidden;
+            width: 100%;
+            z-index: 1000;
+        }
+	</style>
+	<!--<apex:attribute type="String" required="true" name="articleLink" description="articleLink"/>
+	--><div id="overlay" style="text-align:center;padding-top:190px;"><!--
+           <apex:image value="/img/loading.gif" ></apex:image>
+           
+    --> 
+    <apex:iframe width="90%" height="500px"  scrolling="true" id="theIframe"/> 
+    <a href="javascript:void(0);" onclick="hideOverlay();return false;">Close</a>
+    </div>
+	<script>
+	    //showOverlay();
+		function showOverlay(hrefvalue) {
+		        //alert(hrefvalue);
+            	var o = document.getElementById('overlay');
+            	o.style.visibility = 'visible';
+            	document.getElementById('theIframe').src = hrefvalue;
+           }
+        
+           function hideOverlay() {
+             	var o = document.getElementById('overlay');
+             	o.style.visibility = 'hidden';
+           }
+	</script>        
+</apex:component>

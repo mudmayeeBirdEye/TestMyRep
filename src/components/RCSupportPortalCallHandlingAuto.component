@@ -1,0 +1,132 @@
+<apex:component >
+ <style>
+            .learning-center ul.lc-nav a.last {
+                padding : 0px 0px 0px 0px !important;
+            }
+            .liBullet {
+                list-style-type: disc !important;
+                
+            }
+        </style>
+ <section class="lc-page">
+                                <div class="left-container">
+                                	<div id="BreadCrumb" style="padding-bottom: 10px;">
+              							<!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+              							--><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+              							<span class="breadcrumblink">Call Handling (Auto-Receptionist)</span>
+            						</div>
+                                    <article>
+                                      <h4>Call Handling (Auto-Receptionist)</h4>
+                                      <div class="video-desc">
+                                        <p style="line-height:normal !important">As an administrator, use the Auto-Receptionist to:
+                                        </p>
+                                        <ul style="padding-left: 18px;line-height: 20px;"> 
+                                            <li style="list-style-type:disc"> 
+                                                Choose how incoming calls are handled during normal business hours as well as after hours
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                Specify the greeting callers will hear
+                                            </li>
+                                        </ul><br/><br/>
+                                        <p style="line-height:normal !important;">In Auto-Receptionist, you’ll find these  options:
+                                        </p>
+                                        <ul style="padding-left: 18px;line-height: 20px;"> 
+                                            <li style="list-style-type:disc"> 
+                                                Company Hours
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                Greetings and Company Calls
+                                            </li>
+                                            <li style="list-style-type:disc"> 
+                                                Dial by Name Directory
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                Operator Extension
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                Call Recording
+                                            </li>
+                                        </ul>
+                                      </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                       <div class="share">
+                                        	<apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=0JdGBmULCkk" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                      	</div> <img title="Auto-Receptionist Overview" alt="Auto-Receptionist Overview" 
+                                        src="http://i1.ytimg.com/vi/0JdGBmULCkk/mqdefault.jpg" />
+                                        <a class="article-video" 
+                                        	href="http://www.youtube.com/watch?v=0JdGBmULCkk?rel=0" rel="prettyPhoto" title="Auto-Receptionist Overview">
+                                       
+                                          <p class="play-video"></p>
+                                        </a>
+                                        <a class="overview-call" href="http://www.youtube.com/watch?v=0JdGBmULCkk?rel=0" rel="prettyPhoto" 
+                                        title="Auto-Receptionist Overview">Auto-Receptionist Overview &raquo;</a>
+                                        </div>
+                                        
+                                      </div>
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_3" class="more">Advanced Call Handling</a></div>
+                                    </div>
+                            
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/What-is-an-auto-receptionist?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dauto%2Breceptionist%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=What%20is%20an%20auto-receptionist?
+                                            ">What is an auto-receptionist?</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Company-Business-Hours-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3280%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20Business%20Hours%20Settings
+                                            ">How to set up the company hours settings</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Uploading-Company-Business-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3381%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%20Company%20Business%20Hours%2
+                                            ">How to customize the company hours greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-Company-After-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3384%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%20Company%20After%20Hours%20
+                                            ">How to customize the company after hours greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-After-Hours-Voicemail-Greetings-of-an-extension-via-Web?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3197%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%2
+                                            ">How to customize the after hours voicemail greeting for an extension as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-set-a-rule-based-on-time-of-day-or-date-range-with-a-specific-date-range?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dholidays%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20specific%20date%20range
+                                            ">How to set a rule based on time of day or date range with a specific date range</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-set-a-rule-based-on-time-of-day-or-date-range-with-a-weekly-schedule?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dlunch%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20weekly%20schedule
+                                            ">How to set a rule based on time of day or date range with a weekly schedule</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Uploading-Company-Business-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D2%26k%3Dupload%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20Customize%20Company%20Hours%20Greeting%20as%20an%20Administrator
+                                            ">How to Customize Company Hours Greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Changing-the-Operator-Extension-of-your-RingCentral-Account?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3389%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Changing%20the%20
+                                            ">How to change the operator extension on my RingCentral account as an Administrator
+                                            </a></li>
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                                <aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section"> 
+                                            <ul class="paginate gallery">
+                                                <li> <img title="Change what callers hear" alt="Change what callers hear" 
+                                               	 src="http://i1.ytimg.com/vi/b-v5i4Nuia4/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=b-v5i4Nuia4?rel=0" rel="prettyPhoto" title="Change what callers hear">
+                                               
+                                                <p class="play-video"></p></a><span>Change what callers hear</span></li>
+                                                
+                                                <li>  <img title="Forward my calls to my other phone" alt="Forward my calls to my other phone" 
+                                                	src="http://i1.ytimg.com/vi/a18xaZJZhAk/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=a18xaZJZhAk?rel=0" rel="prettyPhoto" title="Forward my calls to my other phone">
+                                              
+                                                <p class="play-video"></p></a><span>Forward my calls to my other phone or phone
+                                                </span></li>
+                                                <li>  <img title="Setup call forwards for admins" alt="Setup call forwards for admins" 
+                                                	src="http://i1.ytimg.com/vi/Hr1FiArSqHE/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=Hr1FiArSqHE?rel=0" rel="prettyPhoto" title="Setup call forwards for admins">
+                                              
+                                                <p class="play-video"></p></a><span>Setup call forwards for admins
+                                                </span></li>
+                                                <li>  <img title="Change company voicemail" alt="Change company voicemail" 
+                                                	src="http://i1.ytimg.com/vi/H8OG_DbbRrY/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=H8OG_DbbRrY?rel=0" rel="prettyPhoto" title="Change company voicemail">
+                                              
+                                                <p class="play-video"></p></a><span>Change company voicemail</span></li><!--
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            --></ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+                                <c:RCVideoSupport />
+</apex:component>

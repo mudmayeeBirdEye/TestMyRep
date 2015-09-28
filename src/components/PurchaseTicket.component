@@ -1,0 +1,107 @@
+<!---------------------------------------- Component - To create purchase ticket ----------------------------------------------------------->
+<apex:component controller="PurchaseTicket" allowDML="true">
+    <style>
+        #datepicker {
+            border-color: #A5A5A5;
+            width: 30%;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            height: 30px;
+        }
+    </style>
+   <apex:form id="CaseForm1" styleclass="CaseForm1Cls"> 
+        <div class="contect">
+            <apex:outputPanel id="pb">
+                <script>
+                  $(function() {
+                    $("#datepicker").datepicker(); 
+                  });
+                </script>
+                <table id="CaseTable" style="width: 100%;text-align: center;" border="0"> <!-- -border:1px solid red; -->
+                    <tr><td colspan="2" style="text-align: left;">
+                    <span style="font-size:15px;"> 
+                    Please fill out the form below in order to create a Purchase Case
+                    </span></td></tr>
+                    <tr><td colspan="2"><br/></td></tr>        
+                    <tr>
+                        <td style="text-align: left;font-size:15px;width: 20%;">
+                            Subject
+                            <span style="color:red">*</span> 
+                        </td>
+                        <td>
+                            <apex:inputText id="inpSubject1"  styleclass="inpSubject" maxlength="255" 
+                                value="{!subject}"/>
+                           <div class="errorMsg1">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td style="text-align: left;font-size:15px;width: 20%;">
+                        Description
+                        <span style="color:red">*</span>
+                    </td>
+                    <td style="text-align: left;">
+                        <apex:inputTextarea id="inpDesc1" styleclass="inpDesc"  value="{!description}"/>
+                        <div class="errorMsg1">&nbsp;</div>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;font-size:15px;width: 20%;">
+                            Requested Date
+                         </td>
+                        <td style="text-align:left;">
+                            <apex:outputpanel id="ReqDate">    
+                                <input type="text" id="datepicker" /> 
+                            </apex:outputpanel>
+                        </td>
+                    </tr>
+                    <tr><td colspan="2"><br/></td></tr>    
+                    <tr>
+                        <td  colspan="2"> 
+                        <apex:commandButton id="searchBtn" styleclass="saveBtnCSS" 
+                            value="Submit" onclick="validateForm1();return false;"/>
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;font-size:15px;">
+                        <span><br/>Note: You can attach images and files after submission.</span>
+                    </td>
+                    </tr>
+                </table>
+             </apex:outputPanel>
+        </div>
+        <apex:Actionfunction name="submitCase1" action="{!submitCase}" reRender="pb" status="status1">
+            <apex:param value="" assignTo="{!strDate}" name="dateValue1" />
+        </apex:Actionfunction>
+        <script>
+            function validateForm1() {
+                var isValid1 = $('[id$=CaseForm1]').valid();
+                if(isValid1) {
+                    var dataValue = $('#datepicker').val();
+                    submitCase1(dataValue);
+                }
+            }
+            $(document).ready(function() {
+               $('.CaseForm1Cls').validate({
+                   rules: {
+                       "{!$Component.j_id0:LC_Form:j_id44:j_id45:CaseForm1:inpSubject1}": "required",
+                       "{!$Component.j_id0:LC_Form:j_id44:j_id45:CaseForm1:inpDesc1}": {
+                           required: true,
+                           maxlength: 5000
+                       }
+                   },
+                   messages: {
+                       "{!$Component.j_id0:LC_Form:j_id44:j_id45:CaseForm1:inpSubject1}": "Please enter the Subject.",
+                       "{!$Component.j_id0:LC_Form:j_id44:j_id45:CaseForm1:inpDesc1}": {
+                           required: "Please enter the Description.",
+                           maxlength: "Length must be less than 5000 characters."
+                       
+                       }
+                   },errorPlacement: function(error, element) {
+                       error.appendTo(element.next("div") );
+                   }
+               });
+           });       
+        </script> 
+   </apex:form>
+</apex:component>

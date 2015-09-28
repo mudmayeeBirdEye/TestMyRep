@@ -1,0 +1,92 @@
+<apex:component >
+<footer class="footerWrapper">
+  <div class="footerArea">
+    <section role="Main footer">
+      <div class="two-column">
+        <h3>Phone System Features</h3>
+        <ul>
+          <li><a href="http://www.ringcentral.com/office/features/toll-free-numbers/overview.html">Toll Free Numbers</a></li>
+          <li><a href="http://www.ringcentral.com/virtual-pbx/index.html">Virtual PBX</a></li>
+          <li><a href="http://www.ringcentral.com/call-forwarding/index.html">Call Forwarding</a></li>
+          <li><a href="http://www.ringcentral.com/office/features/call-screening/overview.html">Call Screening</a></li>
+          <li><a href="http://www.ringcentral.com/cloud-pbx/index.html">Cloud PBX</a></li>
+          <li><a href="http://www.ringcentral.com/voip-services/index.html">VoIP Service</a></li>
+          <li><a href="http://www.ringcentral.com/phone-system/index.html">Phone System</a></li>
+          <li><a href="http://www.ringcentral.com/business-phone/index.html">Business Phone</a></li>
+        </ul>
+         <ul>
+          <li><a href="http://www.ringcentral.com/features/toll-free-numbers/800-numbers.html">800 Numbers</a></li>
+          <li><a href="http://www.ringcentral.com/office/features/local-numbers/overview.html">Local Numbers</a></li>
+          <li><a href="http://www.ringcentral.com/office/features/voicemail/overview.html">Voicemail</a></li>
+          <li><a href="http://www.ringcentral.com/voicemail/index.html">Online Voicemail</a></li>
+          <li><a href="http://www.ringcentral.com/phone-service/index.html">Phone Service</a></li>
+          <li><a href="http://www.ringcentral.com/office/features/music-on-hold/overview.html">Music on-hold</a></li>
+          <li><a href="http://www.ringcentral.com/office/features/message-alerts/overview.html">Message Alerts</a></li>
+          <li><a href="http://www.ringcentral.com/business-voip/index.html">Business VoIP</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Fax Features</h3>
+       <ul>
+          <li><a href="http://www.ringcentral.com/fax/default.html">Internet Fax</a></li>
+          <li><a href="http://www.ringcentral.com/email-fax/index.html">Email Fax</a></li>
+          <li><a href="http://www.ringcentral.com/fax-number/index.html">Dedicated Fax Number</a></li>
+          <li><a href="http://www.ringcentral.com/fax-service/index.html">Fax Service</a></li>
+          <li><a href="http://www.ringcentral.com/online-fax/index.html">Fax Online</a></li>
+          <li><a href="http://www.ringcentral.com/fax/features/how-it-works.html">Fax Software</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>RingCentral</h3>
+        <ul>
+          <li><a href="http://www.ringcentral.com/whyringcentral/inthenews.html">In the news</a></li>
+          <li><a href="http://www.ringcentral.com/whyringcentral/analysts.html">Analysts</a></li>
+          <li><a href="http://www.ringcentral.com/whyringcentral/testimonials.html">Testimonials</a></li>
+          <li><a href="http://www.ringcentral.com/whyringcentral/casestudies.html">Case studies</a></li>
+          <li><a href="http://www.ringcentral.com/whyringcentral/awards.html">Awards</a></li>
+          <li><a href="http://compare.ringcentral.com/">Compare Us</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Tools+Resources</h3>
+        <ul>
+          <li><a rel="nofollow" href="javascript:window.open('http://www.ringcentral.com/features/popup/hpdemo-video.html','Video','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=576,height=425'); void(0);" target="_top">Watch video</a></li>
+          <li><a href="http://www.ringcentral.com/demo.html">Interactive screen shots</a></li>
+          <li><a href="http://netstorage.ringcentral.com/guides/professional_office_userguide.pdf">User guide</a></li>
+          <!-- li><a href="http://www.ringcentral.com/support/whatisnew.html">What's new</a></li -->
+          <li><a href="http://www.ringcentral.com/resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Support</h3>
+          <ul>
+          <li><a href="http://www.ringcentral.com/whyringcentral/contactus.html">Contact Us</a></li>
+          <li><a href="http://blog.ringcentral.com/">Blog</a></li>
+          <li><a href="http://forum.ringcentral.com/">Forum</a></li>
+          <li><a href="http://www.ringcentral.com/office/phone-system-faq.html">FAQs</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="bottom_menu">
+      <section class="copy">&copy; 1999-2013 RingCentral, Inc. All rights reserved.</section>
+    <nav class="botmenu">
+      <ul>
+        <!-- li class="mlink"><a title="Mobile Site" href="http://www.ringcentral.com/features/rcmobile/overview.html" id="a_mlink">Mobile Site</a></li >
+        <li class="mlink sep">|</li -->
+        <li><a title="RingCentral Contact Us" rel="nofollow" href="http://www.ringcentral.com/whyringcentral/contactus.html">Contact Us</a></li>
+        <li class="sep">|</li>
+        <li><a title="About RingCentral" rel="nofollow" href="http://www.ringcentral.com/whyringcentral/company.html">About RingCentral</a></li>
+        <li class="sep">|</li>
+        <li><a title="RingCentral Affiliate Program" rel="nofollow" href="http://www.ringcentral.com/partner/overview.html">Affiliates and Partners</a></li>
+        <li class="sep">|</li>
+        <li><a title="RingCentral Legal Pages" rel="nofollow" href="http://www.ringcentral.com/legal.html">Legal</a></li>
+        <li class="sep">|</li>
+        <li><a title="Security Policy" rel="nofollow" href="http://www.ringcentral.com/security-statement.html">Security Policy</a></li>
+        <li class="sep">|</li>
+        <li><a title="Sitemap" href="http://www.ringcentral.com/sitemap.html">Site Map</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+</footer>
+</apex:component>

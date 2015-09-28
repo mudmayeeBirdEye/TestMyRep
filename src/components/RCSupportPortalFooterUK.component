@@ -1,0 +1,121 @@
+<apex:component >
+    <head>
+    <apex:stylesheet value="{!URLFOR($Resource.RCHeaderFooter, 'header-footer-rc/includes/css/stylefooter.css')}"/>  
+    <style>
+        div.light_rounded, div.dark_rounded, div.facebook, 
+        div.light_square, div.dark_square, div.pp_overlay { position: fixed; }
+        #footer_wrap_hp .foot-menu div h4 {
+            display: block;
+        }
+    </style>
+
+</head>
+<div id="footer_wrap_hp" style="top: 0px; left: 0px;clear: both;">  
+        <footer>
+    <div class="logoVideoBlock">
+        <a class="footerLogo" href="#" title="RingCentral Virtual PBX, Phone and Internet Fax Service and Software">
+            <span></span> 
+            <b>RingCentral - Your Phone System Everywhere</b>
+        </a>
+        <div class="overVideoFooter video-panel gallery">
+            <a class="videoThumbnail video article-video" href="https://www.youtube.com/watch?v=0FoTstucf9U" rel="prettyPhoto" 
+                    id="0FoTstucf9U">
+                </a>
+            <p>How does it work?</p>
+        </div>
+       <!--  <div class="video-panel gallery">
+            <div class="share-video">
+                    <div class="share">
+                        <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=_zWGe6DU3iM" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                    </div>
+                    <img title="RingCentral Ease of Management - Business Phone System" 
+                        alt="RingCentral Ease of Management - Business Phone System" 
+                        src="http://i1.ytimg.com/vi/foTd3e3oiI8/mqdefault.jpg" />
+                    <a class="article-video" href="https://www.youtube.com/watch?v=foTd3e3oiI8" rel="prettyPhoto">
+                        <p class="play-video"></p>
+                    </a>
+            </div>
+        </div> -->
+    </div>
+    <div class="foot-menu"> 
+        <div class="column1">
+            <h4>Phone System Features</h4>  
+            <ul>
+                <li><a title="Freephone numbers" href="http://www.ringcentral.co.uk/office/features/freephone-numbers/overview.html">Freephone numbers</a></li>
+                <li><a title="Hosted PBX" href="http://www.ringcentral.co.uk/office/features/hosted-pbx/overview.html">Hosted PBX</a></li>
+                <li><a title="Call Forwarding" href="http://www.ringcentral.co.uk/office/features/call-forwarding/overview.html">Call Forwarding</a></li>
+                <li><a title="Call Screening" href="http://www.ringcentral.co.uk/office/features/call-screening/overview.html">Call Screening</a></li>       
+                <li><a title="Conferencing" href="http://www.ringcentral.co.uk/office/features/rc-conferencing/overview.html">Conferencing</a></li>
+                <li><a title="DigitalLine VoIP Service" href="http://www.ringcentral.co.uk/office/features/voip/overview.html">VoIP Service</a></li>              
+                <li><a title="Mobile Apps" href="http://www.ringcentral.co.uk/office/features/rcmobile/overview.html">Mobile Apps</a></li>             
+                <li><a title="VoIP Phones" href="http://www.ringcentral.co.uk/office/voip-phone.html">VoIP Phones</a></li>
+                <li><a title="Auto-attendant" href="http://www.ringcentral.co.uk/office/features/auto-attendant/overview.html">Auto-attendant</a></li>
+                <li><a title="Voicemail" href="http://www.ringcentral.co.uk/office/features/voicemail/overview.html">Voicemail</a></li>
+            </ul> 
+        </div>  
+        <div class="column2">
+            <h4>RingCentral</h4>
+            <ul> 
+                <li><a title="Press Releases" href="http://www.ringcentral.co.uk/whyringcentral/company/pressreleases.html">Press Releases</a></li>
+                <li><a title="In the news" href="http://www.ringcentral.co.uk/whyringcentral/inthenews.html">In the news</a></li>
+                <li><a title="Analysts" href="http://www.ringcentral.co.uk/whyringcentral/analysts.html">Analysts</a></li>
+                <li><a title="Case studies" href="http://www.ringcentral.co.uk/whyringcentral/casestudies.html">Case studies</a></li>
+                <li><a title="Compare Us" href="http://www.ringcentral.co.uk/office/comparison.html">Compare Us</a></li>
+            </ul>
+            <h4>Tools &amp; Resources</h4>
+                <ul>
+                    <li><a href="http://www.ringcentral.co.uk/demo.html">Interactive screenshots</a></li>
+                    <li><a href="http://www.ringcentral.co.uk/resources/learning-center.html#whitepapers">White Papers</a></li>
+                    <li><a href="http://www.ringcentral.co.uk/resources/learning-center.html#ringcentral_guides">User guides</a></li>
+                    <li><a href="http://www.ringcentral.co.uk/office/comparison.html">PBX Comparison</a></li>
+                    <li><a href="http://www.ringcentral.co.uk/office/platform/overview.html">RingCentral Platform</a></li>
+                    <li><a href="http://www.ringcentral.co.uk/support/qos-information.html">Quality of Service</a></li>
+                </ul> 
+            </div>
+    <div class="column3">
+        <h4>Support</h4>
+            <ul>
+                <li><a rel="nofollow" class="jse-link" href="http://www.ringcentral.co.uk/whyringcentral/contactus.html">Contact us</a></li>
+                <li><a rel="nofollow" target="_blank" href="https://blog.ringcentral.com/category/ringcentral-uk/">Blog</a></li>
+                <li><a href="http://www.ringcentral.co.uk/office/phone-system-faq.html">FAQs</a></li>
+            </ul>
+    </div>
+    </div>
+    <div class="phones">
+        <div class="socialFooter">
+            <a class="faceB" href="https://www.facebook.com/ringcentral"  target="_blank" rel="nofollow"></a>
+            <a class="twitter" href="https://twitter.com/ringcentral" target="_blank"  rel="nofollow"></a>
+            <a class="googleP" href="https://www.google.com/+ringcentral" target="_blank"  rel="nofollow"></a>
+            <a class="linkedIn" href="http://www.linkedin.com/company/ringcentral"  target="_blank" rel="nofollow"></a>
+        </div>
+        <!-- <p class="sale_phones">Call today <span class="office_phones" id="DinOfficePhone">800 820 3676</span></p> -->
+        <p class="sale_phones">Call today <span class="office_phones" id="DinOfficePhone"><a href="callto:08000988136" style="color:#fff">0800 098 8136</a></span></p>
+
+    </div>
+    <div class="logos">
+        <span></span>
+    </div>
+    <div class="bottom_menu">
+        <p class="copy">
+            © 1999-2015 RingCentral, Inc. All rights reserved.</p>
+        <nav class="botmenu">
+            <ul>
+                <li><a class="jse-link" rel="nofollow" title="Affiliates and Partners" 
+                        href="http://www.ringcentral.co.uk/partner/overview.html">
+                        Affiliates and Partners</a>
+                </li>
+                <li class="sep">|</li>
+                <li><a class="jse-link" rel="nofollow" title="RingCentral Legal Pages" href="http://www.ringcentral.co.uk/legal.html">Legal</a></li>
+                <li class="sep">|</li>
+                <li><a class="jse-link" href="http://www.ringcentral.co.uk/security-statement.html" rel="nofollow" title="Security Policy">Security Policy</a></li>
+                <li class="sep">|</li>
+                <li><a class="jse-link" href="http://www.ringcentral.co.uk/legal/privacy-policy.html" rel="nofollow" title="Security Policy">Privacy Policy</a></li>
+                <li class="sep">|</li>
+                <li><a class="jse-link" title="Site Map" href="http://www.ringcentral.co.uk/sitemap.html" >Site Map</a></li>
+            </ul>
+        </nav>
+    </div>
+    <c:RCVideoSupport />
+</footer>
+</div>
+</apex:component>

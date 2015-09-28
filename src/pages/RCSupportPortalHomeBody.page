@@ -1,0 +1,226 @@
+<!-- *************************************************************************************************************************************
+
+UPDATE
+
+    Case: 03823915 - Updates on What's New @ Customer Support Center
+    Case Desc:  Additional list of topics and links that need to be display.
+    Update by: eugenebasianomutya
+    Update date: 08072013
+
+****************************************************************************************************************************************** -->
+
+<apex:page sidebar="false" controller="RCSupportControllerHandler"  showHeader="false" standardStylesheets="false" docType="html-5.0">
+ 
+    <c:RCSystemStatus Text="Customer Support Center" />
+    <style>
+        .lastUL li {
+            display: inline-table;
+            padding-left: 55px;
+        }
+        .areatop {
+            padding:14px 0 14px 60px!important;
+        }  
+    </style>
+    <article class="box top" style=" width: 212px; height: 670px;margin-bottom:0px;padding:2px 20px 0px 24px;" >
+         <h3>WHAT'S NEW</h3>
+         <ul>
+         
+            <!-- Case# 03823915 -->
+         
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8404">Office 365 Integration</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8353">RingCentral Global Office</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6748 ">Single Sign On</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8355">Park Location Group</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8282">Call Monitoring from HUD</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/873">Hold Music</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8354">Corporate Directory</a>
+            </li>
+            
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/3472">Outbound Fax Settings</a>
+            </li>
+            
+            
+            <!--  COMMENT THIS LINKS
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8207">Oracle Sales Cloud Integration</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8212">Heads Up Display</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5541">RingCentral Meetings</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8211">Cost Center Management</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6546">Templates</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=SmartphoneApps_0">RingCentral Mobile App</a>
+            </li>
+            
+            -->
+
+            <!-- Case# 03823915 -->
+            
+            <li><a
+                href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=getting_0">Customer Onboarding Guide</a>
+            </li>
+            <li><a
+                href="http://netstorage.ringcentral.com/guides/quickuserguide.pdf ">Quick Guide for Users</a> 
+            </li>
+             <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6630">Fax Account Resources</a>
+            </li>
+            <li><a
+                href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf"
+                target="_blank" title="Release Notes"><b>Release Notes</b></a>
+            </li>
+        </ul>
+         
+         
+         
+
+         <h3 style="margin-top: 25px;">POPULAR ARTICLES</h3>
+
+        <ul>
+                <apex:repeat value="{!articleOrderedList}" var="key">
+                  <li><a href="{!mapArticleUrl[key]}">{!key}</a></li>
+             </apex:repeat>
+        </ul>
+
+    </article>
+ 
+    <div class="learning-center-container lccontainer" style="width:682px!important;">
+         <h2>learning center</h2>
+
+        <div class="icon-area areatop">
+            <ul class="icons-list">
+                    <li class="gs bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=getting_0">Getting
+                            Started</a>
+                    </li>
+                    <li class="nt bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=number_0">Number
+                            Transfer</a>
+                    </li>
+                    <li class="cq bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=call_0">Call
+                            Quality</a>
+                    </li>
+                    <li class="cs bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21">Company
+                            Settings</a>
+                    </li>
+                    <li class="ds bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7">Group
+                            Settings</a>
+                    </li>
+                    <li class="us bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14">User
+                            Settings</a>
+                    </li>
+                    <li class="fax bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Faxing_0">Faxing</a>
+                    </li>
+                    <li class="dp bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=DeskPhones_0">Phone Devices</a>
+                    </li>
+                    <li class="clearBoth">&nbsp;</li>
+
+                    <li class="ma bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=SmartphoneApps_0">Mobile
+                            Apps</a>
+                    </li>
+                    <li class="sp bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Desktop_0">Desktop Apps</a>
+                    </li>
+                    <li class="hdvideo bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_8">HD
+                            Video Meeting </a>
+                    </li>
+                    <li class="con bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_2"
+                        style="width: 84px !important; margin: 0px 17px !important">Conferencing
+                    </a>
+                    </li>
+                    <li class="clearBoth">&nbsp;</li>
+
+                    <li class="sms bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_1">Business
+                            SMS </a>
+                    </li>
+                    <li class="inte bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_3">Salesforce
+                            Integration </a>
+                    </li>
+                    <li class="bill bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Billing_0">Billing</a>
+                    </li>
+                    <li class="tf bg"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0">Top
+                            Features</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="flag-bottom learningCenterBottom"></div>
+    </div>
+    <div style='float: left; margin-left: 26px; width: 100%;'>
+        <article class=" last" style="height:auto;margin-bottom:30px;margin-right:0px;">
+             <h3 style="float: left;">QUICK LINKS</h3>
+
+            <ul class="lastUL">
+                <li><a href="http://www.ringcentral.com/support/images/creditcardauthorizationform.pdf" target="_blank" title="Credit Card Auth Form"> Credit Card Form
+            </a>
+                </li>
+                 <li><a href="http://www.ringcentral.com/webinars" target="_blank" title="Webinars"> Webinars </a>
+                </li>
+                <li>
+                    <!--Changed on 17th March 2014 <a href="http://netstorage.ringcentral.com/guides/professional_office_userguide.pdf" target="_blank" title="Admin Guide">Admin Guide</a> --> 
+                    <a href="http://www.ringcentral.com/office/documentation.html" target="_blank" title="Documentation">Documentation</a>
+                </li>
+                <li>
+                    <!--Changed on 17th March 2014 <a href="http://netstorage.ringcentral.com/guides/office_non-admin_userguide.pdf" target="_blank" title="User Guide">User Guide</a>  --> 
+                    <a href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf" target="_blank" title="Release Notes">Release Notes</a>
+                </li>
+                <!-- <li>
+                    <apex:outputLink rendered="{!if($Site.Name == 'rcsupport2013',true,false)}" target="_blank" value="{!$Site.CurrentSiteUrl}FAXFeatureFAQ" title="Top Fax FAQ">Top Fax FAQ</apex:outputLink>
+                    <apex:outputLink rendered="{!if($Site.Name == 'rcsupportCA2012',true,false)}" target="_blank" value="{!$Site.CurrentSiteUrl}FAXFeatureFAQCA" title="Top Fax FAQ">Top Fax FAQ</apex:outputLink>
+                </li> -->
+               <li><a href="https://developer.ringcentral.com" target="_blank" title="For Developers">For Developers</a>  
+                    <!--<span style="display:block;padding-top: 10px;">
+                    <apex:outputtext rendered="{!IF(((CONTAINS($Site.CurrentSiteUrl,'rcsupportCA2012')) || (CONTAINS($Site.CurrentSiteUrl,'success.ringcentral.ca'))),true,false)}">
+                   <a href="http://www.ringcentral.ca/fax/features/faq.html" target="_blank"  title="For Developers">Fax Faq</a>
+                  </apex:outputtext>
+                    <apex:outputtext rendered="{!IF((!(CONTAINS($Site.CurrentSiteUrl,'rcsupportCA2012')) && !(CONTAINS($Site.CurrentSiteUrl,'success.ringcentral.ca'))),true,false)}">
+                     <a href="{!$Site.CurrentSiteUrl}fax/features/faq.html" target="_blank"  title="For Developers">Fax Faq</a>
+                    </apex:outputtext>
+                 </span>      
+         -->
+                </li>
+                <!--<li><a href="http://help.ringcentral.com/"  target="_blank" title="Classic Support Site">Classic Support Site</a></li>-->
+            </ul>
+        </article>
+    </div>     
+</apex:page>

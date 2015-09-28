@@ -1,0 +1,90 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <article>
+          <h4>Softphone</h4>
+          <div class="video-desc">
+            <p>The RingCentral Softphone is a custom application for your desktop or laptop computer that turns it into a phone. You get real-time control of your calls and immediate access to creating and sending a fax, company and personal contacts, voicemail, and much more.</p>
+            <br/>
+            <span style="color:#333333">With the Softphone, you and your users can:</span>
+            <ul style="color:#333333;padding-left:17px;"><!--
+                <li class="list-head"></li>
+                --><li>Dial and answer calls from your computer</li>
+                <li>Screen incoming calls</li>
+                <li>View and listen to voice messages</li>
+                <li>View your recent, answered, missed, received and dialed calls</li>
+                <li>Transfer incoming and outgoing calls to other phone numbers or extensions</li>
+                <!--<li>Speed dial up to 10 numbers so you can easily customize the numbers you call most</li>
+                <li>Access your online account</li>-->
+            </ul>
+            <p class="note"><!--*Dialing from a softphone requires a digital line--></p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+              <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                <div class="share">
+                        <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=wOCN1lc4bKk" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                    </div>
+              <!-- </div> -->
+            
+            <img title="Downloading the RingCentral Softphone" alt="Downloading the RingCentral Softphone article video" 
+                src="http://i1.ytimg.com/vi/wOCN1lc4bKk/mqdefault.jpg " />
+                <a class="article-video" href="http://youtu.be/wOCN1lc4bKk?rel=0" rel="prettyPhoto" title="Downloading the RingCentral Softphone">
+              <p class="play-video"></p>
+              </a>
+             <a class="overview-call" href="http://youtu.be/wOCN1lc4bKk?rel=0" rel="prettyPhoto" title="Downloading the RingCentral Softphone">
+             Downloading the RingCentral Softphone&raquo;</a> 
+             </div>
+            </div>
+        </article><!--
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=Billing_0"  class="more">Billing</a>
+        </div>
+      -->
+        <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+            <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_softphone" 
+                target="_blank" class="more">
+                Learn more in the Community
+            </a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4973?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Ddownload%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Download%20and%20Install%20the%20RingCentral%20SoftPhone%20on%20a%20Windows%20PC
+            ">How to Download and Install the RingCentral SoftPhone on a Windows PC</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5133?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Ddownload%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20download%20the%20RingCentral%20SoftPhone
+            ">How to download the RingCentral SoftPhone</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5063?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D1404%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=RingCentral%20Softphone%20Minimum%20Requirements
+            ">RingCentral Softphone Minimum Requirements</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5016?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Ddownloading%2Bmobile%2Bapps%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20download%20the%20RingCentral%20Mobile%20applications
+            ">How to download the RingCentral Mobile applications</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5034?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dmac%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Install%20the%20RingCentral%20Call%20Controller%20on%20a%20MAC%20with%20OS%20X%20Mountain%20Lion
+            ">How to install the RingCentral Call Controller on a Mac with OS X Mountain Lion</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+           <img title="Sending Faxes using  the RingCentral Softphone" alt="Sending Faxes using  the RingCentral Softphone" 
+            src="http://i1.ytimg.com/vi/3o68-DknRzo/mqdefault.jpg" />
+            <a href="http://youtu.be/3o68-DknRzo?rel=0" rel="prettyPhoto" title="Sending Faxes using  the RingCentral Softphone">
+            <p class="play-video"></p>
+            </a><span>Sending Faxes using  the RingCentral Softphone</span></li>
+          
+          <li>
+            <img title="Send Text-to-Speech Message Reply using the Softphone" alt="Send Text-to-Speech Message Reply using the Softphone" 
+                   src="http://i1.ytimg.com/vi/kUYd846n26U/mqdefault.jpg" />
+            <a href="http://youtu.be/kUYd846n26U?rel=0" rel="prettyPhoto" title="Send Text-to-Speech Message Reply using the Softphone">       
+            <p class="play-video"></p>
+            </a><span>Send Text-to-Speech Message Reply using the Softphone</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,138 @@
+<apex:page controller="SupportPortalControllerNew" showHeader="false"
+    title="Public Knowledge Base" cache="true" expires="{!cacheMaxAge}">
+
+    <style type="text/css">
+ul li,ol li {
+    margin-left: 0px;
+    padding-left: 0; //
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #0670B4;
+    padding-bottom: 5px;
+}
+
+.videoText {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    width: 740px !important;
+}
+
+.rn_ProductCategoryList .rn_HierList {
+    width: 95% !important;
+}
+
+.rn_ProductCategoryList {
+    margin-left: 36px;
+}
+
+li a {
+    color: #0670B4;
+}
+
+.rn_HierList ul li a:hover {
+    text-decoration: underline !important;
+    color: #015BA7 !important;
+}
+
+#ContentHeader {
+    text-align: center;
+    color: #B80000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ContentbodyHeader {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    padding-left: 3px;
+}
+
+#ContentBodyLinks { //
+    padding-left: 902x;
+    padding-left: 3px;
+}
+
+.links {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.videoText {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    width: 97%;
+}
+</style>
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="search">
+            <!--  <div style='margin-bottom:15px;margin-top:10px;' >
+            <a href="{!$Site.CurrentSiteUrl}" class="rn_Selected rn_FilterItem" style='text-decoration:underline'>Support Home</a>->Videos
+            </div> -->
+            <table border="0" width="100%" cellspacing="0">
+                <tr>
+                    <td valign="top">
+                        <div id="Div2" class="rn_ProductCategoryList" style="width: 100%;">
+                            <div id="ContentDiv" style="width: 100%;">
+                                <!--
+                               <div class="ContentbodyHeader"
+                                    style="color: red; text-align: center">Coming Soon</div>-->
+                                <div id="Contentbody">
+                                    <div class="ContentbodyHeader">Phone Documents</div>
+                                    <div class="videoText"></div>
+                                    <div id="ContentBodyLinks">
+                                        <ul>
+                                            <!--
+                                            <li><a
+                                                href="http://netstorage.ringcentral.com/btcloudphone/phoneportfoliobrochure.pdf"
+                                                target="_blank">IP Phones Portfolio</a></li>
+                                            -->
+                                             <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhonePolycomVVX300400UserGuide.pdf"
+                                                target="_blank">Polycom VVX 300 and VVX 400 User Guide</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhonePolycomVVX500UserGuide.pdf"
+                                                target="_blank">Polycom VVX 500 User Guide</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhonePolycomSoundstationUserGuide.pdf"
+                                                target="_blank">Polycom IP 6000</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneYealinkW52PUserGuide.pdf"
+                                                target="_blank">Yealink W52P</a></li>
+                                        </ul>
+                                    </div>
+                                    <br />
+                                    <div class="ContentbodyHeader">Other User Guides</div>
+                                    <div class="videoText"></div>
+                                    <div id="ContentBodyLinks">
+                                        <ul>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneGettingReady.pdf"
+                                                target="_blank">Getting Ready for BT Cloud Phone</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneAdminPortalUserGuide.pdf"
+                                                target="_blank">User Guide for the Admin Portal</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneMyExtensionUserGuide.pdf"
+                                                target="_blank">User Guide for My Extension</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneSalesforceAdminGuide.pdf"
+                                                target="_blank">SalesForce Admin Guide Link</a></li>
+                                            <li><a
+                                                href="https://btbusiness.custhelp.com/euf/assets/cloud_phone/pdf/BTCloudPhoneSalesforceUserGuide.pdf"
+                                                target="_blank">SalesForce User Guide Link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="5%">&nbsp;</td>
+                </tr>
+            </table>
+        </apex:define>
+    </apex:composition>
+</apex:page>

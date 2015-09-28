@@ -1,0 +1,125 @@
+<apex:component >
+    <section class="lc-page">
+    <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+            <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                                        -->
+            <a
+                href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21"
+                class="breadcrumblink">Company Settings</a> &gt; <span
+                class="breadcrumblink">Add and Set Up Departments</span>
+        </div>
+        <article>
+        <h4 style="margin-bottom: 10px">Add and Set Up Departments</h4>
+        <div class="video-desc">
+            <p style="line-height: normal !important">As an administrator or call queue manager, add and create call queues any time a specific group of users such as sales, support and billing need to share incoming calls..</p>
+            <br />
+            <p style="line-height: normal !important">Give each call queue an extension or direct number (local or toll-free) of its own.</p>
+            <br />
+            <p style="line-height: normal !important">Designate specific business hours for your call queue and set up email or text message notifications for voicemails or any missed calls . </p>
+            <br />
+        </div>
+        <div class="video-panel gallery">
+            <div class="share-video">
+                <div class="share">
+                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=aEL5qvPWqrI" href="javascript:void(0)"><span>Share</span></a>'
+                        escape="false"></apex:outputtext>
+                </div>
+                <img title="Call Queue Overview" alt="Call Queue Overview"
+                    src="http://i1.ytimg.com/vi/uFk5TVaF_54/mqdefault.jpg" /> <a
+                    class="article-video"
+                    href="https://www.youtube.com/watch?v=uFk5TVaF_54"
+                    rel="prettyPhoto" title="Call Queue Overview">
+
+                    <p class="play-video"></p> </a> <a class="overview-call"
+                    href="https://www.youtube.com/watch?v=uFk5TVaF_54"
+                    rel="prettyPhoto" title="Call Queue Overview">Call Queue Overview&raquo;</a>
+            </div>
+        </div>
+        </article>
+        <div class="suggestion">
+            <span class="next">Next Suggested Topic:</span> <a
+                href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_22"
+                class="more">Set Up Business Hours</a>
+        </div>
+        <!--<div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="#" class="more">Messages &amp; Notifications</a></div>
+                                -->
+    </div>
+
+    <div id="article" class="right-container">
+        <aside>
+        <h3>Related Topics</h3>
+        <ul class="paginate">
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-edit-the-rules-for-department-hours?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3521%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20the%20rules%20for%20d
+                                            ">How to configure call queue rules</a></li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-record-your-department-s-greeting-over-the-phone?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3616%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20record%20your%252
+                                            ">How to customize group greetings
+</a></li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-upload-after-hours-voicemail-greetings-for-a-department?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3531%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20upload%2
+                                            ">How to upload after hours voicemail for a group</a></li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Changing-the-Operator-Extension-of-your-RingCentral-Account?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3389%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Changing%20the%20
+                                            ">How to change the operator extension on my RingCentral account as an Administrator</a></li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-access-the-advanced-call-handling-feature-of-the-auto-receptionist?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3634%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to
+                                            ">Howto access the advanced call handling feature of the auto receptionist</a></li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-edit-the-notification-settings-of-a-department?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3523%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20the%20noti
+                                            ">How to edit the business hours messages and notification settings of a call queue</a></li>
+        </ul>
+        </aside>
+        <div class="page_navigation"></div>
+    </div>
+    </section>
+    <aside id="lc-video" class="lc-video">
+    <div class="video-section">
+        <ul class="paginate gallery">
+            <li><img title="Setting up Business  Hours for Departments"
+                alt="Setting up Business  Hours for Departments"
+                src="http://i1.ytimg.com/vi/2oJA9maFn78/mqdefault.jpg" /> <a
+                href="http://www.youtube.com/watch?v=2oJA9maFn78?rel=0"
+                rel="prettyPhoto" title="Setting up Business  Hours for Departments">
+
+                    <p class="play-video"></p> </a><span>Setting up Business Hours
+                    for Departments</span></li>
+
+            <li><img title="Call Handling for Departments"
+                alt="Call Handling for Departments "
+                src="http://i1.ytimg.com/vi/Qd1PMacsNok/mqdefault.jpg" /> <a
+                href="http://www.youtube.com/watch?v=Qd1PMacsNok?rel=0"
+                rel="prettyPhoto" title="Call Handling for Departments">
+
+                    <p class="play-video"></p> </a><span>Call Handling for
+                    Departments </span></li>
+
+            <li><img title="Messages and Notifications for Departments"
+                alt="Messages and Notifications for Departments"
+                src="http://i1.ytimg.com/vi/Pw7dtfFHyZw/mqdefault.jpg" /> <a
+                href="http://www.youtube.com/watch?v=Pw7dtfFHyZw?rel=0"
+                rel="prettyPhoto" title="Messages and Notifications for Departments">
+
+                    <p class="play-video"></p> </a><span>Messages and Notifications
+                    for Departments </span></li>
+
+            <li><img title="Advanced Call Handling for Call Queues "
+                alt="Advanced Call Handling for Call Queues "
+                src="http://i1.ytimg.com/vi/Pw7dtfFHyZw/mqdefault.jpg" /> <a
+                href="http://www.youtube.com/watch?v=2NVbMK6zdn4?rel=0"
+                rel="prettyPhoto"
+                title="Advanced Call Handling for Call Queues s">
+
+                    <p class="play-video"></p> </a><span>Advanced Call Handling for Call Queues </span></li>
+            <!--
+                                                
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            -->
+        </ul>
+    </div>
+    <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,139 @@
+<apex:component >
+<style>
+  .settinganchor{
+    //text-decoration: underline;
+    color:#f8981d;
+  }
+</style>
+<section class="lc-page">
+      <div class="left-container">
+        <!--<div id="BreadCrumb" style="padding-bottom: 10px;">
+             <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">Setting</a> &gt; 
+             <span class="breadcrumblink">User Settings</span>
+         </div>
+        --><article>
+          <h4>User Settings</h4> 
+          <div class="video-desc"> 
+            <p>What is a user? Every person that makes or receives call is a user. This section is for RingCentral Users or Administrators who are setting up user details.</p>
+            <br/>
+            <p style="line-height:normal !important"><!--
+                Administrators and department managers can:   
+                <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_15" class="settinganchor">Set up business hours</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_16">set greetings &amp; hold music</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_17">set call handling &amp; forwarding</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_18">set advanced call handling</a>, 
+                <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_19">set messages &amp; notifications</a>
+                and <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_20">set Caller ID</a>.-->
+                
+                <table style="width:340px">
+                    <tr>
+                        <td nowrap="nowrap" style="vertical-align:top;">
+                            <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_15" class="settinganchor">Set up business hours</a>
+                        </td>
+                        <td nowrap="nowrap" style="vertical-align:top;">
+                            <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_16">Set greetings &amp; hold music</a>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td nowrap="nowrap" style="vertical-align:top;">
+                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_17">Set call handling &amp; forwarding</a>
+                      </td>
+                      <td nowrap="nowrap" style="vertical-align:top;">
+                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_18">Set advanced call handling</a>
+                      </td>
+                    </tr>
+                    <tr>
+                       <td nowrap="nowrap" style="vertical-align:top;">
+                          <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_19">Set messages &amp; notifications</a>
+                       </td>
+                       <td nowrap="nowrap" style="vertical-align:top;">
+                            <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_20">Set Caller ID</a>
+                       </td>
+                    </tr>
+                 </table>
+                 
+                </p>
+                <br/>
+                <!--<br/>
+                -->
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=D2uWgyTzD8Y" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+            
+            <img title="RingCentral - User Overview" alt="RingCentral - User Overview" 
+                src="http://i1.ytimg.com/vi/D2uWgyTzD8Y/mqdefault.jpg"  />
+              <a class="article-video" href="http://www.youtube.com/watch?v=D2uWgyTzD8Y?rel=0" rel="prettyPhoto" title="RingCentral - User Overview"> 
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=D2uWgyTzD8Y?rel=0" rel="prettyPhoto" title="RingCentral - User Overview">RingCentral - User Overview&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> 
+        <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_15" class="more">Set Up Business Hours</a>
+            <p style="line-height:normal !important;margin-top:30px;">Other Settings Sections:  
+                    <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="settinganchor">Company Settings</a>, 
+                    <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="settinganchor">Department Settings</a>
+            </p> 
+        </div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5069?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DUsers%2BOverview%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Users%20Overview
+            ">Users Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5027?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3271%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extens
+            ">How to edit your extension's user hours rules</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5097?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3913%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20customize%20your%20extension's%20greeting
+            ">How to customize your extension's greeting</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5096?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dvoicemail%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20customize%20the%20user%20hours%20voicemail%20greeting%20of%20your%20extension
+            ">How to customize the user hours voicemail greeting of your extension</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4979?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3470%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Handling%20&%20Forwarding%20Overview
+            ">Call Handling &amp; Forwarding Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5072?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dadd%2Buser%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20add%20multiple%20extensions%20to%252
+            ">How to add multiple extensions to your RingCentral account</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5009?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3274%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up
+            ">How to add a custom rule in your extension</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5024?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3613%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extension's%2
+            ">How to change your extension's Notification settings</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4976?retURL
+            ">How to Set up Incoming Call Information as an Extension User</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          
+            <img title="RingCentral Office - User Extension Overview" alt="RingCentral Office - User Extension Overview" 
+                src="http://i1.ytimg.com/vi/4qTaI5Z7H4U/mqdefault.jpg"  />
+                <a href="http://www.youtube.com/watch?v=4qTaI5Z7H4U?rel=0" rel="prettyPhoto" title="RingCentral Office - User Extension Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Extension Overview</span></li>
+          <li>
+          
+          <img title="RingCentral Office - User Section Overview" alt="RingCentral Office - User Section Overview" 
+            src="http://i1.ytimg.com/vi/rA3AFAgxIEs/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=rA3AFAgxIEs?rel=0" rel="prettyPhoto" title="RingCentral Office - User Section Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Section Overview</span></li>
+          
+          <li>
+          
+          <img title="RingCentral Office - Call Handling and Forwarding Overview" alt="RingCentral Office - Call Handling and Forwarding Overview" 
+            src="http://i1.ytimg.com/vi/Ly0syiFtLvs/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=Ly0syiFtLvs?rel=0" rel="prettyPhoto" title="RingCentral Office - Call Handling and Forwarding Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Call Handling and Forwarding Overview</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

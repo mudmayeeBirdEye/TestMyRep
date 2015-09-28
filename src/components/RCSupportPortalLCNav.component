@@ -1,0 +1,171 @@
+<apex:component controller="RCSupportControllerHandler">
+ <!--<script src="{!URLFOR($Resource.HoverIntent)}"></script>
+--><apex:attribute type="String" required="true" name="tabname" description="tabText"/>
+<style>
+/*.learning-center ul.lc-nav a.last {
+    padding-left: 8px !important;
+}*/
+.selectedSubMenu{
+  /*background-color: #686869;
+  background-image: none;
+  color: #fff !important;*/
+}
+.selectedMenu{
+  background-color:#9c672b;
+}
+/*.learning-center ul.lc-nav li a{
+   background-color: javascript:void(0);9c672b;
+}
+.learning-center .three-column a:hover, .learning-center .single-column a:hover, .learning-center .three-column a:hover, 
+.learning-center .single-column a:hover {
+  background: url({!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-Menu-Arrow.png')}) center bottom no-repeat javascript:void(0);9c672b;
+  display: block;
+}*/
+</style>
+
+    <script>
+       
+       /*$(document).ready(function () {
+        function drops_show(){ 
+            alert(1);  
+        }
+        
+        function drops_hide(){  
+            alert(2);   
+        }   
+        
+        $(".lc-nav").hoverIntent({
+                interval: 1000, // milliseconds delay before onMouseOver
+                over: drops_show, 
+                timeout: 2000, // milliseconds delay before onMouseOut
+                out: drops_hide
+                });
+        });*/
+    </script>
+
+<nav role="sub navigation">
+    <ul class="lc-nav">
+        <li class="single-column started parent">
+           <a href="javascript:void(0);" class="first {!IF(CONTAINS(tabname,'getting'), 'selectedMenu', '')}"  id="getting_0">Getting Started</a>
+            <div class="LC-submenu">
+                <ul class="column" style="width:165px;">
+                    <li><a href="javascript:void(0);" id="getting_0" class="{!IF(CONTAINS(tabname,'getting_0'), 'selectedSubMenu', '')}">Getting Started</a></li>
+                    <li><a href="javascript:void(0);" id="getting_1" class="{!IF(CONTAINS(tabname,'getting_1'), 'selectedSubMenu', '')}">Learn the Basics</a></li>
+                </ul>
+                <div class="lc-sub-nav-footer-bg">
+                <img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-DD-single-column.png')}"/> 
+                    </div>
+            </div>
+        </li>
+        <li class='parent'>
+           <a href="javascript:void(0);" class="{!IF(CONTAINS(tabname,'number_0'), 'selectedMenu', '')}" id="number_0">Number Transfer</a>
+        </li>
+        
+        <li class='parent'>
+          <a href="javascript:void(0);" class="{!IF(CONTAINS(tabname,'call_0'), 'selectedMenu', '')}" id="call_0">Call Quality</a>
+        </li>
+        <li class="three-column setting parent" >
+               <a href="javascript:void(0);" id="settings_21" class="{!IF(CONTAINS(tabname,'settings'), 'selectedMenu', '')}" >Settings
+               </a>
+            <div class="LC-submenu" >
+            <ul class="column">
+                <li class="lc-sub-nav-head">
+                <a href="javascript:void(0);" id="settings_21" class="{!IF(CONTAINS(tabname,'settings_21'), 'selectedSubMenu', '')}">Company Settings Overview</a></li>
+                <li><a href="javascript:void(0);" id="settings_0" class="{!IF(CONTAINS(tabname,'settings_0'), 'selectedSubMenu', '')}">Add and Set Up Users</a></li>
+                <li><a href="javascript:void(0);" id="settings_1" class="{!IF(CONTAINS(tabname,'settings_1'), 'selectedSubMenu', '')}">Add and Set Up Departments</a></li>
+                <li><a href="javascript:void(0);" id="settings_22" class="{!IF(CONTAINS(tabname,'settings_22'), 'selectedSubMenu', '')}">Set Up Business Hours</a></li>
+                <li><a href="javascript:void(0);" id="settings_2" class="{!IF(CONTAINS(tabname,'settings_2'), 'selectedSubMenu', '')}">Call Handling (Auto-Receptionist)</a></li>
+                <li><a href="javascript:void(0);" id="settings_3" class="{!IF(CONTAINS(tabname,'settings_3'), 'selectedSubMenu', '')}">Advanced Call Handling</a></li>
+                <li><a href="javascript:void(0);" id="settings_4">Ordering and Configuring Phones</a></li>
+                <li><a href="javascript:void(0);" id="settings_5">Call Recording</a></li>
+                <li><a href="javascript:void(0);" id='settings_6'>Additional Phone Numbers</a></li>
+            </ul>
+            <ul class="column">
+                <li class="lc-sub-nav-head"><a href="javascript:void(0);" id="settings_7">Group Settings Overview</a></li>
+                <li><a href="javascript:void(0);" id="settings_8">Set Up Business Hours</a></li>
+                <li><a href="javascript:void(0);" id="settings_9">Greeting &amp; Hold Music</a></li>
+                <li><a href="javascript:void(0);" id="settings_10">Add Call Queue Members</a></li>
+                <li><a href="javascript:void(0);" id="settings_11">Call Handling &amp; Forwarding</a></li>
+                <li><a href="javascript:void(0);" id="settings_12">Advanced Call Handling</a></li>
+                <li><a href="javascript:void(0);" id="settings_13">Messages &amp; Notifications</a></li>
+            </ul>
+            <ul class="column">
+                <li class="lc-sub-nav-head" > <a href="javascript:void(0);" id="settings_14">User Settings Overview</a></li>
+                <li><a href="javascript:void(0);" id="settings_15">Set Up Business Hours</a></li>
+                <li><a href="javascript:void(0);" id="settings_16">Greeting &amp; Hold Music</a></li>
+                <li><a href="javascript:void(0);" id="settings_17">Call Handling</a></li>
+                <li><a href="javascript:void(0);" id="settings_18">Advanced Call Handling</a></li>
+                <li><a href="javascript:void(0);" id="settings_19">Messages &amp; Notifications</a></li>
+                <li><a href="javascript:void(0);" id="settings_20">Caller ID</a></li> 
+            </ul>
+            <div class="lc-sub-nav-footer-bg">
+                <img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-DD-three-column.png')}" /></div>
+            </div>
+        </li>
+        <li class='parent'><a href="javascript:void(0);" id='Faxing_0' class="{!IF(CONTAINS(tabname,'Faxing_0'), 'selectedMenu', '')}">Faxing</a></li>
+        <li class='parent'><a href="javascript:void(0);" id='DeskPhones_0' class="{!IF(CONTAINS(tabname,'DeskPhones_0'), 'selectedMenu', '')}">Phone Devices</a></li>
+        <li class='parent'><a href="javascript:void(0);" id='SmartphoneApps_0' class="{!IF(CONTAINS(tabname,'SmartphoneApps_0'), 'selectedMenu', '')}">Mobile Apps</a></li>
+        <li class='parent'><a href="javascript:void(0);" id='Desktop_0' class="{!IF(CONTAINS(tabname,'Desktop_0'), 'selectedMenu', '')}">Desktop Apps</a></li>
+        <li class='parent'><a href="javascript:void(0);" id='Billing_0' class="{!IF(CONTAINS(tabname,'Billing_0'), 'selectedMenu', '')}">Billing</a></li>
+        
+         <li class="three-column features parent" >
+          <a href="javascript:void(0);" class="last {!IF(CONTAINS(tabname,'TopFeatures'), 'selectedMenu', '')}" style="padding:0.13px" id='TopFeatures_0' >Top Features</a>
+            
+            <apex:outputPanel rendered="{!!UKPortal}">
+                <div class="LC-submenu" style='display:none;left:-567px;'>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_0'>Top Features</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_1'>Business SMS</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_2'>Conferencing</a></li>
+                     <li><a href="javascript:void(0);" id='TopFeatures_9'>Templates</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_3'>Salesforce Integration</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_4'>Presence</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_5'>Call Flip</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_10'>Reports</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_6'>Call Recording</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_7'>Ring Out</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_8'>Meetings</a></li>
+                </ul>
+                <div class="lc-sub-nav-footer-bg">
+                    <img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-DD-three-column.png')}" /></div>
+                </div>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!UKPortal}">
+                <div class="LC-submenu" style='display:none;left:-567px;'>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_0'>Top Features</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_2'>Conferencing</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_3'>Salesforce Integration</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_4'>Presence</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_5'>Call Flip</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_6'>Call Recording</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="javascript:void(0);" id='TopFeatures_7'>Ring Out</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_8'>Meetings</a></li>
+                    <li><a href="javascript:void(0);" id='TopFeatures_9'>Templates</a></li>
+                </ul>
+                <div class="lc-sub-nav-footer-bg">
+                    <img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/LC-DD-three-column.png')}" /></div>
+                </div>
+            </apex:outputPanel>
+        </li>
+    </ul>
+</nav>
+<script>
+    function fade() { 
+        // $('.setting .LC-submenu').css('display', 'block');
+        // $('.setting .LC-submenu').hide(2000);
+    }
+    function show() {
+        // $('.setting .LC-submenu').show();
+    }
+</script>
+</apex:component>

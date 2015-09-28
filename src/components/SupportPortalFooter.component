@@ -1,0 +1,51 @@
+<apex:component >
+    <div id="rn_Footer">
+
+        <table width="100%" border="0">
+            <tr>
+                <td align="left" width="80%">
+                    <div style='float: left; margin-top: 10px; width: 100%;'>
+                        <p>
+                            <a href="http://www.bt.com/contactus" target='_blank'>Contact
+                                BT</a><span style="padding-left: 15px"></span> <a
+                                href="http://www.bt.com/privacypolicy" target='_blank'>Privacy</a><span
+                                style="padding-left: 15px"></span> <a
+                                href="http://www.productsandservices.bt.com/consumerProducts/displayTopic.do?topicId=35808"
+                                target='_blank'>Terms of use</a><span style="padding-left: 15px"></span>
+                            <a
+                                href="http://www.btplc.com/Thegroup/RegulatoryandPublicaffairs/Codeofpractice/index.htm"
+                                target='_blank'>Codes of practice</a><span
+                                style="padding-left: 15px"></span> <a
+                                href="http://www.btplc.com/Thegroup/RegulatoryandPublicaffairs/Codeofpractice/CustomerComplaintsCode/index.htm"
+                                target='_blank'>Complaints Code</a><span
+                                style="padding-left: 15px"></span> <a
+                                href="http://www.bt.com/terms" target='_blank'>T&amp;C</a><span
+                                style="padding-left: 15px"></span> <a
+                                href="http://www.bt.custhelp.com/app/contact_email/c/6493/"
+                                target='_blank'>Feedback</a><br /> <font size="0.1"> The
+                                BT Corporate Mark is a registered trade mark of British
+                                Telecommunications plc. BT Cloud Phone is a trade mark of British
+                                Telecommunications plc.<br /> &copy;2015 RingCentral, Inc. All
+                                rights reserved.<br /> RingCentral and the RingCentral Logo are
+                                trade marks of RingCentral Inc<br />
+                                British Telecommunications plc Registered office: 81 Newgate Street London EC1A 7AJ.<br/>
+                                Registered in England No. 1800000.<br/>
+                                
+                            </font>
+
+                        </p>
+                    </div>
+                </td>
+                <td align="left" width="120%">
+                    <div style='clear: both;'>
+                        <div id="rc_RingCentralCredit"
+                            style='float: right; width: 80%; left: 0px;'>
+                            <apex:image value="{!URLFOR($Resource.BTSupport, 'BTSupport/images/in-association-with-rc.png')}"
+                                style="max-width:200px; height:25px;padding-bottom: 15px;padding-left: 55px;" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:component>

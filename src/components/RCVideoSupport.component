@@ -1,0 +1,45 @@
+<apex:component >
+  <link rel="stylesheet" href="{!URLFOR($Resource.RCSupportPortalvideo, 'RCSupportPortalvideo/css/prettyPhoto.css')}" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+     <script src="{!URLFOR($Resource.RCSupportPortalvideo, 'RCSupportPortalvideo/js/jquery.prettyPhoto.js')}" type="text/javascript" charset="utf-8"></script>
+    
+    <style>
+    .facebook{
+      width:75px !important;
+    }
+    .pp_overlay {
+        z-index: 9999 !important;
+        zIndex: 9999 !important;
+    }
+    </style>
+      <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+                $("area[rel^='prettyPhoto']").prettyPhoto();
+                
+                $(".gallery a[rel^='prettyPhoto']").prettyPhoto(
+                                                                 {animation_speed:'normal',
+                                                                  theme:'light_square',
+                                                                  slideshow:3000, 
+                                                                  autoplay_slideshow: false,
+                                                                  default_width: 600,
+                                                                  default_height: 344,
+                                                                  showTitle: true,
+                                                                  allow_resize: true,
+                                                                  horizontal_padding: 20,
+                                                                  deeplinking:true,
+                                                                  autoplay: false,
+                                                                  /*social_tools: "<div class='pp_social'><a class='addthis_button_tweet' tw:via='somename' tw:lang='en' tw:hashtags='whatever'></a><a class='addthis_button_google_plusone' g:plusone:size='medium'></a><a class='addthis_button_facebook_like' fb:like:layout='button_count'></a><a class='addthis_button_facebook_send'></a></div>",*/                                                              
+                   changepicturecallback: function(){ clearHashtag(); }});
+                //$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+              function clearHashtag(){
+                 //addthis.toolbox('.pp_social');
+                 var url=location.href;
+                 var hashtag=(url.indexOf('#!'))?true:false;
+                 if(hashtag)location.hash="";
+                 
+                 addthis.toolbox('.pp_social');
+                 }
+            });
+            </script>   
+      <!--<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e3332e662bb532a"></script>
+   
+--></apex:component>

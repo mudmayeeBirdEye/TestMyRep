@@ -1,0 +1,70 @@
+<apex:component >
+        <!-- AddThis Button BEGIN 
+        <div id="addthis_toolbox" class="social-media" style="position:fixed !important;">
+            <a class="addthis_button_facebook at300b" style="margin-bottom: 10px;"><div class="fb"></div></a>
+            <a class="addthis_button_twitter at300b" style="margin-bottom:10px;"><div class="tw"></div></a>
+            <a class="addthis_button_google_plusone_share at300b" style="margin-bottom:10px;"><div class="google"></div></a>
+            <a class="addthis_button_linkedin at300b" style="margin-bottom:10px;"><div class="in"></div></a>
+            <a class="addthis_button_email at300b" style="margin-bottom:10px;"><div class="email"></div></a>
+        </div>-->
+        <style>
+            .at300bs.at16nc {
+                background:none !important;
+            }
+            #atic_auth {
+                display:none !important;
+            }
+            .atm-f {
+                display:none !important;
+            }
+            #at3winfooter {
+                display:none !important;
+            }
+            .sthoverbuttons-label {
+                display:none;
+            }
+            .social-media ul li {
+                margin:0px;
+                padding-top:2px;
+            }
+        </style>
+<div class="social-media" style="position:fixed !important;top:43%;">
+    <ul>
+      <li><a href="https://www.facebook.com/ringcentral" class="fb" alt="Facebook" title="Facebook" target='_blank'>&nbsp;</a></li>
+      <li><a href="https://twitter.com/ringcentraluk"  class="tw" alt="Twitter" title="Twitter" target='_blank'>&nbsp;</a></li>
+      <li><a href="https://plus.google.com/109829942920822348615/videos" class="gplus" alt="Google+" title="Google Plus" target='_blank'>&nbsp;</a></li>
+      <li><a href="http://www.linkedin.com/company/ringcentral"  class="in" alt="Linkedin" title="In.Com" target='_blank'></a>&nbsp;</li>
+      <!-- <li><a href="http://www.linkedin.com/company/ringcentral"  class="email" alt="Email Media" title="Email" target='_blank'></a>&nbsp;</li>-->
+    </ul>
+  </div>
+<!--  script type="text/javascript">
+    function rewriteURL() {
+        var URL = window.location.href;
+         if(URL.indexOf('ArticleRendererPkb.apexp') != -1 ) {
+            URL = '{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/{!$CurrentPage.parameters.urlName}';
+            var urlName = '?urlName={!$CurrentPage.parameters.urlName}';
+            var title = '&title={!$CurrentPage.parameters.Title}';
+            var Id = '&Id={!$CurrentPage.parameters.Id}';
+            var shared = '&shared=true';
+            URL += urlName + title + Id + shared;
+         }
+         return URL;
+    }
+    var addthis_config = {"data_track_addressbar":false};
+    var addthis_share = {
+        url: rewriteURL()
+    }
+    $(function(){
+        /*if screen size less than 1104 or resize happens below 1104px*/
+        if($(window).width()<1104)$('.social-media').addClass('body-narrow');$('#addthis_toolbox').css('display','block');
+        $(window).resize(function() {
+            if($(window).width()<1104)$('.social-media').addClass('body-narrow');else $('.social-media').removeClass('body-narrow');    
+        }); 
+    });
+</script -->
+
+<!-- script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e3332e662bb532a"></script -->
+<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5139740e747ea68a"></script>-->
+
+<!-- AddThis Button END -->
+</apex:component>

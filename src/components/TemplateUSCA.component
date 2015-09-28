@@ -1,0 +1,63 @@
+<apex:component >
+<style>
+    .video-desc1 {
+        list-style-position: outside !important;
+        /*margin-left: 16px;*/
+    }
+</style>
+
+    <section class="lc-page">
+    <div class="left-container">
+    <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Templates</span>
+     </div>
+    <article>
+    
+        <h4>Templates</h4>
+        <div class ="video-desc"  >
+        <p>Now you can save time and repetitive manual effort and streamline your administrative routine with RingCentral Templates.</p><br/>
+        <p>You can easily create a template to specify phone system settings for users just once,
+           then quickly apply those settings over and over again just by associating users with the template.
+           You can also edit or clone a template any time you want to quickly update your settings. </p><br/><br/><br/>
+           RingCentral provides two types of templates:<br />
+           <ul style="list-style-position: outside !important;width:175%;margin-left:16px;margin-top: 6px;">
+            <li class="video-desc1" > One template for user phone settings, such as e911 address, office hours, prompts, on-hold music, outbound caller ID,  
+                 user greetings, and notifications, and more.</li>
+            <li class="video-desc1" > One template for specifying call handling rules, such as when you want incoming calls answered by a specific phone 
+                 number during a specific date range or set of operating hours. </li>
+           </ul>
+        </div>
+        <div class="video-panel gallery">
+            <div class="share-video"> <a class="share">share &raquo;</a> 
+                                            <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;">
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="https://www.youtube.com/watch?v=vibu8Ah-RNo&feature=youtu.be" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            </div>
+           
+            <img title="How to Make RingCentral User Templates" alt="How to Make RingCentral User Templates" 
+                src="http://i1.ytimg.com/vi/vibu8Ah-RNo/mqdefault.jpg"  />
+                 <a class="article-video" href="https://www.youtube.com/watch?v=vibu8Ah-RNo&feature=youtu.be" rel="prettyPhoto" title="How to Make RingCentral User Templates">
+              <p class="play-video"></p>
+              </a> </div>
+            <a class="overview-call" href="https://www.youtube.com/watch?v=vibu8Ah-RNo&feature=youtu.be" rel="prettyPhoto" title="RingCentral Conferencing – Cloud Phone System">How to Make RingCentral User Templates</a> </div>
+    </article>
+     <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_3" class="more">Salesforce Integration</a>
+        </div>
+    </div>
+     <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6546?retURL">Templates Overview  </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6774?retURL">Templates FAQs  </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6729?retURL">Create a Template  </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6775?retURL">Apply a Template  </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6735?retURL">Save a Template as another Template  </a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

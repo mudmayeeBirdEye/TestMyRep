@@ -1,0 +1,56 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_8" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">RingCentral Meetings<sup><font size="1">TM</font></sup></span>
+        </div>
+        <article>
+          <h4>RingCentral Meetings<sup><font size="1">TM</font></sup></h4>
+          <div class="video-desc">
+            <p>RingCentral Meetings gives you the power to video conference and web share, as part of your complete business communication solution. Hold face-to-face
+            meetings in high definitions and share your desktop or documents with anyone, anytime, anywhere. 
+            </p>
+            <br/><br/>
+            <ul style="color:gray;padding-left:17px;">
+              <li>Hold HD video conferencing with up to 50 participants from around the world whenever you want.</li><br/>
+              <li>Manage your entire system of locations, departments and individual extension wherever you go. </li><br/>
+              <li>Use your computer (PC or Mac), smartphone (iPhone or Android), tablet (iPhone or Android)</li>
+            </ul>
+            <br/>
+             <p>RingCentral Meetings is available with RingCentral Office Enterprise Edition.</p><br /><!-- Enterprise -->
+              Visit the <a class="more" href="http://marketo.ringcentral.com/rcmeeting.html" title="RingCentral Meeting Resource" >RingCentral Meetings Resource Center</a>
+          </div>
+           <div class="video-panel gallery" >
+            <div class="share-video">
+                 
+                <img title="How to Use RingCentral Meetings" alt="How to Use RingCentral Meetings" 
+                src="http://i1.ytimg.com/vi/BuWig_HM3Rk/mqdefault.jpg" />
+                <a class="article-video" href="https://www.youtube.com/watch?v=BuWig_HM3Rk&feature=youtu.be" rel="prettyPhoto" title="How to Use RingCentral Meetings">
+                    <p class="play-video"></p>
+                </a> 
+              <a href="https://www.youtube.com/watch?v=BuWig_HM3Rk&feature=youtu.be" rel="prettyPhoto" title="How to Use RingCentral Meetings" 
+                class="overview-call">How to Use RingCentral Meetings</a>
+              </div>
+             </div> 
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_9" class="more">Templates</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+             <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/6834 ">RingCentral Meetings Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5827?retURL ">Downloading and Installing Meeting App</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/6848?priority=10&retURL=/apex/RCSupportPortalSearchNew&type=FAQ&id=kA280000000GwHaCAK&Title=Hosting+a+RingCentral+Meeting">Hosting a Meeting</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/6841?priority=10&retURL=/apex/RCSupportPortalSearchNew&type=FAQ&id=kA280000000GwHVCA0&Title=Inviting+others+to+join+a+RingCentral+Meeting">Inviting Meeting participants</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/6849?priority=10&retURL=/apex/RCSupportPortalSearchNew&type=FAQ&id=kA280000000GwHfCAK&Title=RingCentral+Meetings+Frequently+Asked+Questions">FAQs</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,24 @@
+<apex:page ><!-- standardController="zqu__Quote__c" extensions="clsZuoraQuoteInfo" id="ZuoraQuotePopUpPage"  showHeader="false" sidebar="false" >
+    <style>
+    .backCss {
+    background-color:  #fffcce !important;
+    border: 1px solid #cd9e5a !important;
+    border-radius: 5px;
+    -moz-border-radius:5px !important;
+    -webkit-border-radius:5px !important;
+    }
+    </style>
+    <apex:form rendered="{! warn1 }" id="accountFom">
+        <div class="backCss">
+            <apex:outputPanel id="message">
+            <apex:image id="warning" value="{!imgPath}" width="48.7" height="48.7" style="padding:5px;" rendered="{!warn1}"/>
+                <apex:panelGrid columns="2" id="Paneltable">
+                    <apex:outputLabel escape="false" rendered="{!warn1}">&#9830;&#160;</apex:outputLabel>
+                        <apex:outputText escape="false" rendered="{!warn1}" style="color:red">  
+                        <font color='#FFF' style="background:red;font-size:15px;font-weight:bold;"> This Quote is being updated with Tax estimation. Please refresh the page for latest value.</font> 
+                    </apex:outputText>
+                </apex:panelGrid>
+            </apex:outputPanel>
+        </div>
+    </apex:form>-->
+</apex:page>

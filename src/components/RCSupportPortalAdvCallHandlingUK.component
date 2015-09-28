@@ -1,0 +1,116 @@
+<apex:component >
+ <section class="lc-page">
+        <div class="left-container">
+            <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+                <span class="breadcrumblink">Advanced Call Handling</span>
+            </div>
+            <article>
+                <h4>Advanced Call Handling</h4>
+              <div class="video-desc">
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo est eget diam condimentum faucibus. Pellentesque vulputate ante sed massa rhoncus eu vulputate magna ullamcorper. In vehicula adipiscing lacus eu mollis. Donec consequat neque ac justo adipiscing tincidunt ultricies justo convallis. 
+Morbi sollicitudin odio in arcu porttitor nec egestas dui malesuada. Aliquam molestie, magna in <a class="more">More...</a></p>
+              -->
+              <p>As an administrator, set advanced Call Handling to create additional rules for  the company. For example when the company 
+              has holiday hours,  you may want to treat incoming calls differently.  You can set up an advanced rule based on:
+              </p>
+              <ul style="padding-left: 18px;line-height: 20px;"> 
+                                            <li style="list-style-type:disc"> 
+                                                Date and/or time of call 
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                Caller ID
+                                            </li>
+                                            <li style="list-style-type:disc">
+                                                or the number called
+                                            </li>
+                                        </ul>
+              <br/>
+              <p>These rules override regular call handling rules for the company.
+              </p>
+              </div>
+              <div class="video-panel gallery">
+                <div class="share-video">
+                <div class="share">
+                   <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=VyRVQI32gnc" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                </div>  <img title="RingCentral Office - Advanced Company Call Handling" alt="RingCentral Office - Advanced Company Call Handling" 
+                    src="http://i1.ytimg.com/vi/VyRVQI32gnc/mqdefault.jpg" />
+                <a class="article-video" href="http://www.youtube.com/watch?v=VyRVQI32gnc?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Company Call Handling">
+                
+                  <p class="play-video"></p>
+                </a>
+                <a class="overview-call" 
+                    href="http://www.youtube.com/watch?v=VyRVQI32gnc?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Company Call Handling">RingCentral Office - Advanced Company Call Handling &raquo;</a>
+                </div>
+              </div>
+            </article>
+            <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_4" class="more">Ordering and Configuring Phones</a></div>
+            </div>
+    
+        <div id="article" class="right-container">
+            <aside>
+                <h3>Related Topics</h3>
+                <ul class="paginate">
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5005?retURL
+
+                    =%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dadvanced%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20access%20the%20advanced%20call%20handling%20feature
+                    ">How to access the advanced call handling feature</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5005?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3606%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20weekly%20schedule
+                    ">How to set a rule based on time of day or date range with a weekly schedule</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5047?retURL =%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3609%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20a%20called%20number
+                    ">How to set a rule based on a called number</a></li>
+                    <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4962?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3608%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20an%20incoming%20caller%20ID
+                    ">How to set a rule based on an incoming caller ID</a></li>
+                    <!--<li><a href="#">5 Set custom rules by area code or caller ID? </a></li>
+                    <li><a href="#">6 How do I block specific numbers?</a></li>
+                    <li><a href="#">7 How do I add custom call handling rules?</a></li>
+                    <li><a href="#">8 How do I edit custom call handling?</a></li>
+                    <li><a href="#">9 How do I add custom rules based on date and time?</a></li>
+                    <li><a href="#">10 How do I add a custom rule based on the called number?</a></li>
+                    <li><a href="#">11 Set custom rules by area code or caller ID? </a></li>
+                    <li><a href="#">12 How do I block specific numbers?</a></li>
+                    <li><a href="#">13 How do I add custom call handling rules?</a></li>
+                    <li><a href="#">14 How do I edit custom call handling?</a></li>
+                    <li><a href="#">15 How do I add custom rules based on date and time?</a></li>
+                    <li><a href="#">16 How do I add a custom rule based on the called number?</a></li>
+                    <li><a href="#">16 Set custom rules by area code or caller ID? </a></li>
+                    <li><a href="#">18 How do I block specific numbers?</a></li>
+                --></ul>
+            </aside>
+            <div class="page_navigation"></div>
+        </div>
+    </section>
+    
+    <aside id ="lc-video" class="lc-video">
+        <div class="video-section">
+                <ul class="paginate gallery">
+                    <li><img title="RingCentral Office - Auto-Receptionist Overview" alt="RingCentral Office - Auto-Receptionist Overview" 
+                        src="http://i1.ytimg.com/vi/Vs7P4Ujo03s/mqdefault.jpg" />
+                    <a href="http://www.youtube.com/watch?v=Vs7P4Ujo03s?rel=0" rel="prettyPhoto" title="RingCentral Office - Auto-Receptionist Overview">
+                 
+                    <p class="play-video"></p></a><span>RingCentral Office - Auto-Receptionist Overview</span></li>
+                    
+                    <li>  <img title="RingCentral Office - Advanced Call Handling by Called Number" alt="RingCentral Office - Advanced Call Handling by Called Number" 
+                        src="http://i1.ytimg.com/vi/W3ILxtr6ndE/mqdefault.jpg" />
+                    <a href="http://www.youtube.com/watch?v=W3ILxtr6ndE?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Call Handling by Called Number">
+                  
+                    <p class="play-video"></p></a><span>RingCentral Office - Advanced Call Handling by Called Number</span></li>
+                   
+                    
+                    <li><img title="RingCentral Office - Advanced Call Handling by Date" alt="RingCentral Office - Advanced Call Handling by Date" 
+                        src="http://i1.ytimg.com/vi/x8J98Irt8SQ/mqdefault.jpg" />
+                    <a href="http://www.youtube.com/watch?v=x8J98Irt8SQ?rel=0" rel="prettyPhoto" title="RingCentral Office - Advanced Call Handling by Date">
+                    
+                    <p class="play-video"></p></a><span>RingCentral Office - Advanced Call Handling by Date</span></li>
+                    
+                     
+                    <!--<li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>4 Ring A Number only during After Hours</span></li>
+                    <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                    <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal,'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                --></ul>
+            </div>
+            <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport /> 
+</apex:component>

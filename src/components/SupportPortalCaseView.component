@@ -1,0 +1,211 @@
+<apex:component controller="SupportPortalAdvCaseCreate">
+<apex:stylesheet value="{!URLFOR($Resource.BTSupport, 'BTSupport.css')}" /> 
+<style>
+.rowData {
+    height: 25px;
+    text-align: center;
+    border: none !important;
+    /*border-bottom:1px solid #DBDBDB !important;
+            border-right:1px solid #DBDBDB !important;*/
+}
+ 
+#overlayNew {
+    background: no-repeat scroll top center gray;
+    border: 0px solid #000000;
+    bottom: 0;
+    left: -190px;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 124.5%;
+    z-index: 1000;
+    /* height: 1000px; */
+}
+
+#search {
+    display: block
+}
+
+.check-status a {
+    color: #666666;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.popupTd:hover,.popupTd1:hover,.popupTd2:hover,.popupTd3:hover {
+    box-shadow: 0 0 4px 2px gray;
+    border-radius: 5px;
+}
+
+.activeSpan {
+    border: 1px solid gray;
+    box-shadow: 0px 0px 0px 0px inset;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+</style>
+<script>
+    function showOverlay() {
+        var o = document.getElementById('overlayNew');
+        o.style.display = 'block';
+    }
+    
+    function hideOverlay() {
+        var o = document.getElementById('overlayNew');
+        o.style.display = 'none';
+    }
+</script>
+    <section class="main-content" style="margin-left: -5px; margin-right: -205px;">
+        <apex:form >
+        <div class="submit-case" style="margin-bottom : 20px;margin-top:30px;">
+            <div class="my-case-list">
+                <div class="list-head" id="case">
+                        <label for="uniform-sort">View</label>
+                        <apex:SelectList styleclass="uniform" size="1" multiselect="false"
+                            value="{!selectedViewOptions1}">
+                            <apex:selectOptions value="{!lstselectOptionView}" />
+                            <apex:actionSupport status="Ajaxstatus" event="onchange"
+                                action="{!sortCaseList}"
+                                rerender="mycase,RecListId,pnlGridPaging" />
+                        </apex:SelectList>&nbsp;
+                 
+                        <label for="uniform-sort">Sort By</label>
+                        <apex:SelectList styleclass="uniform" size="1" multiselect="false"
+                            value="{!selectSortValue}">
+                            <apex:selectOption itemValue="Time_Date_Opened"
+                                itemLabel="Time/Date Opened" />
+                            <apex:selectOption itemValue="Case_Status"
+                                itemLabel="Case Status" />
+                            <apex:actionSupport status="Ajaxstatus" event="onchange"
+                                action="{!sortCaseList}" rerender="mycase,RecListId" />
+                        </apex:SelectList>
+
+                        <div class="align-right">
+                            <label for="search1">Search</label>
+                            <apex:SelectList styleclass="uniform" id="search1" size="1"
+                                multiselect="false" value="{!selectSearchValue}">
+                                <apex:selectOption itemValue="Case_Number"
+                                    itemLabel="Case Number" />
+                                <apex:selectOption itemValue="Contact_Name"
+                                    itemLabel="Contact Name" />
+                                <apex:selectOption itemValue="Subject" itemLabel="Subject" />
+                                <apex:selectOption itemValue="Severity_Level"
+                                    itemLabel="Severity Level" />
+                            </apex:SelectList>
+                            &nbsp;
+                            <apex:inputtext value="{!inputSearchValue}"
+                                style="background: white !important;"></apex:inputtext>
+                            <apex:CommandButton status="Ajaxstatus" action="{!searchCase}"
+                                value="Find" rerender="mycase,RecListId,NocAses"
+                                style="border: none !important;" />
+                        </div>
+                </div>
+                <apex:outputPanel id="mycase">
+                    <apex:outputPanel rendered="{!if(usercaseListWr.size>0,true,false)}">
+                        <apex:variable value="{!Floor(userCasePaging.pageNumberParam*userCasePaging.PageSize-(userCasePaging.PageSize-1))}"
+                            var="firstelement1" />
+                        <apex:variable value="{!((userCasePaging.pageNumberParam*userCasePaging.PageSize) - 
+                                             (if((userCasePaging.pageNumberParam*userCasePaging.PageSize)>usercaseListWr.size,userCasePaging.pageNumberParam*userCasePaging.PageSize - usercaseListWr.size,0)))}"
+                            var="lastelement1" />
+                        <span class="total-result"> <apex:outputPanel rendered="{!firstelement1 != lastelement1}">
+                                <apex:outputText value="{0, number, integer}">
+                                    <apex:param value="{!firstelement1}" />
+                                </apex:outputText> to&nbsp;
+                                <apex:outputText value="{0, number, integer}">
+                                    <apex:param value="{!lastelement1}" />
+                                </apex:outputText>
+                            </apex:outputPanel> <apex:outputPanel rendered="{!firstelement1 == lastelement1}">
+                                <apex:outputText value="{0, number, integer}">
+                                    <apex:param value="{!firstelement1}" />
+                                </apex:outputText>
+                            </apex:outputPanel> of {!usercaseListWr.size}
+                        </span>
+                        <div id="overlayNew" style="text-align: center; padding-top: 300px;">
+                                <apex:image value="{!$Resource.loading}"></apex:image>
+                            </div>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr class="greyBg">
+                                <th>Case Number</th>
+                                <th>Contact Name</th>
+                                <th>Subject</th>
+                                <th>Severity Level</th>
+                                <th>Created Time/Date Opened</th>
+                                <th>Case Status</th>
+                            </tr>
+                            <apex:variable value="{!1}" var="rowNum" />
+                            <apex:repeat value="{!caseList1}" var="caseObjWr">
+                                <tr class="{!if(MOD(rowNum,2) == 0,'whiteBg','')}">
+                                    <td class="rowData">
+                                        <apex:outputLink value="{!$Site.CurrentSiteUrl}SupportPortalAdvCaseDetail?pageid=contact&Id={!caseObjWr.caseObj.Id}" style="text-decoration: underline;">
+                                            {!caseObjWr.caseObj.CaseNumber}
+                                        </apex:outputLink>
+                                    </td>
+                                    <td class="rowData"><apex:outputText value="{!caseObjWr.caseObj.Contact.Name}" /></td>
+                                    <td class="rowData"><apex:outputText value="{!caseObjWr.caseObj.Subject}" /></td>
+                                    <td class="rowData"><apex:outputText value="{!caseObjWr.caseObj.Case_Severity__c}" /></td>
+                                    <td class="rowData"><apex:outputText value="{!caseObjWr.strformatDT}" /></td>
+                                    <td class="rowData"><apex:outputText value="{!caseObjWr.caseObj.status}" /></td>
+                                </tr>
+                                <apex:variable var="rowNum" value="{!rowNum + 1}" />
+                            </apex:repeat>
+                        </table>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="NocAses" rendered="{!!if(usercaseListWr.size>0,true,false)}">
+                        <div style="text-align: center; padding-top: 20px; font-size: 15px;">No Cases Found</div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+
+                <apex:panelGrid style="float:right" id="pnlGridPaging">
+                    <apex:outputPanel id="RecListId"
+                        rendered="{!if((tempCasesPgItr != null && tempCasesPgItr.size>0),true,false)}">
+                        <apex:commandLink action="{!getCasesPgItr}"
+                            Rendered="{!if(wrPgItrCases.wrfirstElement - 10 >= 1,true,false)}"
+                            reRender="RecListId,mycase" status="Ajaxstatus">
+                            <apex:outputText value="<< Previous"></apex:outputText>
+                            <apex:Param value="Previous" assignTo="{!actionType}"></apex:Param>
+                            </apex:commandlink>
+                            <apex:outputPanel rendered="{!if((tempCasesPgItr.size>1),true,false)}">
+                                <apex:repeat value="{!tempCasesPgItr}" var="pageNumber">
+                                    <span id="{!pageNumber}" style="margin-right: 5px"
+                                        class="{!if(TEXT(userCasePaging.pageNumberParam)== TEXT(pageNumber),'activeSpan','popupTd')}">
+                                        &nbsp;&nbsp;
+                                        <apex:commandLink rerender="mycase,NocAses,RecListId" action="{!userCasePaging.getRecordsByPN}" status="Ajaxstatus">{!pageNumber}
+                                            <apex:param value="{!pageNumber}" name="pageNumber" assignTo="{!userCasePaging.pageNumberParam}" />
+                                        </apex:commandlink>&nbsp;&nbsp;
+                                    </span>
+                                </apex:repeat>
+                            </apex:outputPanel>
+                            <apex:commandLink rendered="{!if(userCasePaging.TotalPageNumber - wrPgItrCases.wrlastElement >= 1,true,false)}"
+                                              action="{!getCasesPgItr}" reRender="mycase,NocAses,RecListId"
+                                              status="Ajaxstatus">Next >> 
+                                <apex:Param value="Next" assignTo="{!actionType}" />
+                            </apex:commandlink>
+                    </apex:outputPanel>
+                </apex:panelGrid>
+            </div>
+            <!-- <div id="overlayNew" style="text-align: center; padding-top: 700px;">
+                <apex:image value="{!$Resource.loading}"></apex:image>
+            </div> -->
+        </div>
+        </apex:form>
+    </section>
+<apex:actionStatus id="Ajaxstatus" onStart="showOverlay();" onstop="hideOverlay();" />
+<script>
+    function showSelected(objElemId,type,pagenumber) {
+        //var $j = jQuery.noConflict();
+        var obj = document.getElementById(objElemId);
+        if(type == 'Recp') {
+            $('.popupTd').removeClass('activeSpan');
+        } 
+        $(obj).addClass('activeSpan');
+    }
+</script>
+</apex:component>

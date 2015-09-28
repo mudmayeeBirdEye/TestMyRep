@@ -1,0 +1,84 @@
+<apex:component >
+ <style>
+            .learning-center ul.lc-nav a.last {
+                padding : 0px 0px 0px 0px !important;
+            }
+            .liBullet {
+                list-style-type: disc !important;
+            }
+            .lc-video .video-section ul {
+                padding: 5px 40px 0 187px;
+            }
+        </style>
+  <section class="lc-page">
+                                <div class="left-container">
+                                    <div id="BreadCrumb" style="padding-bottom: 10px;">
+                                        <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                                        --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+                                        <span class="breadcrumblink">Ordering and Configuring Phones</span>
+                                    </div>
+                                    <article>
+                                      <h4>Ordering and Configuring Phones</h4>
+                                      <div class="video-desc">
+                                        <p style="line-height:normal !important">As an administrator, add or change phone assignment 
+                                        (to digital lines) to be used for inbound and outbound calling. 
+                                        </p>
+                                        <br/>
+                                      </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                        <div class="share">
+                                            <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=tydgzEjoBRc" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                        </div>  <img title="Phones Overview" alt="Phones Overview" 
+                                            src="http://i1.ytimg.com/vi/tydgzEjoBRc/mqdefault.jpg " />
+                                        <a class="article-video" href="http://www.youtube.com/watch?v=tydgzEjoBRc?rel=0" rel="prettyPhoto" title="Phones Overview">
+                                      
+                                          <p class="play-video"></p>
+                                        </a>
+                                        <a class="overview-call" href="http://www.youtube.com/watch?v=tydgzEjoBRc?rel=0" rel="prettyPhoto" title="Phones Overview">Phones Overview &raquo;</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_5" class="more">Call Recording</a></div>
+                                    </div>
+                            
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/List-of-tested-deskphones-with-RingCentral?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dbasic%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=List%20of%20tested%20deskphones%20with%20RingCentral
+                                            ">List of tested deskphones with RingCentral</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-do-I-resolve-Initializing-network-error-message?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dinitializing%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20do%20I%20resolve%20%22Initializing%20network%22%20error%20message
+                                            ">How do I resolve "Initializing network" error message</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Basic-Troubleshooting-Tips-for-your-Phones?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DBasic%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Basic%20troubleshooting%20tips%20for%20your%20phones
+                                            ">Basic troubleshooting tips for your phones</a></li>
+                                            <li><a href="http://ringcentral.force.com/rcsupport2013/articles/RC_Knowledge_Article/How-to-Set-up-and-Provision-Existing-or-Third-Party-Devices-2013?retURL=%2Frcsupport2013%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D000003829%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=How%20to%20Set%20up%20and%20Provision%20Existing%20or%20Third%20Party%20Devices
+                                            ">How to Set up and Provision Existing or Third Party Devices</a></li>
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                           <aside id ="lc-video" class="lc-video"> 
+                                <div class="video-section"> 
+                                   <ul class="paginate gallery">
+                                       <li><img title="User Phone and Numbers" alt="User Phone and Numbers" 
+                                       src="http://i1.ytimg.com/vi/bqqd7MYR3AI/mqdefault.jpg " />
+                                       <a href="http://www.youtube.com/watch?v=bqqd7MYR3AI?rel=0" rel="prettyPhoto" title="User Phone and Numbers">
+                                       <p class="play-video"></p></a><span>User Phone and Numbers</span></li>
+                                       
+                                       <li> <img title="Caller ID for user overview" alt="Caller ID for user overview" 
+                                       src="http://i1.ytimg.com/vi/mhP52XHPvwk/mqdefault.jpg " />
+                                       <a href="http://www.youtube.com/watch?v=mhP52XHPvwk?rel=0" rel="prettyPhoto" title="Caller ID for user overview">
+                                      <p class="play-video"></p></a><span>Caller ID for user overview
+                                       </span></li>
+                                       
+                                       <!--<li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>Change company voicemail - Jose</span></li>
+                                       <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                       <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                   --></ul>
+                                    </div> 
+                                    <div class="page_navigation"></div>
+                            </aside>
+                            <c:RCVideoSupport />
+</apex:component>

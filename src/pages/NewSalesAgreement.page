@@ -1,0 +1,252 @@
+<apex:page ><!-- standardController="zqu__Quote__c" extensions="QuoteController"
+     sidebar="true" showHeader="true" >
+     <script>
+        function colorPageBlock(pageblock, color) {
+        if (pageblock != null) pageblock.firstChild.style.cssText = "background-color: " + color + ";";
+        
+        }
+      </script>
+    <script>
+        function makeAbs(el) {
+            var val = Math.abs(el.value);
+            if (!isNaN(val)) {
+                el.value = val;
+            }
+        }
+    </script>
+    <style>
+        .pbHeader {
+            background: #7593d7 !important;
+            /*box-shadow: 0 17px 36px 0px #FFF inset !important;*/
+            color: #FFF !important;
+            /*box-shadow: 0px 3px 11px 0px #FFF inset !important;*/
+            
+        }
+        .bPageBlock.brandSecondaryBrd.apexDefaultPageBlock.secondaryPalette {
+            border-top: 2px solid lightgray;
+        }
+        .pbSubheader.brandTertiaryBgr.tertiaryPalette {
+            /*
+            background-color: #FFA500 !important;
+            border-color: #B4C374  !important;
+            box-shadow: 0 33px 24px -26px #FFF inset !important;
+            padding: 6px !important;
+            */
+            background-color: #7593d7 !important;
+            /*box-shadow: 0 33px 24px -26px #FFF inset !important;*/
+            padding: 6px !important;
+        }
+        .mainTitle{
+            color: white !important;
+        }
+        .content.pageTitleIcon img{ 
+            /* display:none !important; */
+        }
+        .pbTitle {
+            font-size:15px !important;
+        }
+         .overLay {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+           /* IE 5-7 */
+        filter: alpha(opacity=60);
+        /* Netscape */
+        -moz-opacity: 0.6;
+        /* Safari 1.x */
+        -khtml-opacity: 0.6;
+        /*cursor: wait;*/
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #000;
+        opacity: 0.6;
+        cursor: wait;
+        position: fixed;
+        display:block;
+      }
+      .loader-static {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        }
+        .loader-static .loader-static-panel {
+            border: 1px solid #AECBDA;
+            position: relative;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-color: transparent\9;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#bbffffff, endColorstr=#bbffffff);
+            text-align: center;
+            padding: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .loader-static .loader-static-panel div {
+            margin-top: 10px;
+            color: #063F60;
+        }
+        .loader-static .loader-fix {
+            content: "";
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function showOverlay() {
+            document.getElementById('overlayPanel').style.display="";
+        }
+        function hideOverlay() {
+            document.getElementById('overlayPanel').style.display="none";
+        }
+    
+    </script>
+    <span id="overlayPanel" style="display:none;">
+        <div class='overLay' style="display:block;z-index:99999;"></div>
+        <div  class="loader-static" style='z-index:100000;'>
+            <div class="loader-static-panel">
+                <div style='margin-top:0px;font-weight:bold;'>Please wait...</div>
+           </div>
+            <div class="loader-fix"></div>
+        </div>
+    </span>
+    <apex:form id="quoteForm">
+        <apex:sectionHeader title="Sales Agreement" subtitle="{!subTitle}" id="quoteTitle" />
+            <!-- <span style="margin-top:0px;">
+                <apex:image url="{!URLFOR($Resource.QUOTE_ICON)}" height="50px" width="50px" alt="New Quote" styleClass="pageTitleIcon" title="New Quote" style="height:50px;width:50px;"/>
+            </span>   
+        <apex:pageBlock title="Step 1 of 2" id="quoteblock" >
+          <!--  <span style="text-align:right;position: absolute;right: 22px;margin-top: -46px;font-size: 25px;color: #fff;"><b>Step 1 of 2</b></span>   
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Go to Step 2" action="{!save}"
+                    reRender="quoteblock,errors" status="onsave"><apex:actionStatus id="onsave" onstart="showOverlay();"  onstop="hideOverlay();"/></apex:commandButton>
+                <apex:commandButton value="Cancel" action="{!cancel}" />
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="errors">
+                <apex:pageMessages />
+            </apex:outputPanel>
+
+            <apex:outputPanel id="viewbasicinfo">
+
+                <apex:actionRegion >
+
+                    <apex:pageBlockSection title="Agreement Information" columns="2"
+                        collapsible="false">
+                        <apex:outputField value="{!quoteObj.zqu__Opportunity__c}"
+                            id="opportunity" />
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputLabel value="Account Name" for="accountName" />
+                            </apex:outputPanel>
+                            <apex:outputPanel >
+                                <apex:outputLink value="{!accountURL}" id="theLink">
+                                    <apex:outputText value="{!accountName}" id="accountName" />
+                                </apex:outputLink>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!quoteObj.Name}" id="name"
+                            required="true" style="width:400px" label="Sales Agreement Name"/>
+                        <apex:pageBlockSectionitem >
+                            <apex:outputPanel > 
+                                <apex:outputLabel value="Bill To Contact" for="billTo" />
+                            </apex:outputPanel>
+                            <apex:outputPanel id="billtofield">
+                                <apex:actionRegion >
+                                    <div class="requiredInput"> 
+                                        <div class="requiredBlock"></div>
+                                        <apex:inputField required="true" value="{!quoteObj.zqu__BillToContact__c}" />
+                                        <div>
+                                            <apex:outputLabel rendered="{!isBillToNull}" escape="false"
+                                                value="{!valueRequiredMessage}" style="color:#D74C3B;">
+                                            </apex:outputLabel>
+                                        </div>
+                                    </div>
+                                </apex:actionRegion>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionitem>    
+                        <apex:inputField value="{!quoteObj.zqu__ValidUntil__c}" id="valid"
+                            required="true" />
+                            <apex:outputtext ></apex:outputtext>
+                    
+                        <apex:inputField value="{!quoteObj.zqu__StartDate__c}" id="startDate" required="true" />
+   
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputLabel value="Initial Term (Months)"
+                                    for="initialTerm" />
+                            </apex:outputPanel>
+                            <apex:inputField value="{!quoteObj.zqu__InitialTerm__c}"
+                                id="initialTerm" 
+                                onchange="javascript:return makeAbs(this);" required="true" />
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!quoteObj.zqu__AutoRenew__c}" id="autoRenew" />
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputLabel value="Renewal Term (Months)"
+                                    for="renewalTerm" />
+                            </apex:outputPanel>
+                            <apex:inputField value="{!quoteObj.zqu__RenewalTerm__c}"
+                                id="renewalTerm" 
+                                onchange="javascript:return makeAbs(this);" required="true" />
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <!-- <apex:outputPanel >
+                                <apex:outputLabel value="Currency" />
+                            </apex:outputPanel>   
+                            <apex:outputPanel >
+                                <apex:actionRegion >
+                                    <!-- <div class="requiredInput">
+                                        <div class="requiredBlock"></div>
+                                        <apex:inputField value="{!quoteObj.zqu__Currency__c}" id="currency"
+                                            required="false"
+                                            onchange="validateInvoiceOwner();InvoiceOwner.addContextParameter('Currency', document.getElementById('{!$Component.currency}').value);InvoiceOwner.addContextParameter('Status', 'Active');">
+                                            <apex:actionFunction name="validateInvoiceOwner"
+                                                action="{!onCurrencyChange}"
+                                                rerender="invoiceOwnerMessage,currencyMessage"
+                                                oncomplete="if ({!(invoiceOwnerSupport.hasWarning || invoiceOwnerSupport.hasError)}) InvoiceOwner.clear();" />
+                                        </apex:inputField>
+                                    </div>   
+                                    <!-- <div>
+                                        <apex:outputPanel id="currencyMessage">
+                                            <apex:outputLabel rendered="{!isCurrencyNull}" escape="false"
+                                                value="{!valueRequiredMessage}" style="color:#D74C3B;">
+                                            </apex:outputLabel>
+                                        </apex:outputPanel>
+                                    </div>    
+                                </apex:actionRegion>
+                                <script>
+                  InvoiceOwner.addContextParameter('Currency', document.getElementById('{!$Component.currency}').value); 
+                  InvoiceOwner.addContextParameter('Status', 'Active');
+                </script>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Additional Terms" columns="1"
+                        collapsible="false">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Special Terms and Notes" for="terms" />
+                            <apex:inputField value="{!quoteObj.zqu__Terms__c}" id="terms"
+                                style="width:500px" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+
+                </apex:actionRegion>
+
+            </apex:outputPanel>
+
+        </apex:pageBlock>
+    </apex:form>  -->
+</apex:page>

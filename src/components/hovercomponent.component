@@ -1,0 +1,16 @@
+<apex:component >
+   <apex:attribute required="true" name="recordId" type="String" description="Record id"/>
+   <apex:attribute required="true" name="displayname" type="String" description="display name"/>
+   <apex:attribute required="false" name="format" type="Boolean" description="format"/>
+    <apex:attribute required="false" name="target" type="String" description="target"/>
+   
+     <a href="/{!recordId}" id="{!recordId}" target="{!target}" onblur="LookupHoverDetail.getHover('{!recordId}').hide();" 
+       onfocus="LookupHoverDetail.getHover('{!recordId}', '/{!recordId}/m?retURL=%2F{!recordId}&isAjaxRequest=1').show();" 
+       onmouseout="LookupHoverDetail.getHover('{!recordId}').hide();" 
+       onmouseover="LookupHoverDetail.getHover('{!recordId}', '/{!recordId}/m?retURL=%2F{!recordId}&isAjaxRequest=1').show();">
+        <apex:outputText rendered="{!format}"><b>{!displayname}</b></apex:outputText>
+        <apex:outputText rendered="{!!format}">{!displayname}</apex:outputText>
+       
+   </a>
+   
+</apex:component>

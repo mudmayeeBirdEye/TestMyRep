@@ -1,0 +1,51 @@
+<apex:component >
+<style>
+    .video-desc1 {
+        list-style-position: outside !important;
+        /*margin-left: 16px;*/
+    }
+</style>
+
+    <section class="lc-page">
+    <div class="left-container">
+    <div id="BreadCrumb" style="padding-bottom: 10px;"> 
+                <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Reports</span>
+     </div>
+    <article>
+    
+        <h4>Reports</h4>
+        <div class ="video-desc"  >
+        <p>RingCentral Reports give you visibility into the call activities within your company.  With flexible configuration options, you can easily generate historical usage analytics and trending metrics that will help improve future business efficiency.  </p><br/>
+        
+           RingCentral Reports include these views: 
+           <ul style="list-style-position: outside !important;width:175%;margin-left:16px;margin-top:6px;">
+                <li class="video-desc1" > <b>Summary:</b> Provides a dashboard showing overall inbound and outbound call volume and activity.</li>
+                <li class="video-desc1" > <b>Queue Activity:</b> Summarizes historical call queue activity and volume. </li>
+                <li class="video-desc1" > <b>User Activity:</b> Displays call usage patterns, such as call volume, calls per hour, calls per day and average call time about users. </li>
+                <li class="video-desc1" > <b>Phone Number: </b>Analyzes call activities of each purchased phone number.</li>
+           </ul>
+        </div>
+
+            
+    </article>
+     <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_6" class="more">Call Recording</a>
+        </div>
+    </div>
+     <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <!--<li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6942?retURL">Using Reports  </a></li>-->
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6943?retURL">Reports FAQs  </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6944?retURL">Setting up Reports: Generating a Report Based on 
+                Call Queue Activity </a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6945?retURL">Generating a Report for User Activity</a></li>
+            <li><a href="{!$Site.CurrentSiteUrl}articles/RC_Knowledge_Article/6946?retURL">Generating a Report for Phone Number Activity</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7198?retURL">Access Reports on the Mobile Apps</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

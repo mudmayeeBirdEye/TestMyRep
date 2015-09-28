@@ -1,0 +1,94 @@
+<apex:component >
+
+ <section class="lc-page">
+                                <div class="left-container">
+                                    <div id="BreadCrumb" style="padding-bottom: 10px;">
+                                        <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+                                        --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+                                        <span class="breadcrumblink">Call Recording</span>
+                                    </div>
+                                    <article>
+                                      <h4>Call Recording</h4>
+                                      <div class="video-desc">
+                                        <p style="line-height:normal !important">There are two call recording features in the system.
+                                        </p>
+                                        <br/>
+                                        <p><b>On Demand Call Recording</b><br/>
+                                            On demand call recording will give all users the ability to record a specific call by 
+                                            pressing *9 to start recording and *9 when they are done.  (This can be turned on or off at 
+                                            the company level by the administrator.)
+                                        </p><br/>
+                                        <p><b>Auto Call Recording</b><br/>
+                                            Administrators can set the system to automatically record an employee’s incoming and 
+                                            outgoing calls. They can download and play back recordings for customer service evaluation, 
+                                            training purposes or for keeping compliance records.
+                                        </p><br/>
+                                        <span style="font-size: 10px;">Please note that Automatic call recording is available only on select RingCentral plans. 
+                                            Please note that state and federal laws require that callers hear a call-recording notification 
+                                            before and after their call is recorded. Your company’s call recording procedures must comply with 
+                                            federal and state laws; RingCentral is not responsible for compliance
+                                        </span><br/><br/>
+                                      </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                         <div class="share">
+                                            <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://youtu.be/xh2KF2gVhmw" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                         </div>  <img title="How to set up the automatic call record" alt="How to set up the automatic call record" 
+                                            src="http://i1.ytimg.com/vi/xh2KF2gVhmw/mqdefault.jpg " />
+                                        <a class="article-video" href="http://youtu.be/xh2KF2gVhmw?rel=0" rel="prettyPhoto" title="How to set up the automatic call record">
+                                      
+                                          <p class="play-video"></p>
+                                        </a>
+                                        <a class="overview-call" href="http://youtu.be/xh2KF2gVhmw?rel=0" rel="prettyPhoto" title="How to set up the automatic call record">
+                                            How to set up the automatic call record &raquo;</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_6" class="more">Additional Phone Numbers</a></div>
+                                    </div>
+                            
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Automatic-Call-Recording-Frequently-Asked-Questions?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3635%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Automatic%20Call%20Recording%2
+                                            ">Automatic Call Recording Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-Call-Recording-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3390%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20Call%20Recording%20Settings
+                                            ">How to set up the Call Recording settings of my RingCentral account as an Administrator
+                                            </a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Using-Default-Call-Recording-Announcement-on-Start-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3391%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Using%20Default%2
+                                            ">How to use the default call recording Announcement on Start greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-Call-Recording-Announcement-on-Start?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3421%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%20Call%20Recording%2
+                                            ">How to customize the call recording Announcement on Start greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Using-Default-Call-Recording-Announcement-on-Stop?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3422%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Using%20Default%20Call%20Re
+                                            ">How to use the default call recording Announcement on Stop greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-Call-Recording-Announcement-on-Stop?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DUploading%2BCall%2BRecording%2BAnnouncement%2Bon%2BStop%26action%3DSearchAnswer%26sortBy%3
+                                            ">How to customize the call recording Announcement on Stop greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Download-On-Demand-Call-Recordings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Ddownload%2Brecorded%2Bcalls%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How to Download On-Demand Call Recordings
+                                            ">How to download recorded calls</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-Initiate-On-Demand-Call-Recordings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Don%2Bdemand%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20Initiate%20On-Demand%252
+                                            ">How to initiate on-demand Call Recording</a></li>
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                                <!--<aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section"> 
+                                            <ul class="paginate">
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>User Phone and Numbers</span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>Caller ID for user overview
+                                                </span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>Presence Overview
+                                                </span></li>
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>Change company voicemail - Jose</span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            </ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+                       
+-->
+      <c:RCVideoSupport />   
+</apex:component>

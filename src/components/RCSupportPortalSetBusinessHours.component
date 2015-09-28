@@ -1,0 +1,98 @@
+<apex:component >
+ <section class="lc-page">
+                                <div class="left-container">
+                                	<div id="BreadCrumb" style="padding-bottom: 10px;">
+              							<!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Setting</a> &gt; 
+              							--><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21" class="breadcrumblink">Company Settings</a> &gt; 
+              							<span class="breadcrumblink">Set Up Your Business Hours</span>
+            						</div>
+                                    <article>
+                                      <h4>Set Up Your Business Hours</h4>
+                                      <div class="video-desc">
+                                        <p style="line-height:normal !important">As an administrator, set the phone system to work the same 
+                                        way the company does.
+                                        </p><br/>
+                                        <p style="line-height:normal !important">
+                                        	Set up business hours to route calls to the company during business hours and 
+                                        	to be handled appropriately (such as routing to voicemail or an extension) during after hours.
+                                        </p><br/>
+                                      </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                        <div class="share">
+                                           	<apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=NyVVESU-Ijo" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                        </div> <img title="Setting up business hours for Company" alt="Setting up business hours for Company" 
+                                       		src="http://i1.ytimg.com/vi/NyVVESU-Ijo/mqdefault.jpg" />
+                                        <a class="article-video" href="http://www.youtube.com/watch?v=NyVVESU-Ijo?rel=0" rel="prettyPhoto" 
+                                        	title="Setting up business hours for Company">
+                                       
+                                          <p class="play-video"></p>
+                                        </a>
+                                        <a class="overview-call" href="http://www.youtube.com/watch?v=NyVVESU-Ijo?rel=0" rel="prettyPhoto" 
+                                        	title="Setting up business hours for Company">Setting up business hours for Company – Overview &raquo;</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_2" class="more">Call Handling (Auto-Receptionist)</a></div>
+                                    </div>
+                            
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Editing-Company-Hours-of-Operation?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3270%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20Company%20Hours%20of%20Operation
+                                            ">How to edit the company hours of operation as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Company-Business-Hours-Settings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3280%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20Business%20Hours%20Settings
+                                            ">How to set up the company hours settings</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Uploading-Company-Business-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3381%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%20Company%20Business%20Hours%2
+                                            ">How to customize the company hours greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Company-Business-Hours-Connecting-directly-to-an-extension?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3382%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20Business%20Ho
+                                            ">How to direct all incoming calls to a specific extension during company hours as an 
+                                            Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Using-Default-Company-After-Hours-Greetings?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3383%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Using%20Default%20Company%20After
+                                            ">How to set up your company to use the Default company after hours greeting as an 
+                                            Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Uploading-Company-After-Hours-Greeting?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3384%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Uploading%20Company%20After%20Hours%20
+                                            ">How to customize the company after hours greeting as an Administrator</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Company-After-Hours-Connecting-directly-to-an-extension?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3385%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20After%20Hou
+                                            ">How to direct all incoming calls to a specific extension during company after hours as an 
+                                            Administrator</a></li>
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                                <aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section"> 
+                                            <ul class="paginate gallery">
+                                                <li><img title="Forward My Calls to My Other Phone or Phones" alt="Forward My Calls to My Other Phone or Phones" 
+                                                	src="http://i1.ytimg.com/vi/a18xaZJZhAk/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=a18xaZJZhAk?rel=0" rel="prettyPhoto" title="Forward My Calls to My Other Phone or Phones">
+                                                
+                                                <p class="play-video"></p></a><span>Forward My Calls to My Other Phone or Phones</span></li>
+                                                
+                                                <li>  <img title="Advanced Call Handling for Company" alt="Advanced Call Handling for Company" 
+                                                	src="http://i1.ytimg.com/vi/8WI5jMNtN_I/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=8WI5jMNtN_I?rel=0" rel="prettyPhoto" title="Advanced Call Handling for Company">
+                                              
+                                                <p class="play-video"></p></a><span>Advanced Call Handling for Company
+                                                </span></li>
+                                                
+                                                <li>   <img title="Change what callers hear" alt="Change what callers hear" 
+                                                	src="http://i1.ytimg.com/vi/b-v5i4Nuia4/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=b-v5i4Nuia4?rel=0" rel="prettyPhoto" title="Change what callers hear">
+                                             
+                                                <p class="play-video"></p></a><span>Change what callers hear
+                                                </span></li>
+                                                
+                                                <!--
+                                                <li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>Advanced Call Handling for Departments</span></li>
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>
+                                            	-->
+                                            </ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+                                <c:RCVideoSupport />
+</apex:component>

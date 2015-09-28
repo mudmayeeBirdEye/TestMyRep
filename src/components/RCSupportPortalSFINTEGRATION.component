@@ -1,0 +1,113 @@
+<apex:component >
+ <section class="lc-page">
+      <div class="left-container">
+        <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_0" class="breadcrumblink">Top Features</a> &gt; 
+                <span class="breadcrumblink">Salesforce Integration</span>
+        </div>
+        <article>
+            <h4>Salesforce Integration</h4>
+          <div class="video-desc">
+            <p>RingCentral for Salesforce gives you seamless integration between your RingCentral phone system and Salesforce CRM, increasing call efficiency and improving productivity. You'll get:</p>
+            <br />
+            <ul style="color:#333333;padding-left:1px;">
+              <li>Access from any popular browser on Windows or Mac </li>
+              <li>One-click dialing on any phone numbers</li>
+              <li>Caller account records displayed on incoming calls</li>
+              <li>Real-time call notes created while on call</li>
+              <li style="width: 109%">Customizable call reporting via Salesforce reporting interface</li>
+            </ul>
+            <br />
+            <a href="http://netstorage.ringcentral.com/guides/sfdc_admin_guide.pdf" class="more" target="_blank">Download RingCentral for Salesforce Administrator Guide.</a>
+            <a href="http://netstorage.ringcentral.com/guides/sfdc_user_guide.pdf" class="more" target="_blank">Download RingCentral for Salesforce User Guide.</a>
+           <br />
+           <br />
+           <p>*RingCentral for Salesforce is available for Office Premium and Enterprise Editions.</p>
+           
+          </div>
+          <div class="video-panel gallery" >
+            <div class="share-video">
+                 
+                <img title="How to use RingCentral for Salesforce" alt="How to use RingCentral for Salesforce" 
+                src="http://i1.ytimg.com/vi/51Pv2j_lI_8/mqdefault.jpg" />
+                <a class="article-video" href="https://www.youtube.com/watch?v=51Pv2j_lI_8&feature=youtu.be" rel="prettyPhoto" title="How to use RingCentral for Salesforce">
+                    <p class="play-video"></p>
+                </a> 
+              <a href="https://www.youtube.com/watch?v=51Pv2j_lI_8&feature=youtu.be" rel="prettyPhoto" title="How to use RingCentral for Salesforce" 
+                class="overview-call">How to use RingCentral for Salesforce</a>
+              </div>
+             </div> 
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=TopFeatures_4" class="more">Presence</a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <!--<ul class="paginate">
+            <li><a href="http://netstorage.ringcentral.com/guides/Salesforce_Administrator_Guide.pdf
+            ">Salesforce Guide for Administrators</a></li>
+            <li><a href="http://netstorage.ringcentral.com/guides/Salesforce_User_Guide.pdf
+            ">Salesforce Guide for Users</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5002?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3402%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentral%20Salesforce%20Adapter
+            ">RingCentral Salesforce Adapter</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4988?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3404%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up%20Salesforce%20CRM%20Call%20Cen
+            ">How to set up the Salesforce CRM Call Center</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5060?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3411%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Center%20Overview
+            ">RingCentral CRM Call Center Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5075?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3420%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Adding%20Users%20for%20RingCentral
+            ">How to add users for RingCentral Salesforce</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5051?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3423%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up%20a%20Visualforce%20page
+            ">How to set up a Visualforce page</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4991?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3426%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Setting%20up%20the%20Softphone%20layout
+            ">How to setup the Softphone layout of your RingCentral Salesforce App</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5076?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3429%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Assigning%20Softphone%20layouts%20to%20users
+            ">How to assign Softphone layouts to users</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5035?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DInstalling%2Bthe%2BRingCentral%2BSalesforce%2BClient%2BApplication%26action%3DSearch
+            ">How to install the RingCentral Salesforce Client Application</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5003?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3433%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentral%20App%20for%
+            ">RingCentral App for Salesforce Overview</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5039?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3435%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20resolve%20Int
+            ">How to resolve Internet Explorer's Security Warning issue</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4999?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3441%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20incoming%
+            ">How incoming calls work through the RingCentral App for Salesforce</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5057?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3442%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20the%20RingCentral%20App%20for%2
+            ">How the RingCentral App for Salesforce works</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5036?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3443%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=
+            ">How to log in to the RingCentral Softphone application through Salesforce</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5001?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3444%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20outgoing%20ca
+            ">How outgoing calls work through RingCentral App for Salesforce</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5006?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3445%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Important%20Ti
+            ">Important Tips Before Installing the RingCentral App for Salesforce</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5002?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3446%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Using%20the%20Menu%20
+            ">How to use the menu options of the RingCentral Salesforce App</a></li>
+          </ul>-->
+          
+          
+          
+           <ul class="paginate">
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/RingCentral-Salesforce-Adapter?retURL 
+            ">RingCentral Salesforce App Overview</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/RingCentral-App-for-Salesforce-Frequently-Asked-Questions?retURL 
+            ">RingCentral for Salesforce Frequently Asked Questions</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7250?retURL 
+            ">How to add RingCentral for Salesforce to your Salesforce account?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Installing-the-RingCentral-Salesforce-Client-Application?retURL 
+            ">How to Install RingCentral for Salesforce </a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Adding-Users-for-RingCentral-Salesforce-Adapter?retURL 
+            ">How to enable Users with RingCentral for Salesforce?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/How-to-log-in-to-the-RingCentral-Softphone-Adapter-application-through-Salesforce?retURL 
+            ">How to login to RingCentral for Salesforce?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Setting-up-the-Softphone-layout?retURL 
+            ">How to set up Softphone Layout for the RingCentral app?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Assigning-Softphone-layouts-to-users?retURL 
+            ">How to assign Softphone Layout to Users on the RingCentral app?</a></li>
+            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/7272?retURL 
+            ">Troubleshooting for the RingCentral App</a></li>
+            </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+</apex:component>

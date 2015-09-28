@@ -1,0 +1,127 @@
+<apex:component >
+    <section class="lc-page">
+                                <div class="left-container">
+                                    <article>
+                                      <h4>Getting Started</h4>
+                                    <!--  <div class="video-desc">
+                                        <p style="line-height:normal !important">We offer plenty of resources to help you set up and use your system. 
+                                        Here are a few ways to get started:</p><br/>
+                                        <p style="line-height:normal !important">
+                                        <b>Express Setup:</b>  Express Setup will help you set up your system in minutes.  
+                                            Just log into your account and follow the prompts.
+                                        </p><br/>
+                                        <p style="line-height:normal !important">
+                                        <b>Implementation Services:</b>  
+                                            Our implementation advisors will  help you get your RingCentral Office account up and running.  
+                                            We’ll walk you through the physical setup of your phones and help you configure the settings for each of your employees. 
+                                        </p><br/>
+                                        <p style="line-height:normal !important">
+                                        You will receive a call a few days after you open your account.  
+                                        (Implementation services are free of charge to RingCentral Office accounts with two or more users.)
+                                        </p><br/>
+                                        <p style="line-height:normal !important">
+                                        <b>Learning Center:</b>  
+                                        Take a look around our Learning Center.  You’ll find information with helpful videos and articles.
+                                        </p><br/>
+                                      </div> -->
+                                      <div class="video-desc">
+                                            <p style="line-height:normal !important">
+                                                Read our <b>Customer Onboarding Guide</b> to learn everything you need to know to be successful with your RingCentral service.  Learn about the Setup Process including Implementation Services, Network Readiness , Number Transfer and more.
+                                            </p><br/>
+                                            <p style="line-height:normal !important">
+                                                <div><span class="next"></span><a href="http://netstorage.ringcentral.com/guides/onboarding_guide_2to9_users.pdf" target="_blank" style="color:#f8981d;">Customer Onboarding Guide for  2 - 9 users</a></div>
+                                                <div><span class="next"></span><a href="http://netstorage.ringcentral.com/guides/onboarding_guide_10to99_users.pdf" target="_blank" style="color:#f8981d;">Customer Onboarding Guide for  10 - 99 users</a></div>
+                                                <div><span class="next"></span><a href="http://netstorage.ringcentral.com/guides/onboarding_guide_100plus_users.pdf" target="_blank" style="color:#f8981d;">Customer Onboarding Guide for  100+ users</a></div>
+                                            </p><br/><br/>
+                                       </div>
+                                      <div class="video-panel gallery">
+                                        <div class="share-video">
+                                            <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=_zWGe6DU3iM" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+                                            
+                                                <img title="RingCentral Ease of Management - Business Phone System" 
+                                                    alt="RingCentral Ease of Management - Business Phone System" 
+                                                    src="http://i1.ytimg.com/vi/foTd3e3oiI8/mqdefault.jpg" />
+                                               <!-- <a class="article-video" href="http://www.youtube.com/watch?v=_zWGe6DU3iM&feature=share&list=SPpfipw7KaEwYm90Fu5Ns-OnDeAEBGuEtC?rel=0" rel="prettyPhoto">-->
+                                                    <a class="article-video" href="https://www.youtube.com/watch?v=foTd3e3oiI8" rel="prettyPhoto">
+                                                    <p class="play-video"></p>
+                                                </a>
+                                            <a class="overview-call" href="https://www.youtube.com/watch?v=foTd3e3oiI8" rel="prettyPhoto">
+                                                Customer Onboarding Guide Video &raquo;</a>
+                                        </div>
+                                      </div>
+                                      
+                                    </article>
+                                    <div class="suggestion"><span class="next">Next Suggested Topic: </span><a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=getting_1" class="more">Learn the Basics</a></div>
+                                </div>
+                                <div id="article" class="right-container">
+                                    <aside>
+                                        <h3>Related Topics</h3>
+                                        <ul class="paginate">
+                                            <li><a href="http://netstorage.ringcentral.com/guides/professional_office_userguide.pdf" target="_blank" title="Admin Start Guide">Admin Start Guide</a></li>
+                                            <li><a href="http://netstorage.ringcentral.com/guides/office_non-admin_userguide.pdf" target="_blank" title="User Start Guide">User Start Guide</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/What-is-an-auto-receptionist?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dauto%2Breceptionist%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=What%20is%20an%20auto-receptionist?">What is an auto-receptionist?</a></li>
+                                            <li><a href="http://marketo.ringcentral.com/rs/ringcentral/images/Transferring-Your-Phone-Number-to-RingCentral-Tips-and-Checklist.pdf">Tips to a successful number transfer</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Department-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3465%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Department%20Overview">Department Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Company-Numbers-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DCompany%2BNumbers%2BOverview%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Company%20Numbers%20Overview">Company Numbers Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Phones-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DPhones%2BOverview%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Phones%20Overview">Phones Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Users-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DUsers%2BOverview%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Users%20Overview">Users Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-User-Extension-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3911%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=User%20Extension%20Overview">User Extension Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5-10-Messages-and-Notifications-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3912%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Messages%20and%20Notifications%20Overview">Messages and Notifications Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Call-Handling-Forwarding-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3470%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Call%20Handling%20&%20Forwarding%20Overview">Call Handling &amp; Forwarding Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Outbound-Fax-Settings-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3472%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Outbound%20Fax%20Settings%20Overview">Outbound Fax Settings Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Outbound-Caller-ID-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3471%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Outbound%20Caller%20ID%20Overview">Outbound Caller ID Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Screening-Greeting-Hold-Music-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3469%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Screening,%20Greeting%20&%20Hold%20Music%20Overview">Screening, Greeting &amp; Hold Music Overview</a></li>
+                                            <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/Phones-Numbers-Overview?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3468%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Phones%20&%20Numbers%20Overview">Phones &amp; Numbers Overview</a></li>
+                                            <!-- <li><a href="#">14 How do I edit custom call handling?</a></li>
+                                            <li><a href="#">15 How do I add custom rules based on date and time?</a></li>
+                                            <li><a href="#">16 How do I add a custom rule based on the called number?</a></li>
+                                            <li><a href="#">16 Set custom rules by area code or caller ID? </a></li>
+                                            <li><a href="#">18 How do I block specific numbers?</a></li>-->
+                                        </ul>
+                                    </aside>
+                                    <div class="page_navigation"></div>
+                                </div>
+                            </section>
+                                <aside id ="lc-video" class="lc-video"> 
+                                    <div class="video-section">
+                                            <ul class="paginate gallery">
+                                                <li>
+                                                
+                                               <img title="Interface Overview" alt="Interface Overview"  src="http://i1.ytimg.com/vi/Bf0zUBvWkiI/mqdefault.jpg" />
+                                                 <a href="http://youtu.be/Bf0zUBvWkiI?rel=0" rel="prettyPhoto" title="Interface Overview">
+                                                  <p class="play-video"></p>
+                                                </a>
+                                                <span>Interface Overview 
+                                                </span></li>
+                                                
+                                                <li>
+                                                 <img title="Company Settings" alt="Company Settings" 
+                                               src="http://i1.ytimg.com/vi/cV7aRFRoZj8/mqdefault.jpg" />
+                                                <a href="http://www.youtube.com/watch?v=cV7aRFRoZj8?rel=0" rel="prettyPhoto" title="Company Settings">
+                                               
+                                                <p class="play-video"></p></a><span>Company Settings
+                                                </span></li>
+                                                
+                                                <li>
+                                                   <img title="User Settings" alt="User Settings" src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg" /> 
+                                                      <a href="http://youtu.be/q5PkpCzAfsQ?rel=0" rel="prettyPhoto" title="User Settings">
+                                                           <p class="play-video"></p></a><span>RingCentral – User Settings
+                                                      </span>
+                                                </li>
+                                                
+                                                <!--<li><a href="#"><img title="video one" alt="video one" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-one-BIG.png')}" /><p class="play-video"></p></a><span>4 Ring A Number only during After Hours</span></li>
+                                                
+                                                <li><a href="#"><img title="video two" alt="video two" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-two-BIG.png')}" /><p class="play-video"></p></a><span>5 Ring A Number only during After Hours</span></li>
+                                                
+                                                <li><a href="#"><img title="video three" alt="video three" src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/video-three-BIG.png')}" /><p class="play-video"></p></a><span>6 Ring A Number only during After Hours</span></li>-->
+                                            </ul>
+                                        </div> 
+                                        <div class="page_navigation"></div>
+                                </aside>
+                                <c:RCVideoSupport />
+</apex:component>

@@ -1,0 +1,73 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+      <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink">Messages and Notifications</span>
+        </div>
+        <article>
+          <h4>Messages and Notifications</h4>
+          <div class="video-desc">
+            <p>Set up the system to notify  you via email or text when  you receive a voicemail message, fax, missed call, text message. You can also be notified of fax transmission results.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <div class="share">
+                                <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=CmDjkoL0j8I" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                           </div>
+            
+            <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+             src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg"  />
+             <a class="article-video" href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+              <p class="play-video"></p>
+              </a> 
+              <a class="overview-call" href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+              RingCentral Office - User Notifications&raquo;</a> </div>
+              </div>
+            
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_20" class="more">Caller ID</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5024?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3613%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extension's%2
+            ">How to change your extension's Notification settings</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+            
+            <img title="RingCentral Office - Messages and Notifications Overview" alt="RingCentral Office - Messages and Notifications Overview" 
+                src="http://i1.ytimg.com/vi/aqaNcuiEah0/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=aqaNcuiEah0?rel=0" rel="prettyPhoto" title="Messages and Notifications Overview for Users">     
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Messages and Notifications Overview</span></li>
+          
+          <li>
+           
+           <img title="RingCentral Office - Advanced Call Handling for Users" alt="RingCentral Office - Advanced Call Handling for Users" 
+                src="http://i1.ytimg.com/vi/Oz3lgF8SSqA/mqdefault.jpg" />
+            <a href="http://www.youtube.com/watch?v=Oz3lgF8SSqA?rel=0" rel="prettyPhoto" title="Advanced Call Handling for Users">  
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Advanced Call Handling for Users</span></li>
+          
+          <li>
+          
+          <img title="RingCentral Office - Setting up User Business Hours" alt="RingCentral Office - Setting up User Business Hours" 
+                src="http://i1.ytimg.com/vi/rZfAlcD86LM/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=rZfAlcD86LM?rel=0" rel="prettyPhoto" title="RingCentral Office - Setting up User Business Hours">   
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Setting up User Business Hours</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

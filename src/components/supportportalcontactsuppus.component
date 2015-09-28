@@ -1,0 +1,522 @@
+<apex:component controller="SupportPortalControllerNew">
+<script src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/js/libs/jquery-1.8.2.js')}"></script>
+<style>
+.status {
+    width: 948px;
+}
+
+.contact-support-container article.app {
+    padding: 5px !important;
+}
+
+.contact-support-container .img-container.chat_support {
+    background: url('{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img
+    /icon_2.png')}') 34px 10px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+.contact-support-container .img-container.case2 {
+    background: url('{!URLFOR($Resource.BTSupport, 'BTSupport/images/Open_Case_Icon.png')}') 55px 0px no-repeat;
+    display: block;
+    width: 200px;
+    height: 50%;
+    background-size: 25%;
+}
+
+.contact-support-container .img-container.call_support2 {
+    background: url('{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/icon_3.png')}') 29px 5px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+.contact-support-container .img-container.community2 {
+    background: url('{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/icon_4.png')}') 48px 0px no-repeat;
+    display: block;
+    width: 200px;
+}
+
+.newapp {
+    height: 160px !important;
+    width: 175px !important;
+    margin-bottom: -35%;
+}
+
+.contact-support-container .container-desc h3 {
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+    text-align: center;
+}
+
+.chat-content {
+    width: 240px;
+    float: left;
+}
+
+.info_line p {
+    padding: 0 0 5px -1px !important;
+}
+</style>
+<style>
+.Chat_OfflineMsg {
+    background: url('{!URLFOR($Resource.RCSupportPortal, 'supportPortal/img/icon_2.png')}') no-repeat scroll transparent;
+    display: block;
+    height: 200px;
+    float: right;
+    width: 200px;
+    position: absolute;
+    margin-left: 260px;
+}
+
+.link_set {
+    color: #4541E3;
+    cursor: pointer;
+    margin-top: 125px;
+    position: absolute;
+    margin-left: 22px;
+}
+
+.caseStatus-button {
+    margin-left: -21px;
+    width: 220px;
+}
+</style>
+<style type="text/css">
+#overlay11 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity = 70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    opacity: 0.7;
+    z-index: 9999;
+    display: none;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.popup {
+    width: 900px;
+    margin-top: -230px;
+    margin-left: 50px;
+    display: none;
+    position: fixed;
+    z-index: 10000;
+}
+
+.content {
+    min-width: 416px;
+    width: 374px;
+    min-height: 165px;
+    margin: 50px auto;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+
+.content p {
+    clear: both;
+    color: #555555;
+    text-align: justify;
+}
+
+.content p a {
+    color: #d91900;
+    font-weight: bold;
+}
+
+.content .x {
+    float: right;
+    height: 16px;
+    left: 10px;
+    position: relative;
+    top: -10px;
+    width: 20px;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.content .x:hover {
+    cursor: pointer;
+}
+
+.container-desc {
+    margin-top: -5px;
+    font-size: 12px !important;
+    line-height: 15px !important;
+}
+
+.contact-support-container .container-desc h3 {
+    color: rgb(79, 146, 242);
+}
+
+.chat-wrapper {
+    width: 300px;
+    padding: 20px;
+    position: fixed;
+}
+</style>
+
+    <script type='text/javascript'>
+        $(function() {
+            var overlay11 = $('<div id="overlay11" class="close"></div>');
+            $('.close').click(function() {
+                $('.popup').hide();
+                $('#overlay11').hide();
+                //overlay11.appendTo(document.body).remove();
+                return false;
+            });
+
+            $('.x').click(function() {
+                $('.popup').hide();
+                $('#overlay11').hide();
+                //overlay11.appendTo(document.body).remove();
+                return false;
+            });
+
+            $('.click').click(function() {
+                overlay11.show();
+                overlay11.appendTo(document.body);
+                $('.popup').show();
+                return false;
+            });
+        });
+
+        function openoverlay11() {
+            overlay11.show();
+            overlay11.appendTo(document.body);
+            $('.popup').show();
+        }
+    </script>
+    <script>
+        (function() {
+
+            var overlay11 = $('<div id="overlay11"></div>');
+            $('.close').click(function() {
+                $('.popup').hide();
+                $('#overlay11').hide();
+                //overlay11.appendTo(document.body).remove();
+                return false;
+            });
+
+            $('.x').click(function() {
+                $('.popup').hide();
+                $('#overlay11').hide();
+                $('#overlay11').hide();
+                //overlay11.appendTo(document.body).remove();
+                return false;
+            });
+
+            $('.click').click(function() {
+                overlay11.show();
+                overlay11.appendTo(document.body);
+                $('.popup').show();
+                return false;
+            });
+
+            function openoverlay11() {
+                overlay11.show();
+                overlay11.appendTo(document.body);
+                $('.popup').show();
+            }
+
+            var lpc;//livePersonChat
+
+            //var skill = 'US Team';//operator group
+            //var skill = 'Test Skill';//operator group
+            var skill = 'Support - Inbound Chat';//operator group
+
+            var isSafari = null;//hack for Safari for window.open
+
+            function detectSafari() {
+                if (null === isSafari) {
+                    isSafari = false;
+                    if (navigator.userAgent.indexOf('Safari') != -1
+                            && navigator.userAgent.indexOf('Chrome') == -1) {
+                        isSafari = true;
+                    }
+                }
+                return isSafari;
+            }
+
+            //called with lpChatConfig.onLoad()
+            function myOnLoad() {
+                lpc = new lpChat();
+            }
+
+            function myOnInit() {
+                $('.livepersonblock1').css({
+                    'cursor' : 'pointer'
+                }).bind(
+                        'click',
+                        function(e) {
+
+                            if (detectSafari()) {
+                                console.log('In side safari');
+                                window.livepersonChat = window.open('',
+                                        'ChatWindow',
+                                        'width=475,height=400,resizable=yes');
+                            }
+                            lpc.chatAvailability({
+                                skill : encodeURIComponent(skill)
+                            });
+                            console.log('out side safari');
+                        });
+            }
+
+            function myOnAvailability(availObj) {
+                if (true == availObj.availability) {
+                    showChatWindow();
+                } else {
+                    if (detectSafari()) {
+                        window.livepersonChat.close();
+                    }
+                    showOfflineForm();
+                }
+            }
+
+            function myOnError(errorObj) {
+                if ('undefined' != typeof (console)) {
+                    console.log('error received: ' + Obj.text);
+                }
+            }
+
+            lpChatConfig = {
+                apiKey : '8f0ffa355d2d428ab7450accae1bb8e0',
+                lpNumber : '2417276',
+                jsApiSrcDomain : 'sales.liveperson.net',
+                onLoad : myOnLoad,
+                onInit : myOnInit,
+                onAvailability : myOnAvailability,
+                onError : myOnError
+            };
+
+            lpChatConfig.closure = function() {
+            }
+
+            lpChatConfig.lpAddScript = function(src, ignore) {
+                var c = lpChatConfig;
+                if (typeof (c.lpProtocol) == 'undefined') {
+                    c.lpProtocol = "https";
+                }
+
+                if (typeof (src) == 'undefined' || typeof (src) == 'object') {
+                    //src = c.lpChatSrc ? c.lpChatSrc : '/hcp/html/lpChatAPI.js'; 
+                    src = c.lpChatSrc ? c.lpChatSrc
+                            : '/hcp/html/jschatapiv2.js';
+                }
+
+                if (src.indexOf('http') != 0) {
+                    src = c.lpProtocol + "://" + c.jsApiSrcDomain + src
+                            + '?site=' + c.lpNumber;
+                } else {
+                    if (src.indexOf('site=') < 0) {
+                        if (src.indexOf('?') < 0) {
+                            src = src + '?';
+                        } else {
+                            src = src + '&';
+                            src = src + 'site=' + c.lpNumber;
+                        }
+                    }
+                }
+
+                //src = '/js/rc12/livechat/livepersonapi.js';
+                //src = '/RCSupportPortal/resource/1379666767000/LivePerson/livepersonapi.js';
+                src = '{!URLFOR($Resource.LivePerson, '
+                livepersonapi.js
+                ')}';
+
+                var s = document.createElement('script');
+                s.setAttribute('type', 'text/javascript');
+                s.setAttribute('charset', 'iso-8859-1');
+                s.setAttribute('src', src);
+                document.getElementsByTagName('head').item(0).appendChild(s);
+
+                var done = false;
+                s.onload = s.onreadystatechange = function() {
+                    if (!done
+                            && (!this.readyState
+                                    || this.readyState === "loaded" || this.readyState === "complete")) {
+                        done = true;
+                        lpChatConfig.closure();
+                        s.onload = s.onreadystatechange = null;
+                    }
+                };
+            }
+            var loadingTableWnd;
+            function showOfflineForm() {
+                openoverlay11();
+            }
+
+            function showChatWindow() {
+                var url = 'http://server.iad.liveperson.net/hc/2417276/?cmd=file&file=visitorWantsToChat&site=2417276';
+                url += '&SV!skill=' + encodeURIComponent(skill);
+                url += '&referrer=' + escape(document.location);
+                if (url.length > 2000) {
+                    url = url.substr(0, 2000);
+                }
+                if (!detectSafari()) {
+                    window.open(url, 'ChatWindow',
+                            'width=475,height=400,resizable=yes');
+                } else {
+
+                    window.livepersonChat.location.href = url;
+                    window.livepersonChat.focus();
+                }
+            }
+
+            lpChatConfig.lpAddScript();
+        })();
+    </script>
+    <script>
+        window.lpTag = window.lpTag || {};
+        if (typeof window.lpTag._tagCount === "undefined") {
+            window.lpTag = {
+                site : "2417276",
+                section : lpTag.section || '',
+                autoStart : lpTag.autoStart || true,
+                ovr : lpTag.ovr || {},
+                _v : "1.4",
+                _tagCount : 1,
+                protocol : location.protocol,
+                events : {
+                    bind : function(app, ev, fn) {
+                        lpTag.defer(function() {
+                            lpTag.events.bind(app, ev, fn)
+                        }, 0)
+                    },
+                    trigger : function(app, ev, json) {
+                        lpTag.defer(function() {
+                            lpTag.events.trigger(app, ev, json)
+                        }, 1)
+                    }
+                },
+                defer : function(fn, fnType) {
+                    if (fnType == 0) {
+                        this._defB = this._defB || [];
+                        this._defB.push(fn)
+                    } else if (fnType == 1) {
+                        this._defT = this._defT || [];
+                        this._defT.push(fn)
+                    } else {
+                        this._defL = this._defL || [];
+                        this._defL.push(fn)
+                    }
+                },
+                load : function(src, chr, id) {
+                    var t = this;
+                    setTimeout(function() {
+                        t._load(src, chr, id)
+                    }, 0)
+                },
+                _load : function(src, chr, id) {
+                    var url = src;
+                    if (!src) {
+                        url = this.protocol
+                                + "//"
+                                + ((this.ovr && this.ovr.domain) ? this.ovr.domain
+                                        : "lptag.liveperson.net")
+                                + "/tag/tag.js?site=" + this.site
+                    }
+                    var s = document.createElement("script");
+                    s.setAttribute('charset', chr ? chr : "UTF-8");
+                    if (id) {
+                        s.setAttribute("id", id)
+                    }
+                    s.setAttribute("src", url);
+                    document.getElementsByTagName('head').item(0)
+                            .appendChild(s)
+                },
+                init : function() {
+                    this._timing = this._timing || {};
+                    this._timing.start = (new Date()).getTime();
+                    var that = this;
+                    if (typeof jQuery == 'undefined') {
+                        if (window.addEventListener) {
+                            window.addEventListener("DOMContentLoaded",
+                                    function() {
+                                        that._domReady("contReady")
+                                    }, false);
+                            window.addEventListener("load", function() {
+                                that._domReady("domReady")
+                            }, false)
+                        } else {
+                            window.attachEvent("onload", function() {
+                                that._domReady("domReady")
+                            })
+                        }
+                    } else {
+                        $(document).ready(function() {
+                            that._domReady("domReady");
+                        });
+                    }
+
+                    if (typeof (window._lptStop) == "undefined") {
+                        this.load()
+                    }
+                },
+                _domReady : function(n) {
+                    if (!this.isDom) {
+                        this.isDom = true;
+                        this.events.trigger("LPT", "DOM_READY", {
+                            t : n
+                        })
+                    }
+                    this._timing[n] = (new Date()).getTime()
+                }
+            };
+            lpTag.init();
+        } else {
+            window.lpTag._tagCount += 1
+        }
+    </script>
+    <apex:form forceSSL="{!!isGuestUser}" style="margin-top: -5%;" rendered="{!!isGuestUser == true}">
+        <div class="contact-support-container" style="margin-left: 103%;margin-top: -24.5% !important;position: absolute;">
+            <apex:commandLink action="{!openCreateCase}" rendered="{!!isGuestUser == true}">
+                <article role="application" class="newapp app">
+                    <div class="img-container case2"></div>
+                    <div class="container-desc">
+                        <h3>Open a Case</h3>
+                        If you can't find an answer or need personalised assistance, simply
+                        open a case.
+                    </div>
+                </article>
+            </apex:commandLink>
+        </div>
+    </apex:form>
+    <apex:form forceSSL="{!isGuestUser}" style="margin-top: 6.5%;position: absolute;" rendered="{!isGuestUser == true}">
+        <div class="check-status">
+            <apex:outputPanel id="thePanel" layout="block" > <!-- rendered="{!theCheckPanel}" -->
+                <table>
+                    <tr>
+                        <td padding="3px">
+                            <apex:commandLink action="{!openMyCase}" type="image/png"
+                                rerender="checkCaseDiv,contactSupport,createCaseDiv,thePanel">
+                                <apex:image value="{!URLFOR($Resource.RCSupportPortal,'supportPortal/img/Check_my_case_status.png')}"
+                                    styleClass="caseStatus-button" />
+                            </apex:commandLink>
+                        </td>
+                        <td width="50px"></td>
+                        <td>
+                            <apex:commandLink action="{!openCase}" type="image/png"
+                                rerender="createCaseDiv,contactSupport">
+                                <apex:image value="{!URLFOR($Resource.RCSupportPortal,'supportPortal/img/Open_a_Case.png')}"
+                                    styleClass="caseStatus-button" />
+                            </apex:commandLink>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+        </div>
+    </apex:form>
+</apex:component>

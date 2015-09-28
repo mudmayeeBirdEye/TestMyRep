@@ -1,0 +1,102 @@
+<apex:component >
+<style>
+    .suggestion {
+        float:none !important;
+    }
+</style>
+<section class="lc-page">
+      <div class="left-container">
+        <article>
+          <h4>Faxing</h4>
+          <div class="video-desc">
+            <p>Sending a fax is easy.  You choose how:</p>
+            <ul class="numbers" style="color:#333333;padding-left: 17px;">
+                <li><a style="color:#f8981d" href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5040?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3617%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20a%20fax%20using%20your%20email
+                "><span>Email</span></a></li>
+                <li><a style="color:#f8981d" href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5132?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3236%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20Faxes%20Sent%2
+                ">Faxout </a>from your online account</li>
+               <!--  <li><a style="color:#f8981d" href="http://success.ringcentral.com/articles/RC_Knowledge_Article/RingCentral-CloudFax-with-Dropbox-Box-Google-Docs-integration?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DDropbox%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentral%20FaxOut%20with%20Dropbox,%20Box%20&%20Google%20Drive%20integration
+                ">RingCentral CloudFax&#8482; with Dropbox, Box, and Google Drive</a></li> -->
+                <li><a style="color:#f8981d" href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5070?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D2071%26action%3DSearchAnswer%26sortBy%3D%26token%3Dro%252FCmVGXpMpdW4BeXbjIPP4jOm1AUniSNOB%252FWfKbW2rLfaIoJUvkcjiezn5Xk29ZTuzppIOyX3%252FAUR7e8l6RoQ%253D%253D&popup=false&Title=View%20and%20Forward%20a%20Fax%20from%20Your%20Smartphone
+                ">Smartphone</a></li>
+            </ul>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=3YU_hxhuluA" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> -->
+            
+                <img title="RingCentral Office - Outbound Fax Setting Overview" alt="RingCentral Office - Outbound Fax Setting Overview" 
+                src="http://i1.ytimg.com/vi/3YU_hxhuluA/mqdefault.jpg" style="width: 280px;" />
+              <a class="article-video" href="http://www.youtube.com/watch?v=3YU_hxhuluA?rel=0" rel="prettyPhoto" title="RingCentral Office - Outbound Fax Setting Overview">
+              <p class="play-video"></p>
+              </a> 
+              <a href="http://www.youtube.com/watch?v=3YU_hxhuluA?rel=0" rel="prettyPhoto" title="RingCentral Office - Outbound Fax Setting Overview" class="overview-call">RingCentral Office - Outbound Fax Setting Overview&raquo;</a> 
+              </div>
+            </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic: </span> 
+        <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=DeskPhones_0" class="more">Desk Phones</a>
+        </div>
+        <div class="suggestion" style="margin-top:0px;"><span class="next"></span>
+            <a href="https://community.ringcentral.com/ringcentral/products/ringcentral_faxing" 
+                target="_blank" class="more">
+                Learn more in the Community
+            </a>
+        </div>
+      </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5045?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3DRingOut%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20scheduled%20faxes%20using%20FaxOut
+            ">How to send scheduled faxes using FaxOut</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5040?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3617%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20a%20fax%20using%20your%20emai
+            ">How to send a fax using your email</a></li>
+           <!--  <li><a href="http://success.ringcentral.com/articles/RC_Knowledge_Article/RingCentral-CloudFax-with-Dropbox-Box-Google-Docs-integration?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D2336%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=RingCentral%20CloudFax%20with%20Dropbox,%20Box%20&%20Google%20Drive%20integration
+            ">RingCentral CloudFax with Dropbox, Box &amp; Google Drive integration</a></li> -->
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5070?retURL
+            ">View and Forward a Fax from Your Smartphone</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5046?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3163%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Sending%20Scheduled%20Faxes%20using%20
+            ">How to send scheduled faxes using the SoftPhone</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5045?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3621%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20send%20faxes%20using%20FaxOut
+            ">How to send faxes using FaxOut</a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5084?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26p%3D2%26k%3Dinternational%26t%3D%26l%3D%26action%3DSearchAnswer%26pageid%3Dknowledge%26serviceFilter%3D&popup=false&Title=How%20to%20change%20the%20service%20plan%20of%20my%20RingCentral%20account%20as%20an%20Administrator
+            ">How to change the service plan of my RingCentral account as an Administrator</a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          <img title="Messages and Notifications Overview" alt="Messages and Notifications Overview" 
+                src="http://i1.ytimg.com/vi/aqaNcuiEah0/mqdefault.jpg " />
+            <a href="http://www.youtube.com/watch?v=aqaNcuiEah0?rel=0" rel="prettyPhoto" title="Messages and Notifications Overview for Users">    
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Messages and Notifications Overview</span></li>
+          
+          <li>
+          <img title="RingCentral Office - User Notifications" alt="RingCentral Office - User Notifications" 
+            src="http://i1.ytimg.com/vi/CmDjkoL0j8I/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=CmDjkoL0j8I?rel=0" rel="prettyPhoto" title="RingCentral Office - User Notifications">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - User Notifications</span></li>
+          
+          <li>
+          <img title="Sending Faxes using the RingCentral Softphone" alt="Sending Faxes using the RingCentral Softphone" 
+                src="http://i1.ytimg.com/vi/3o68-DknRzo/mqdefault.jpg" />
+            <a href="http://youtu.be/3o68-DknRzo?rel=0" rel="prettyPhoto" title="Sending Faxes using the RingCentral Softphone">    
+            <p class="play-video"></p>
+            </a><span>Sending Faxes using the RingCentral Softphone</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+        </aside>
+     <c:RCVideoSupport />
+</apex:component>

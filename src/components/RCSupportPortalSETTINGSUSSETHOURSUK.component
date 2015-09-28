@@ -1,0 +1,83 @@
+<apex:component >
+<section class="lc-page">
+      <div class="left-container">
+       <div id="BreadCrumb" style="padding-bottom: 10px;">
+                <!--<a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+                --><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14" class="breadcrumblink">User Settings</a> &gt; 
+                <span class="breadcrumblink">Set up Business Hours</span>
+        </div>
+        <article>
+          <h4>Set up Business Hours</h4>
+          <div class="video-desc">
+            <p>Choose how your incoming calls are handled during normal business hours and after hours.</p> 
+            <br/> 
+            <p>You can customize your hours of operation by day, week, or to be the same 24/7.</p>
+            <br/>
+            <p>For more advanced rules, (holidays, vacations) see the advanced call handling section.</p>
+          </div>
+          <div class="video-panel gallery">
+            <div class="share-video"> <!-- <a class="share">share &raquo;</a>  -->
+                                            <!-- <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="width;40px;"> -->
+                                                <div class="share">
+                                                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=rZfAlcD86LM" href="javascript:void(0)"><span>Share</span></a>' escape="false"></apex:outputtext>
+                                                </div>
+                                            <!-- </div> --> 
+            
+              <img title="Setting up business hours for users" alt="Setting up business hours for users" 
+                src="http://i1.ytimg.com/vi/rZfAlcD86LM/mqdefault.jpg"  />
+                <a class="article-video" href="http://www.youtube.com/watch?v=rZfAlcD86LM?rel=0" rel="prettyPhoto" title="Setting up business hours for users">
+              <p class="play-video"></p>
+              </a> 
+              <a href="http://www.youtube.com/watch?v=rZfAlcD86LM?rel=0" rel="prettyPhoto" title="Setting up business hours for users" class="overview-call">RingCentral Office - Setting up User Business Hours&raquo;</a>
+              </div>
+             </div>
+        </article>
+        <div class="suggestion"><span class="next">Next Suggested Topic:</span> <a href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_16" class="more">Greeting &amp; Hold Music</a></div>
+        </div>
+      <div id="article" class="right-container">
+        <aside>
+          <h3>Related Topics</h3>
+          <ul class="paginate">
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5027?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3271%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Editing%20your%20Extens
+            ">How to edit your extension's user hours rules
+            </a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5048?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dholidays%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20specific%20date%20range
+            ">How to set a rule based on time of day or date range with a specific date range
+            </a></li>
+            <li><a href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5049?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3Dlunch%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20set%20a%20rule%20based%20on%20time%20of%20day%20or%20date%20range%20with%20a%20weekly%20schedule
+            ">How to set a rule based on time of day or date range with a weekly schedule
+            </a></li>
+          </ul>
+        </aside>
+        <div class="page_navigation"></div>
+      </div>
+    </section>
+    <aside id ="lc-video" class="lc-video">
+      <div class="video-section">
+        <ul class="paginate gallery">
+          <li>
+          <img title="RingCentral Office - Outbound Caller ID Overview" alt="RingCentral Office - Outbound Caller ID Overview" 
+            src="http://i1.ytimg.com/vi/6ECj7zD2wc0/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=6ECj7zD2wc0?rel=0" rel="prettyPhoto" title="RingCentral Office - Outbound Caller ID Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Outbound Caller ID Overview</span></li>
+          
+          <li>
+             <img title="RingCentral Office - Call Handling and Forwarding Overview" alt="RingCentral Office - Call Handling and Forwarding Overview" 
+             src="http://i1.ytimg.com/vi/Ly0syiFtLvs/mqdefault.jpg" />
+             <a href="http://www.youtube.com/watch?v=Ly0syiFtLvs?rel=0" rel="prettyPhoto" title="Call Handling and Forwarding Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral Office - Call Handling and Forwarding Overview</span></li>
+          
+          <li>
+            <img title="RingCentral - User Overview" alt="RingCentral - User Overview" 
+            src="http://i1.ytimg.com/vi/D2uWgyTzD8Y/mqdefault.jpg"  />
+            <a href="http://www.youtube.com/watch?v=D2uWgyTzD8Y?rel=0" rel="prettyPhoto" title="RingCentral - User Overview">
+            <p class="play-video"></p>
+            </a><span>RingCentral - User Overview</span></li>
+        </ul>
+      </div>
+      <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>

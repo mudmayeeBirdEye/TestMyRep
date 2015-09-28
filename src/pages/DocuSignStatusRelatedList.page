@@ -1,0 +1,36 @@
+<!--****************************************************************************************************
+* Project Name..........: Case # 03487050 DocuSign Status in PRM                                       *
+* File..................: DocuSignStatusRelatedList.class                                              *
+* Version...............: 1.0                                                                          *
+* Created by............: eugenebasianomutya                                                           *
+* Created Date..........: 23-04-2015                                                                   *
+* Last Modified by......: eugenebasianomutya                                                           *
+* Last Modified Date....: 23-04-2015                                                                   *
+* Description...........: Class to display the DocuSign Status in Section in Account for Partner User. *
+********************************************************************************************************-->
+
+<apex:page standardController="Account" extensions="DocuSignStatusRelatedList" showHeader="false">
+    <style>
+        .container{
+            overflow:auto;
+            height:90px;
+        }
+        .fontstyle{
+            font-size: 12px;
+        }
+    </style>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputPanel layout="block" styleclass="container, fontstyle">
+                <apex:pageBlockTable value="{!DocuSignStatus}" var="o" >
+                    <apex:column value="{!o.Name}"/>
+                    <apex:column value="{!o.dsfs__Sender__c}"/>
+                    <apex:column value="{!o.dsfs__Subject__c}"/>
+                    <apex:column value="{!o.dsfs__Envelope_Status__c}"/>
+                    <apex:column value="{!o.dsfs__Days_to_Complete__c}"/>
+                    <apex:column value="{!o.dsfs__Sent_Date_Time__c}"/>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

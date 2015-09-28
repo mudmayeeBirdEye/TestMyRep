@@ -1,0 +1,42 @@
+<apex:page standardController="Handling_Objection__c" extensions="RCHandlingExt" tabStyle="Handling_Objection__c">
+
+<style>
+  .headerRow .TableTitle {
+    background-color: #FF9900 !important;
+    background-image: none !important; //This is needed if you want to overwrite the header background
+    color: #CC0000 !important; 
+    font-size:100% !important;
+  }
+</style>
+
+<apex:sectionHeader title="OBJECTION HANDLING GUIDE" />
+
+  <apex:form >  
+      <apex:pageBlock Title="Topic: {!RCHandlingObjections.Name}">
+        <apex:pageBlockButtons >
+          <apex:commandButton value="Edit" action="{!edit}"/>
+          <apex:commandButton value="Back to List" action="{!list}"/>
+        </apex:pageBlockButtons>
+              
+          <apex:pageBlockTable value="{!Handling_Objection__c}" var="Objection Topic">           
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Customer_Objection_1__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Issues_and_Clarification_1__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Response_1__c}" headerClass="TableTitle"/>         
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Handling_Objection__c}" var="Objection Topic">
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Customer_Objection_2__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Issues_and_Clarification_2__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Response_2__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Handling_Objection__c}" var="Objection Topic">
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Customer_Objection_3__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Issues_and_Clarification_3__c}" headerClass="TableTitle"/>
+             <apex:column width="23%" style="vertical-align:Top;height:20" value="{!RCHandlingObjections.Response_3__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+      </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

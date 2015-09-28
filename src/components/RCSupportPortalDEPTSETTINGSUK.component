@@ -1,0 +1,189 @@
+<apex:component >
+    <style>
+.settinganchor { //
+    text-decoration: underline;
+    color: #f8981d;
+}
+</style>
+    <section class="lc-page">
+    <div class="left-container">
+        <!--<div id="BreadCrumb" style="padding-bottom: 10px;">
+             <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_7" class="breadcrumblink">Setting</a> &gt; 
+             <span class="breadcrumblink">Department Settings</span>
+         </div>
+        -->
+        <article>
+        <h4>Group Settings Overview</h4>
+        <div class="video-desc">
+            <p>As an administrator or call queue manager, add and create call
+                queues any time you want a specific group of users such as sales,
+                support or billing to share incoming calls.</p>
+            <br />
+            <p>Give each call queue an extension or its own direct number
+                (local or toll-free).</p>
+            <br />
+            <p style="line-height: normal !important">
+                Administrators and call queue managers can:
+                <!--  <a href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_8" class="settinganchor">Set up business hours</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_9">set greetings &amp; hold music</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_10">add department members</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_11">set call handling &amp; forwarding</a>, 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_12">set advanced call handling</a>, 
+                                          and 
+                                        <a class="settinganchor" href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_13">set messages &amp; notifications</a>. -->
+            <table style="width: 350px">
+                <tr>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_8"
+                        class="settinganchor">Set up business hours</a>
+                    </td>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        class="settinganchor"
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_9">Set greetings &amp; hold music</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        class="settinganchor"
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_10">Add Call Queue Members</a>
+                    </td>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        class="settinganchor"
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_11">Set call handling &amp; forwarding</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        class="settinganchor"
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_12">Set advanced call handling</a>
+                    </td>
+                    <td nowrap="nowrap" style="vertical-align: top;"><a
+                        class="settinganchor"
+                        href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_13">Set messages &amp; notifications</a>
+                    </td>
+                </tr>
+            </table>
+
+            </p>
+            <br />
+            <!--<br/>
+                                        -->
+        </div>
+        <div class="video-panel gallery">
+            <div class="share-video">
+                <div class="share">
+                    <apex:outputtext value='<a class="addthis_button_expanded" onmousehover="return false;" addthis:url="http://www.youtube.com/watch?v=D5YqaK88RG0" href="javascript:void(0)"><span>Share</span></a>'
+                        escape="false"></apex:outputtext>
+                </div>
+                <img title="RingCentral Office - Call Queue Overview"
+                    alt="RingCentral Office - Call Queue Overview"
+                    src="http://i1.ytimg.com/vi/CXO6tg-8Q8s/mqdefault.jpg" /> <a
+                    class="article-video"
+                    href="https://www.youtube.com/watch?v=CXO6tg-8Q8s"
+                    rel="prettyPhoto" title="RingCentral Office - Call Queue Overview">
+                    <p class="play-video"></p> </a> <a
+                    href="https://www.youtube.com/watch?v=CXO6tg-8Q8s"
+                    rel="prettyPhoto" title="RingCentral Office - Call Queue Overview"
+                    class="overview-call">RingCentral Office - Call Queue Overview
+                    &raquo;</a>
+            </div>
+        </div>
+        </article>
+        <div class="suggestion">
+            <span class="next">Next Suggested Topic:</span> <a
+                href="{!$Site.CurrentSiteURL}RCSupportPortalLearningCenter?LCtabId=settings_8"
+                class="more">Set Up Business Hours</a>
+            <p style="line-height: normal !important; margin-top: 30px;">
+                Other Settings Sections: <a
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_21"
+                    class="settinganchor">Company Settings</a>, <a
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalLearningCenter?LCtabId=settings_14"
+                    class="settinganchor">User Settings</a>
+            </p>
+        </div>
+    </div>
+    <div id="article" class="right-container">
+        <aside>
+        <h3>Related Topics</h3>
+        <ul class="paginate">
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5090?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3521%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20edit%20the%20rules%20for%20d
+            ">How to configure call queue rules</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5038?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3616%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20record%20your%2
+            ">How to customize call queue greetings</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/4998?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3532%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20upload%20after%20h
+            ">How to upload after hours voicemail greeting for a group</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5082?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3389%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=Changing%20the%20
+            ">How to change the operator extension on my RingCentral account as an Administrator</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5008?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3634%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to
+            ">How to access the advanced call handling feature of the auto receptionist</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5022?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3519%26action%3DSearchAnswer%26sortBy%3D&popup=false&Titl
+            ">How to edit the business hours messages and notification settings of a call queue</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.co.uk/articles/RC_Knowledge_Article/5011?retURL=%2Fapex%2FRCSupportSearch2013%3Fc%3DAll%26k%3D3505%26action%3DSearchAnswer%26sortBy%3D&popup=false&Title=How%20to%20add%20departments
+            ">How to add call queues</a>
+            </li>
+        </ul>
+        </aside>
+        <div class="page_navigation"></div>
+    </div>
+    </section>
+    <aside id="lc-video" class="lc-video">
+    <div class="video-section">
+        <ul class="paginate gallery">
+            <li><img title="RingCentral Office - Setting Up Call Queue Hours"
+                alt="RingCentral Office - Setting Up Call Queue Hours"
+                src="http://i1.ytimg.com/vi/DBPZB4mNCLY/mqdefault.jpg" /> <a
+                href="https://www.youtube.com/watch?v=DBPZB4mNCLY"
+                rel="prettyPhoto"
+                title="RingCentral Office - Setting Up Call Queue Hours">
+
+                    <p class="play-video"></p> </a><span>RingCentral Office - Setting Up Call Queue Hours</span>
+            </li>
+            <li><img title="RingCentral Office - Call Handling for Call Queues"
+                alt="RingCentral Office - Call Handling for Call Queues"
+                src="http://i1.ytimg.com/vi/Gt1YwwlGESQ/mqdefault.jpg" /> <a
+                href="https://www.youtube.com/watch?v=Gt1YwwlGESQ"
+                rel="prettyPhoto"
+                title="RingCentral Office - Call Handling for Call Queues">
+
+                    <p class="play-video"></p> </a><span>RingCentral Office - Call Handling for Call Queues</span>
+            </li>
+            <li><img
+                title="RingCentral Office - Messages and Notifications for Call Queues"
+                alt="RingCentral Office - Messages and Notifications for Call Queues"
+                src="http://i1.ytimg.com/vi/0BmLyB4P2qA/mqdefault.jpg" /> <a
+                href="https://www.youtube.com/watch?v=0BmLyB4P2qA"
+                rel="prettyPhoto"
+                title="RingCentral Office - Messages and Notifications for Call Queues">
+
+                    <p class="play-video"></p> </a><span>RingCentral Office - Messages and Notifications for Call Queues</span>
+            </li>
+
+            <li><img
+                title="RingCentral Office - Advanced Call Handling for Call Queues "
+                alt="RingCentral Office - Advanced Call Handling for Call Queues "
+                src="http://i1.ytimg.com/vi/eZ6nBpH7pz4/mqdefault.jpg" /> <a
+                href="https://www.youtube.com/watch?v=eZ6nBpH7pz4"
+                rel="prettyPhoto"
+                title="RingCentral Office - Advanced Call Handling for Call Queues ">
+
+                    <p class="play-video"></p> </a><span>RingCentral Office - Advanced Call Handling for Call Queues </span>
+            </li>
+        </ul>
+    </div>
+    <div class="page_navigation"></div>
+    </aside>
+    <c:RCVideoSupport />
+</apex:component>
