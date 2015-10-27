@@ -9,6 +9,7 @@ public class AccInfo {
     //Test
 	//2nd commit second rep branch
 	//test
+	//Master code 
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
