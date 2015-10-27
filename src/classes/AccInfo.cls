@@ -8,6 +8,7 @@ Update details: Case # 03523403 - highlight on the account when a "Customer Succ
 public class AccInfo {
     //Test
 	//2nd commit second rep branch
+	//test
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
