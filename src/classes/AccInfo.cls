@@ -10,6 +10,7 @@ public class AccInfo {
 	//2nd commit second rep branch
 	//test
 	//Master code 
+	//Changing code from Rep 2 branch
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
