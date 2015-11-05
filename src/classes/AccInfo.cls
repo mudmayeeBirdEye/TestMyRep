@@ -12,6 +12,8 @@ public class AccInfo {
 	//Master code 
 	//Changing code from Rep 2 branch
 	//TestMyRep_Branch1
+	
+	//Testing git flow
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
