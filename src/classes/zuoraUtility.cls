@@ -1,4 +1,5 @@
 public class zuoraUtility{/*
+	//Test on Dec 15
     public map<string,Id> addressContactMap = new map<string,Id>();// key=> (country-state-locality) and Value will be ContactId
     public  map<Contact,String> contactJuridnMap = new map<Contact,String>();// key=> sold-to-Contact and Value will be JuridictionId
     public map<string,String> QuoteChargJuridcnMap = new map<string,String>();// key Quote and Value will be Juridiction Id.
